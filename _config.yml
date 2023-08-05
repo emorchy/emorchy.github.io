@@ -32,7 +32,6 @@ words_per_minute: 200
 markdown: kramdown
   #remote_theme: pages-themes/hacker@v0.2.0
 plugins:
-  - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
@@ -58,14 +57,13 @@ include:
 # Site Author
 author:
   name             : "Ethan Morchy"
-  avatar           : "/assets/images/bio-photo.jpg"
+    #avatar           : "/assets/images/bio-photo.jpg"
   bio              : "I am an **amazing** person."
   location         : "Los Angeles, CA"
   links:
     - label: "This website"
       icon: "fas fa-fw fa-link"
       url: "https://emorchy.github.io"
-      url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/emorchy"

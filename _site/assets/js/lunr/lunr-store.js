@@ -390,7 +390,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Resume",
-        "excerpt":"This is the post for the resume  ","categories": ["projects"],
+        "excerpt":"This is the post for the resume  Formal Latex Document     Learned LaTeX   [Downloadable TeX]     Gameboy Document       Gameboy file creation and tool     Polyglot File       Image of hexdump and color-coded magic bytes  ","categories": ["projects"],
         "tags": ["resume"],
         "url": "/projects/2023/08/04/resume.html",
         "teaser": null
