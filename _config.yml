@@ -34,6 +34,10 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jemoji
+  - jekyll-include-cache
   - jekyll-remote-theme # add this line to the plugins list if you already have one
 
 include:
@@ -50,3 +54,18 @@ include:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Site Author
+author:
+  name             : "Ethan Morchy"
+  avatar           : "/assets/images/bio-photo.jpg"
+  bio              : "I am an **amazing** person."
+  location         : "Los Angeles, CA"
+  links:
+    - label: "This website"
+      icon: "fas fa-fw fa-link"
+      url: "https://emorchy.github.io"
+      url: "https://twitter.com/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/emorchy"
