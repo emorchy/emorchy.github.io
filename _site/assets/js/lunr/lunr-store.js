@@ -389,9 +389,27 @@ var store = [{
         "url": "/layout/uncategorized/2017/01/23/layout-header-video.html",
         "teaser": null
       },{
+        "title": "Piezo Shield",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/2023/08/04/piezo-shield.html",
+        "teaser": null
+      },{
         "title": "Resume",
         "excerpt":"This is the post for the resume  Formal Latex Document     Learned LaTeX   [Downloadable TeX]     Gameboy Document       Gameboy file creation and tool     Polyglot File       Image of hexdump and color-coded magic bytes  ","categories": ["projects"],
         "tags": ["resume"],
         "url": "/projects/2023/08/04/resume.html",
+        "teaser": null
+      },{
+        "title": "Weather Station Protocol Forwarding",
+        "excerpt":"Weather Station Protocol Forwarding Weather Station Protocol Forwarding Overview Code Creation Receive Acurite Demodulation Decoding Transmit La Crosse Overview I own a La Crosse weather transmitter and station. Several years ago, my transmitter stopped working. It wasn’t until recently when I began working on another project that I discovered a...","categories": ["projects"],
+        "tags": ["rf"],
+        "url": "/projects/2023/08/05/weather-station.html",
+        "teaser": null
+      },{
+        "title": "Resume",
+        "excerpt":"This is the post for the resume  Formal Latex Document     Learned LaTeX   [Downloadable TeX]     Gameboy Document       Gameboy file creation and tool     Polyglot File       Image of hexdump and color-coded magic bytes  ","categories": ["projects"],
+        "tags": ["resume"],
+        "url": "/projects/2023/08/06/companion-cube.html",
         "teaser": null
       }]
