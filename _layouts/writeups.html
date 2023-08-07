@@ -5,13 +5,13 @@ layout: archive
 {{content}}
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
-{% assign postsByYear = site.posts | where_exp: "item", "item.hidden != true" | where:'category', 'projects' | group_by_exp: 'post', 'post.date | date: "%Y"' %}
-{% for year in postsByYear %} #TODO limit postsByYear only to posts in "project"
+{% assign postsByYear = site.posts | where_exp: "item", "item.hidden != true" | where:'category', 'writeups'|group_by_exp: 'post', 'post.date | date: "%Y"' %}
+{% for year in postsByYear %}
   <section id="{{ year.name }}" class="taxonomy__section">
     <h2 class="archive__subtitle">{{ year.name }}</h2>
     <div class="entries-{{ entries_layout }}">
       {% for post in year.items %}
-        {% if post.category contains 'projects' %}
+        {% if post.category contains 'writeups' %}
         {% include archive-single.html type=entries_layout %}
         {% endif %}
       {% endfor %}
