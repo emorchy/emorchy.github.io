@@ -131,9 +131,9 @@ void transmit(float tempc, int humi) {
 
 I created a different protocol for the sync header because the preamble is 833ms high and 833ms low repeated 4 times. RCSwitch does not allow repeated sync packets, so I used a different protocol for sync. Following the [La Crosse transmission analysis](https://github.com/merbanan/rtl_433/blob/master/src/devices/lacrosse_tx141x.c#L58-L64), the protocol can be coded as such:
 <center>
-```
+<code>
 [id] [id] [flags] [temp] [temp] [temp] [humi] [humi] [chk] [chk]
-```
+</code>
 </center>
 <center><p>Every 4 bits of data is enclosed in [ ] for a total of 40 bits.</p></center>
 ```c++
