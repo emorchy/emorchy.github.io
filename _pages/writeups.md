@@ -1,6 +1,6 @@
 ---
 title: "Writeups"
 permalink: /writeups/
-layout: posts
+layout: writeups
 author_profile: true
 ---

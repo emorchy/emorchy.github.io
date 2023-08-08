@@ -3,7 +3,6 @@ title: "Resume"
 permalink: /resume/
 author_profile: true
 ---
-
 <style>
 * {
   box-sizing: border-box;
@@ -22,6 +21,19 @@ author_profile: true
   display: table;
   clear: both;
 }
+
+iframe {
+    display: block;
+    aspect-ratio: 20/18;
+    width: 50%;
+    margin: 0 auto;
+}
+.aspect-ratio{
+    position: relative;
+    height: 0;
+    padding-top: 90%;
+}
+
 </style>
 
 <div class="row">
@@ -48,10 +60,10 @@ author_profile: true
 <iframe
   id="emulator"
   title="GameBoy Emulator"
-  width="667"
-  height="600"
   src="/assets/files/resume/simple.html"
+  allowfullscreen
 >
 </p>
 </iframe>
 <center><p><u><b>Press play</b></u></p><p><b>Click again</b> to activate controls and music.</p></center>
+

@@ -140,17 +140,17 @@
   
 
 
-<div itemscope itemtype="https://schema.org/Person">
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
 
   
 
   <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Ethan Morchy</a>
+    </h3>
     
-      <h3 class="author__name" itemprop="name">Ethan Morchy</h3>
-    
-    
-      <div class="author__bio" itemprop="description">
-        <p>I am an <strong>amazing</strong> person.</p>
+      <div class="author__bio p-note" itemprop="description">
+        <p>I am a cybersecurity specialist with an emphasis on binary exploitation and cryptography. I enjoy making engineering projects and competing in CTFs.</p>
 
       </div>
     
@@ -161,18 +161,14 @@
     <ul class="author__urls social-icons">
       
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Los Angeles, CA</span>
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Los Angeles, CA</span>
         </li>
       
 
       
         
           
-            <li><a href="https://emorchy.github.io" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">This website</span></a></li>
-          
-        
-          
-            <li><a href="https://github.com/emorchy" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+            <li><a href="https://github.com/emorchy" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
           
         
       
@@ -227,7 +223,7 @@
 
       <!--
   <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
       <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
     </a>
   </li>
@@ -255,22 +251,33 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/projects/2023/08/06/companion-cube.html" rel="permalink">Resume
+        <a href="/projects/2023/08/06/companion-cube.html" rel="permalink">Companion cube
 </a>
       
     </h2>
     
 
+  <p class="page__meta">
+    
 
-    <p class="archive__item-excerpt" itemprop="description">This is the post for the resume
-Formal Latex Document
+    
 
-  Learned LaTeX
-  [Downloadable TeX]
-    Gameboy Document
-  
-  Gameboy file creation and tool
-    Poly...</p>
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This 3D-printed companion cube from Portal plays one of sixty messages with each press of the button heart.
+</p>
   </article>
 </div>
 
@@ -289,6 +296,24 @@ Formal Latex Document
       
     </h2>
     
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
 
 
     <p class="archive__item-excerpt" itemprop="description">I used a 433MHz radio receiver and transmitter with an Attiny chip to interface my neighbor’s AcuRite weather transmitter with my La Crosse weather display.
@@ -312,6 +337,24 @@ Formal Latex Document
     </h2>
     
 
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
 
     <p class="archive__item-excerpt" itemprop="description">This is the post for the resume
 Formal Latex Document
@@ -335,14 +378,32 @@ Formal Latex Document
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/2023/08/04/piezo-shield.html" rel="permalink">Piezo Shield
+        <a href="/projects/2023/08/04/piezo-shield.html" rel="permalink">Bar Mitzvah Shield
 </a>
       
     </h2>
     
 
+  <p class="page__meta">
+    
 
-    <p class="archive__item-excerpt" itemprop="description">
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">hi
 </p>
   </article>
 </div>
@@ -362,6 +423,24 @@ Formal Latex Document
       
     </h2>
     
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
 
 
     <p class="archive__item-excerpt" itemprop="description">This post should not appear in the search index because it has the following YAML Front Matter:
@@ -601,10 +680,6 @@ Formal Latex Document
   <ul class="social-icons">
     
 
-    
-
-    
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
   </ul>
 </div>

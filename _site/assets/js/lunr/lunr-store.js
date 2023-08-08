@@ -377,6 +377,12 @@ var store = [{
         "url": "/2013/08/16/markup-syntax-highlighting.html",
         "teaser": "/assets/images/markup-syntax-highlighting-teaser.jpg"
       },{
+        "title": "Weather Station Protocol Forwarding",
+        "excerpt":"Weather Station Protocol Forwarding Weather Station Protocol Forwarding Overview Code Creation Receive Acurite Demodulation Decoding Transmit La Crosse Overview I own a La Crosse weather transmitter and station. Several years ago, my transmitter stopped working. It wasn’t until recently when I began working on another project that I discovered a...","categories": ["writeups"],
+        "tags": ["rf"],
+        "url": "/writeups/2013/08/16/markup-syntax-highlighting.html",
+        "teaser": null
+      },{
         "title": "Welcome to Jekyll!",
         "excerpt":"You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when...","categories": ["Jekyll"],
         "tags": ["update"],
@@ -389,10 +395,10 @@ var store = [{
         "url": "/layout/uncategorized/2017/01/23/layout-header-video.html",
         "teaser": null
       },{
-        "title": "Piezo Shield",
-        "excerpt":" ","categories": [],
-        "tags": [],
-        "url": "/2023/08/04/piezo-shield.html",
+        "title": "Bar Mitzvah Shield",
+        "excerpt":"What is a Bar Mitzvah? A Bar Mitzvah is a Jewish rite of passage where a boy becomes a man in the eyes of Jewish talmudic law. A Bar Mitzvah student leads part of the Saturday morning service, consisting of reading from the holy book (Torah), reciting/singing from scriptures (Haftarah),...","categories": ["projects"],
+        "tags": ["engineering, piezo, arduino"],
+        "url": "/projects/2023/08/04/piezo-shield.html",
         "teaser": null
       },{
         "title": "Resume",
@@ -402,14 +408,14 @@ var store = [{
         "teaser": null
       },{
         "title": "Weather Station Protocol Forwarding",
-        "excerpt":"Weather Station Protocol Forwarding Weather Station Protocol Forwarding Overview Code Creation Receive Acurite Demodulation Decoding Transmit La Crosse Overview I own a La Crosse weather transmitter and station. Several years ago, my transmitter stopped working. It wasn’t until recently when I began working on another project that I discovered a...","categories": ["projects"],
+        "excerpt":"Overview I own a La Crosse weather transmitter and station. Several years ago, my transmitter stopped working. It wasn’t until recently when I began working on another project that I discovered a wireless weather transmission coming from nearby. I used a 433MHz radio receiver and transmitter with an Attiny chip...","categories": ["projects"],
         "tags": ["rf"],
         "url": "/projects/2023/08/05/weather-station.html",
         "teaser": null
       },{
-        "title": "Resume",
-        "excerpt":"This is the post for the resume  Formal Latex Document     Learned LaTeX   [Downloadable TeX]     Gameboy Document       Gameboy file creation and tool     Polyglot File       Image of hexdump and color-coded magic bytes  ","categories": ["projects"],
-        "tags": ["resume"],
+        "title": "Companion cube",
+        "excerpt":"Overview  This 3D-printed companion cube from Portal plays one of sixty messages with each press of the button heart.  Formal Latex Document     Learned LaTeX   [Downloadable TeX]     Gameboy Document       Gameboy file creation and tool     Polyglot File       Image of hexdump and color-coded magic bytes  ","categories": ["projects"],
+        "tags": ["arduino"],
         "url": "/projects/2023/08/06/companion-cube.html",
         "teaser": null
       }]

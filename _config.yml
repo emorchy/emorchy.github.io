@@ -43,6 +43,7 @@ plugins:
 include:
   - .htaccess
   - _pages
+  - _includes
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
@@ -59,12 +60,12 @@ include:
 author:
   name             : "Ethan Morchy"
     #avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "I am a cybersecurity specialist with an emphasis on binary exploitation and cryptography. I enjoy making engineering projects and competing in CTFs."
   location         : "Los Angeles, CA"
   links:
-    - label: "This website"
-      icon: "fas fa-fw fa-link"
-      url: "https://emorchy.github.io"
+    #- label: "This website"
+    #  icon: "fas fa-fw fa-link"
+    #  url: "https://emorchy.github.io"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/emorchy"
@@ -77,3 +78,18 @@ toc:
  list_class: toc__list
  sublist_class: toc__sublist
 
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      classes: wide
+      author_profile: true
+      read_time: true
+      comments: false
+      toc: true
+      toc_label: "Contents"
+      share: false
+      related: true

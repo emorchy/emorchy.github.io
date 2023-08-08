@@ -148,6 +148,19 @@
   display: table;
   clear: both;
 }
+
+iframe {
+    display: block;
+    aspect-ratio: 20/18;
+    width: 50%;
+    margin: 0 auto;
+}
+.aspect-ratio{
+    position: relative;
+    height: 0;
+    padding-top: 90%;
+}
+
 </style>
 
 <div class="row">
@@ -171,10 +184,11 @@
 
 <h1 id="gameboy-resume">Gameboy Resume</h1>
 <p align="center">
-<iframe id="emulator" title="GameBoy Emulator" width="667" height="600" src="/assets/files/resume/simple.html">
+<iframe id="emulator" title="GameBoy Emulator" src="/assets/files/resume/simple.html" allowfullscreen="">
 &lt;/p&gt;
 </iframe>
 <center><p><u><b>Press play</b></u></p><p><b>Click again</b> to activate controls and music.</p></center>
+
 </p>
 
     </div>
@@ -190,10 +204,6 @@
   <ul class="social-icons">
     
 
-    
-
-    
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
   </ul>
 </div>

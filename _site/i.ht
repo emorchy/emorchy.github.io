@@ -9,39 +9,35 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Piezo Shield - Ethan&#8217;s Blog</title>
-<meta name="description" content="">
+<!-- begin _includes/seo.html --><title>Ethan's Blog</title>
+<meta name="description" content="This is the early stages of this site. Until I get a feel for the software and until I make my first project post, this description will remain up.">
 
 
   <meta name="author" content="Ethan Morchy">
   
-  <meta property="article:author" content="Ethan Morchy">
-  
 
 
-<meta property="og:type" content="article">
+<meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Ethan's Blog">
-<meta property="og:title" content="Piezo Shield">
-<meta property="og:url" content="http://localhost:4000/2023/08/04/piezo-shield.html">
+<meta property="og:title" content="Ethan’s Blog">
+<meta property="og:url" content="http://localhost:4000/i.ht">
 
 
-  <meta property="og:description" content="">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2023-08-04T00:00:00-07:00">
+  <meta property="og:description" content="This is the early stages of this site. Until I get a feel for the software and until I make my first project post, this description will remain up.">
 
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/2023/08/04/piezo-shield.html">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/i.ht">
 
 
 
@@ -135,7 +131,6 @@
 
     <div class="initial-content">
       
-
     </div>
 
     
@@ -149,10 +144,6 @@
   <ul class="social-icons">
     
 
-    
-
-    
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
   </ul>
 </div>
