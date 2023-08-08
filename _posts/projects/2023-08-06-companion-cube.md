@@ -1,9 +1,11 @@
 ---
-title: "Resume"
+title: "Companion cube"
 category: projects
-tags: resume
+tags: arduino
+excerpt: This 3D-printed companion cube from Portal plays one of sixty messages with each press of the button heart.
 ---
-# This is the post for the resume
+# Overview
+{{page.excerpt}}
 ## Formal Latex Document
 - Learned LaTeX
 - [Downloadable TeX]

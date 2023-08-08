@@ -5,17 +5,6 @@ tags: rf
 excerpt: I used a 433MHz radio receiver and transmitter with an Attiny chip to interface my neighbor's AcuRite weather transmitter with my La Crosse weather display.
 ---
 <style>
-#markdown-toc::before {
-    content: "Contents";
-    font-weight: bold;
-}
-#markdown-toc {
-    border: 1px solid #aaa;
-    padding: 1.5em;
-    list-style: decimal;
-    display: inline-block;
-}
-
 img + em {
   display: block;
   text-align: center;
@@ -29,16 +18,13 @@ img.centered {
 }
 </style>
 
-# Weather Station Protocol Forwarding
-* TOC
-{:toc}
-## Overview
+# Overview
 I own a La Crosse weather transmitter and station. Several years ago, my transmitter stopped working. It wasn't until recently when I began working on [another project](/2023/08/04/TPMS.html) that I discovered a wireless weather transmission coming from nearby.
 {{ page.excerpt }}
 
 ![lacrosse.webp](/assets/files/weather/lacrosse.webp){:.centered}
 *La Crosse Weather Sensor and Station*
-## Code Creation
+# Code Creation
 ## Receive Acurite
 Using a RTL-SDR with the "rtl_433" program, I was able to see that someone owned a weather station in the general vicinity.
 ![rtl.png](/assets/files/weather/rtl.png){:.centered}
@@ -115,9 +101,7 @@ Once again, the rtl_433 repository proves invaluable with the Acurite data decod
   ---snip---
 ```
 ## Transmit La Crosse
-Now that we have temperature and humidity stored in a variable, it is time to transmit the data to the La Crosse weather station. I emulated the La Crosse TX141TH-Bv2 sensor.
-
-According to [rtl_433](https://github.com/merbanan/rtl_433/blob/master/src/devices/lacrosse_tx141x.c#L33-L64), "The TX141TH-Bv2 sensor sends 12 of identical packets, one immediately following the other, in a single burst. These 12-packet bursts repeat every 50 seconds." From the description in [lacrosse_tx141x.c](https://github.com/merbanan/rtl_433/blob/master/src/devices/lacrosse_tx141x.c#L33-L47), we can gather a PWM profile for rc-switch:
+Now that we have temperature and humidity stored in a variable, it is time to transmit the data to the La Crosse weather station. I emulated the La Crosse TX141TH-Bv2 sensor. From the description in [lacrosse_tx141x.c](https://github.com/merbanan/rtl_433/blob/master/src/devices/lacrosse_tx141x.c#L33-L47), we can gather a PWM profile for rc-switch:
 
 ```c++
 RCSwitch transmitter = RCSwitch();
@@ -136,6 +120,7 @@ I created a different protocol for the sync header because the preamble is 833ms
 </code>
 </center>
 <center><p>Every 4 bits of data is enclosed in [ ] for a total of 40 bits.</p></center>
+
 ```c++
 ---snip---
     transmitter.setProtocol(sync);
@@ -148,6 +133,7 @@ I created a different protocol for the sync header because the preamble is 833ms
     transmitter.send("11111111");    //dummy CRC is unchecked
 ---snip---
 ```
+
 According to [rtl_433](https://github.com/merbanan/rtl_433/blob/master/src/devices/lacrosse_tx141x.c#L50-L52), "The TX141TH-Bv2 sensor sends 12 of identical packets, one immediately following the other, in a single burst. These 12-packet bursts repeat every 50 seconds". The final transmission function is shown below:
 ```c++
 void transmit(float tempc, int humi) {
