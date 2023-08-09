@@ -17,6 +17,7 @@ img.centered {
 }
 img[alt=Bit-O-Honey] { width: 15%; margin: auto;}
 img[alt=Shield of Daniel] { width: 50%; margin: auto;}
+img[alt=Fritzing Model] { width: 50%; margin: auto;}
 </style>
 
 # What is a Bar Mitzvah?
