@@ -2,7 +2,7 @@
 title: "Bar Mitzvah Shield"
 category: projects
 tag: engineering, piezo, arduino
-excerpt:  hi
+excerpt: An impact sensor array for my brother's shield to count deflected candy at his Bar Mitzvah.
 ---
 <style>
 img + em {
@@ -52,9 +52,17 @@ Piezoelectricity occurs when physical pressure is converted to an electric charg
 
 ## Physical Routing
 
+![Fritzing Model](/assets/files/bar-mitzvah/shield-bb.jpg){:.centered}
+
+The Piezo wafer sensors are connected to the analog ports to provide different feedback for various pressures. I also attached a 100KΩ resistor to each wafer to prevent damage to the Nano. I used whatever large-load resistors were lying around, but I recommend 1MΩ for future projects.
+
+I used [this](https://www.amazon.com/MakerFocus-Discharge-Integrated-Charging-Protection/dp/B07PZT3ZW2/) boost converter in my project because of its battery charging capabilities bundled with a pretty cool battery indicator. I desoldered the "key" button and bridged the connection with a wire to prevent powering off.
 
 ## Code
 
+This is the first completed project where I used a C++ class in a practical scenario. Although OOP wasn't necessary, it was interesting to complete. You can find the code [here](https://github.com/emorchy/piezo-shield).
+
+## Images
 
 ## Final Thoughts
 The shield detected a total of 44 candies. My brother got recognition of having the coolest and most well thought out Bar Mitzvah candy blocker in the synagogue. Sure, other children had tennis raquets or fly swatters, but they all cower at the might of Daniel's mighty Shield!
