@@ -253,10 +253,6 @@
 <lastmod>2018-01-03T06:45:06-08:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/writeups/2013/08/16/markup-syntax-highlighting.html</loc>
-<lastmod>2013-08-16T00:00:00-07:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/jekyll/2016/02/24/welcome-to-jekyll.html</loc>
 <lastmod>2016-02-24T00:00:00-08:00</lastmod>
 </url>
@@ -269,8 +265,12 @@
 <lastmod>2018-02-19T05:05:34-08:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/projects/2023/08/04/piezo-shield.html</loc>
-<lastmod>2023-08-04T00:00:00-07:00</lastmod>
+<loc>http://localhost:4000/projects/2023/02/25/piezo-shield.html</loc>
+<lastmod>2023-02-25T00:00:00-08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/writeups/2023/03/30/picoctf-poweranalysis.html</loc>
+<lastmod>2023-03-30T00:00:00-07:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/projects/2023/08/04/resume.html</loc>
@@ -573,7 +573,7 @@
 </url>
 <url>
 <loc>http://localhost:4000/assets/files/resume/resume.pdf</loc>
-<lastmod>2023-08-04T12:10:15-07:00</lastmod>
+<lastmod>2023-08-08T04:41:33-07:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/assets/files/resume/resume_footnote.pdf</loc>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-08-08T00:56:23-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ethan’s Blog</title><subtitle>This is the early stages of this site. Until I get a feel for the software and until I make my first project post, this description will remain up.</subtitle><author><name>Ethan Morchy</name></author><entry><title type="html">Companion cube</title><link href="http://localhost:4000/projects/2023/08/06/companion-cube.html" rel="alternate" type="text/html" title="Companion cube" /><published>2023-08-06T00:00:00-07:00</published><updated>2023-08-06T00:00:00-07:00</updated><id>http://localhost:4000/projects/2023/08/06/companion-cube</id><content type="html" xml:base="http://localhost:4000/projects/2023/08/06/companion-cube.html">&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-08-10T00:34:04-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ethan’s Blog</title><subtitle>This is the early stages of this site. Until I get a feel for the software and until I make my first project post, this description will remain up.</subtitle><author><name>Ethan Morchy</name></author><entry><title type="html">Companion cube</title><link href="http://localhost:4000/projects/2023/08/06/companion-cube.html" rel="alternate" type="text/html" title="Companion cube" /><published>2023-08-06T00:00:00-07:00</published><updated>2023-08-06T00:00:00-07:00</updated><id>http://localhost:4000/projects/2023/08/06/companion-cube</id><content type="html" xml:base="http://localhost:4000/projects/2023/08/06/companion-cube.html">&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
 &lt;p&gt;This 3D-printed companion cube from Portal plays one of sixty messages with each press of the button heart.&lt;/p&gt;
 &lt;h2 id=&quot;formal-latex-document&quot;&gt;Formal Latex Document&lt;/h2&gt;
 &lt;ul&gt;
@@ -176,7 +176,187 @@ As shown above on the right side, a bit is read every 612ms.&lt;/p&gt;
   &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;11&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//post-amble 2x 833us high and low&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;disableTransmit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Ethan Morchy</name></author><category term="projects" /><category term="rf" /><summary type="html">I used a 433MHz radio receiver and transmitter with an Attiny chip to interface my neighbor's AcuRite weather transmitter with my La Crosse weather display.</summary></entry><entry><title type="html">Bar Mitzvah Shield</title><link href="http://localhost:4000/projects/2023/08/04/piezo-shield.html" rel="alternate" type="text/html" title="Bar Mitzvah Shield" /><published>2023-08-04T00:00:00-07:00</published><updated>2023-08-04T00:00:00-07:00</updated><id>http://localhost:4000/projects/2023/08/04/piezo-shield</id><content type="html" xml:base="http://localhost:4000/projects/2023/08/04/piezo-shield.html">&lt;style&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Ethan Morchy</name></author><category term="projects" /><category term="rf" /><summary type="html">I used a 433MHz radio receiver and transmitter with an Attiny chip to interface my neighbor's AcuRite weather transmitter with my La Crosse weather display.</summary></entry><entry><title type="html">Resume</title><link href="http://localhost:4000/projects/2023/08/04/resume.html" rel="alternate" type="text/html" title="Resume" /><published>2023-08-04T00:00:00-07:00</published><updated>2023-08-04T00:00:00-07:00</updated><id>http://localhost:4000/projects/2023/08/04/resume</id><content type="html" xml:base="http://localhost:4000/projects/2023/08/04/resume.html">&lt;h1 id=&quot;this-is-the-post-for-the-resume&quot;&gt;This is the post for the resume&lt;/h1&gt;
+&lt;h2 id=&quot;formal-latex-document&quot;&gt;Formal Latex Document&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Learned LaTeX&lt;/li&gt;
+  &lt;li&gt;[Downloadable TeX]
+    &lt;h2 id=&quot;gameboy-document&quot;&gt;Gameboy Document&lt;/h2&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Gameboy file creation and tool
+    &lt;h2 id=&quot;polyglot-file&quot;&gt;Polyglot File&lt;/h2&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Image of hexdump and color-coded magic bytes&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Ethan Morchy</name></author><category term="projects" /><category term="resume" /><summary type="html">This is the post for the resume Formal Latex Document Learned LaTeX [Downloadable TeX] Gameboy Document Gameboy file creation and tool Polyglot File Image of hexdump and color-coded magic bytes</summary></entry><entry><title type="html">PicoCTF Power Analysis</title><link href="http://localhost:4000/writeups/2023/03/30/picoctf-poweranalysis.html" rel="alternate" type="text/html" title="PicoCTF Power Analysis" /><published>2023-03-30T00:00:00-07:00</published><updated>2023-03-30T00:00:00-07:00</updated><id>http://localhost:4000/writeups/2023/03/30/picoctf-poweranalysis</id><content type="html" xml:base="http://localhost:4000/writeups/2023/03/30/picoctf-poweranalysis.html">&lt;h1 id=&quot;poweranalysiswarm&quot;&gt;PowerAnalysisWarm&lt;/h1&gt;
+&lt;details&gt;
+&lt;summary&gt;Description&lt;/summary&gt;
+&lt;br /&gt;
+This encryption algorithm leaks a &quot;bit&quot; of data every time it does a computation. Use this to figure out the encryption key.
+
+Additional details will be available after launching your challenge instance.
+&lt;/details&gt;
+
+&lt;h2 id=&quot;precursor&quot;&gt;Precursor&lt;/h2&gt;
+&lt;h3 id=&quot;what-is-aes&quot;&gt;What is AES?&lt;/h3&gt;
+&lt;p&gt;Advanced Encryption Standard (AES) is a symmetric-key block cipher used in VPNs, drive encryption, and government information protection. It is the most used encryption cipher used to date, and the versatility of its base leads to different varieties according to specific needs.&lt;/p&gt;
+&lt;h3 id=&quot;why-aes&quot;&gt;Why AES?&lt;/h3&gt;
+&lt;p&gt;Because of its properties, this algorithm easily and quickly allows data to be encrypted and decrypted at will when a key is known. AES is a worldwide algorithm that works great, when it is not improperly configured. Several attacks are known for insecure AES, including side channel attacks (which we will be discussing later on).&lt;/p&gt;
+&lt;h3 id=&quot;how-aes&quot;&gt;How AES?&lt;/h3&gt;
+&lt;p&gt;Let’s say Alice wants to securely send a simple 16 byte message to Bob using AES.&lt;/p&gt;
+
+&lt;p&gt;Alice decides to create a 16 byte key that will encrypt the message she sends to Bob. She settles on the following:&lt;/p&gt;
+
+&lt;p&gt;Key: “My precious key!”&lt;/p&gt;
+
+&lt;p&gt;Plaintext: “Are belong to us”&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/files/picoctf/aes.png&quot; alt=&quot;AES&quot; /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;xor&quot;&gt;XOR&lt;/h4&gt;
+&lt;p&gt;Alice first converts the key and the plaintext to hex:&lt;/p&gt;
+
+&lt;p&gt;Key: 4d792070726563696f7573206b657921&lt;/p&gt;
+
+&lt;p&gt;Plaintext: 4172652062656c6f6e6720746f207573&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+She then begins by XORing the plaintext and the key.&lt;/p&gt;
+
+&lt;p&gt;Ex. First byte: 0x4d XOR 0x41 = 0x0c&lt;/p&gt;
+
+&lt;p&gt;Second byte: 0x79 XOR 0x72 = 0x0b
+  &lt;br /&gt;
+  &lt;br /&gt;
+Key XOR Plaintext = 0c0b455010000f060112535404450c52&lt;/p&gt;
+&lt;h4 id=&quot;sub-bytes&quot;&gt;Sub-bytes&lt;/h4&gt;
+&lt;p&gt;Next, Alice takes each byte in the XORed result and matches it with a substitution box (S-box). Because the first byte of the XORed value is 0x0c, Alice indexes the 13th value in the S-box and substitutes it for 0x0c.&lt;/p&gt;
+
+&lt;p&gt;Luckily, the AES S-box is a standard lookup table originating from the &lt;a href=&quot;https://en.wikipedia.org/wiki/Rijndael_S-box&quot;&gt;Rijndael S-box&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/files/picoctf/sbox.png&quot; alt=&quot;S-box&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The left column indexes with first half byte and the top row indexes using the last half byte of the input.&lt;/p&gt;
+
+&lt;p&gt;Ex. “0c” would be substituted for “fe”.&lt;/p&gt;
+
+&lt;p&gt;Sub-bytes = fe2b6e53ca63766f7cc9ed20f26efe00&lt;/p&gt;
+
+&lt;p&gt;Although there are subsequent steps involved during the encryption process, this challenge focuses specifically on the XOR and S-box lookup in AES.&lt;/p&gt;
+
+&lt;h3 id=&quot;where-aes&quot;&gt;Where AES?&lt;/h3&gt;
+
+&lt;p&gt;The function “leaky_aes_secret” in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;encrypt.py&lt;/code&gt; demonstrates where AES is used:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def leaky_aes_secret(data_byte, key_byte):
+    out = Sbox[data_byte ^ key_byte]
+    leak_buf.append(out &amp;amp; 0x01)
+    return out
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The second line appears to be the combination of both AES steps previously defined. Additionally, the line after will leak the last bit of every substituted byte and later find the sum of the bits.&lt;/p&gt;
+
+&lt;p&gt;Per our example, the least significant bits of Sub-bytes would be: 0101010101100000&lt;/p&gt;
+
+&lt;p&gt;The sum (6) would subsequently be leaked with the line: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;leakage result: 6&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The challenge essentially asks one question: When we are given the sum of least significant bits after providing a plaintext, is it possible to find the encryption key?&lt;/p&gt;
+
+&lt;h2 id=&quot;theory&quot;&gt;Theory&lt;/h2&gt;
+&lt;p&gt;We are dealing with a &lt;a href=&quot;https://en.wikipedia.org/wiki/Side-channel_attack&quot;&gt;side channel attack&lt;/a&gt;. The least significant bit of each byte is calculated and the total is leaked to the user.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/files/picoctf/algo.png&quot; alt=&quot;algorithm&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;View example on &lt;a href=&quot;https://github.com/emorchy/PicoCTF2023-PowerAnalysis/blob/main/README.md#Theory&quot;&gt;my github repo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;How do we find the key from the result?&lt;/p&gt;
+
+&lt;h2 id=&quot;isolating-the-lsbs&quot;&gt;Isolating the LSBs&lt;/h2&gt;
+&lt;p&gt;We must first control the leak to find the key. To do this, we must be able to correspond individual bytes to bit leakage. By providing a payload that returns 0 bits of leakage, we can move on to the next step of manipulating individual bytes.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;testbyte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;zero_payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#tests payload bytes to decrease bit leakage
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mh&quot;&gt;0xff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#returns before completion
+&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;prepend&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;zero_payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#increases each byte
+&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;{:02x}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;00&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zero_payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prepend&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sendinput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prepend&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#receives the bit leakage
+&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Bits: {}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#return incremented byte
+&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;results&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#LSB was already 0
+&lt;/span&gt;            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;00&quot;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;zero_payload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#becomes a list of payload bytes that output 0 leakage bits
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mh&quot;&gt;0x10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#for each byte
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;testbyte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;zero_payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#lowers bit leakage if it can
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;zero_payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#appends the returned byte
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zero_payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;00&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;bits&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#for each byte that once had LSB
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Because I am using payload “00000000000000000000000000000000”, I receive &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;leakage result: 8&lt;/code&gt;.
+For the first byte of the payload, increment value until it returns a bit leakage value lower than 8. If the bit count becomes higher, the byte “00” already returns LSB 0.
+Repeat for each byte while prepending the bytes from the previous result to craft a “zero payload”.
+Thus, when we submit the “zero payload”, the bit leakage will always be 0.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/files/picoctf/zero.png&quot; alt=&quot;zeropayload&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;solving&quot;&gt;Solving&lt;/h2&gt;
+&lt;p&gt;Now, we solve!&lt;/p&gt;
+
+&lt;p&gt;Choose one payload byte to increment. Record the bit leakage and the incremented payload byte. Repeat for a certain amount of times (more details later).&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;zero_payload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'00'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'01'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'00'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'01'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'00'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'00'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'00'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'01'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'00'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'02'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'04'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'01'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'03'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'03'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'00'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'00'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;zero_payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data_byte&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;leak&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;position&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#first byte will be incremented
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#amount of increments/recordings
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;{:02x}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zero_payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#increment
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;data_byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#record the byte
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sendinput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#get the result (1 or 0)
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;leak&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#record result
+&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The bit leakage recorded will either be a 1 or a 0 (because the other 15 bytes return an LSB of 0).&lt;/p&gt;
+
+&lt;p&gt;What does this mean?&lt;/p&gt;
+
+&lt;p&gt;By curating a list of returned LSBs, it is possible to brute force the key byte by byte.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/files/picoctf/onebyte.png&quot; alt=&quot;onebyte&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As the payload byte increments, XORing with the static key changes its value, returning different Sbox numbers. Therefore, the list of leaked Sbox LSBs matches the Sbox LSBs of a given key byte XORed with the incremented payload byte.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/files/picoctf/bytesolve.png&quot; alt=&quot;bytesolve&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mh&quot;&gt;0xff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#tests all possible bytes
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;testleak&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;testleak&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Sbox&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data_byte&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x1&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#gets LSB of possible Sbox match
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;leak&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;testleak&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#leak list defined previously
+&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;MATCH: 0x{:02x}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We have successfully brute forced the first byte of the AES key. Now repeat 15 more times and we’ve got the encryption key!&lt;/p&gt;
+
+&lt;p&gt;For the python solution code, see “power.py”.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://asciinema.org/a/SyBN8KQjmwGWnoWazw0GeCZEH?speed=2&amp;amp;autoplay=1&quot;&gt;&lt;img src=&quot;https://asciinema.org/a/SyBN8KQjmwGWnoWazw0GeCZEH.png&quot; alt=&quot;asciinema&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h2&gt;
+&lt;p&gt;Overall, this was a fun challenge and a fantastic introduction to side-channel attacks. After several hours of scripting, the key is produced in 90 seconds. I love scripting.&lt;/p&gt;
+
+&lt;p&gt;By the end of the competition, a total of 86 out of 6000 teams solved this challenge. If ranking is measured by total solves instead of points, this would rank me in the top 1%.&lt;/p&gt;
+
+&lt;p&gt;My prior experience with &lt;a href=&quot;https://www.cryptopals.com/&quot;&gt;CryptoPals&lt;/a&gt; helped me the most with solving this challenge.&lt;/p&gt;
+
+&lt;details&gt;&lt;summary&gt;Author's Note&lt;/summary&gt;
+&lt;br /&gt;
+Use the variable `SILENT=1` with `python3 power.py` to witness the beauty of the password oracle.
+&lt;/details&gt;</content><author><name>Ethan Morchy</name></author><category term="writeups" /><category term="cpa," /><category term="aes," /><category term="side-channel" /><summary type="html">This is a writeup for the PicoCTF 2023 PowerAnalysisWarm challenge. Source code on github repo.</summary></entry><entry><title type="html">Bar Mitzvah Shield</title><link href="http://localhost:4000/projects/2023/02/25/piezo-shield.html" rel="alternate" type="text/html" title="Bar Mitzvah Shield" /><published>2023-02-25T00:00:00-08:00</published><updated>2023-02-25T00:00:00-08:00</updated><id>http://localhost:4000/projects/2023/02/25/piezo-shield</id><content type="html" xml:base="http://localhost:4000/projects/2023/02/25/piezo-shield.html">&lt;style&gt;
 img + em {
   display: block;
   text-align: center;
@@ -189,6 +369,35 @@ img.centered {
 }
 img[alt=Bit-O-Honey] { width: 15%; margin: auto;}
 img[alt=Shield of Daniel] { width: 50%; margin: auto;}
+img[alt=Fritzing Model] { width: 50%; margin: auto;}
+img[alt=Exposed] { width: 50%; margin: auto;}
+img[alt=Covered] { width: 50%; margin: auto;}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: &quot;&quot;;
+  display: table;
+  clear: both;
+}
+
+iframe {
+    display: block;
+    aspect-ratio: 1080/1920;
+    width: 25%;
+    margin: 0 auto;
+}
+.aspect-ratio{
+    position: relative;
+    height: 0;
+    padding-top: 0%;
+}
 &lt;/style&gt;
 
 &lt;h1 id=&quot;what-is-a-bar-mitzvah&quot;&gt;What is a Bar Mitzvah?&lt;/h1&gt;
@@ -215,6 +424,7 @@ img[alt=Shield of Daniel] { width: 50%; margin: auto;}
   &lt;li&gt;1 DC voltage boost converter&lt;/li&gt;
   &lt;li&gt;1 TM1637 LED digit counter&lt;/li&gt;
   &lt;li&gt;5 Piezo ceramic wafer plates&lt;/li&gt;
+  &lt;li&gt;1 push-button&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;I took a deep dive into piezoelectricity several months prior to this project, and I was excited to finally have an applied project for this fascinating phenomenon. I will be using manufactured piezoelectric ceramic wafers instead of quartz crystals, but the piezoelectric process is essentially the same.&lt;/p&gt;
@@ -226,23 +436,45 @@ img[alt=Shield of Daniel] { width: 50%; margin: auto;}
 
 &lt;h2 id=&quot;physical-routing&quot;&gt;Physical Routing&lt;/h2&gt;
 
+&lt;p&gt;&lt;img src=&quot;/assets/files/bar-mitzvah/shield-bb.jpg&quot; alt=&quot;Fritzing Model&quot; class=&quot;centered&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The Piezo wafer sensors are connected to the analog ports to provide different feedback for various pressures. I also attached a 100KΩ resistor to each wafer to prevent damage to the Nano. I used whatever large-load resistors were lying around, but I recommend 1MΩ for future projects.&lt;/p&gt;
+
+&lt;p&gt;I used &lt;a href=&quot;https://www.amazon.com/MakerFocus-Discharge-Integrated-Charging-Protection/dp/B07PZT3ZW2/&quot;&gt;this&lt;/a&gt; boost converter in my project because of its battery charging capabilities bundled with a pretty cool battery indicator. I desoldered the “key” button and bridged the connection with the push-button to allow turning on and prevent powering off.&lt;/p&gt;
+
 &lt;h2 id=&quot;code&quot;&gt;Code&lt;/h2&gt;
+
+&lt;p&gt;This is the first completed project where I used a C++ class in a practical scenario. Although OOP wasn’t necessary, it was interesting to complete. You can find the code &lt;a href=&quot;https://github.com/emorchy/piezo-shield&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;images&quot;&gt;Images&lt;/h2&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;column&quot;&gt;
+&lt;div&gt;
+      &lt;p&gt;&lt;img src=&quot;/assets/files/bar-mitzvah/unconnected.jpg&quot; alt=&quot;Exposed&quot; class=&quot;centered&quot; /&gt;
+&lt;em&gt;Sensor Placement&lt;/em&gt;&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;column&quot;&gt;
+&lt;div&gt;
+      &lt;p&gt;&lt;img src=&quot;/assets/files/bar-mitzvah/cardboard.jpg&quot; alt=&quot;Covered&quot; class=&quot;centered&quot; /&gt;
+&lt;em&gt;Final Product&lt;/em&gt;&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;center&gt;
+  &lt;iframe src=&quot;/assets/files/bar-mitzvah/livedemo.mp4&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+  &lt;p&gt;
+  &lt;em&gt;Shield Sensors Demo (2 candies thrown simultaneously)&lt;/em&gt;
+  &lt;/p&gt;
+&lt;/center&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h2&gt;
 &lt;p&gt;The shield detected a total of 44 candies. My brother got recognition of having the coolest and most well thought out Bar Mitzvah candy blocker in the synagogue. Sure, other children had tennis raquets or fly swatters, but they all cower at the might of Daniel’s mighty Shield!&lt;/p&gt;
 
-&lt;p&gt;Could I have used a better wiring system? Were the wire solder connections exposed? Could I have aesthetically made it much prettier and safer? Yes to all these questions. I had the idea to create an impact-sensor shield with a built in counter a week before the Bar Mitzvah began, and I managed to finish it the night before. I am amazed I could even finish on time, let alone it working as well as it did.&lt;/p&gt;</content><author><name>Ethan Morchy</name></author><category term="projects" /><category term="engineering, piezo, arduino" /><summary type="html">hi</summary></entry><entry><title type="html">Resume</title><link href="http://localhost:4000/projects/2023/08/04/resume.html" rel="alternate" type="text/html" title="Resume" /><published>2023-08-04T00:00:00-07:00</published><updated>2023-08-04T00:00:00-07:00</updated><id>http://localhost:4000/projects/2023/08/04/resume</id><content type="html" xml:base="http://localhost:4000/projects/2023/08/04/resume.html">&lt;h1 id=&quot;this-is-the-post-for-the-resume&quot;&gt;This is the post for the resume&lt;/h1&gt;
-&lt;h2 id=&quot;formal-latex-document&quot;&gt;Formal Latex Document&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Learned LaTeX&lt;/li&gt;
-  &lt;li&gt;[Downloadable TeX]
-    &lt;h2 id=&quot;gameboy-document&quot;&gt;Gameboy Document&lt;/h2&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Gameboy file creation and tool
-    &lt;h2 id=&quot;polyglot-file&quot;&gt;Polyglot File&lt;/h2&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Image of hexdump and color-coded magic bytes&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Ethan Morchy</name></author><category term="projects" /><category term="resume" /><summary type="html">This is the post for the resume Formal Latex Document Learned LaTeX [Downloadable TeX] Gameboy Document Gameboy file creation and tool Polyglot File Image of hexdump and color-coded magic bytes</summary></entry><entry><title type="html">Exclude Post from Search Index</title><link href="http://localhost:4000/jekyll/2017/11/28/post-exclude-search.html" rel="alternate" type="text/html" title="Exclude Post from Search Index" /><published>2017-11-28T00:00:00-08:00</published><updated>2018-02-19T05:05:34-08:00</updated><id>http://localhost:4000/jekyll/2017/11/28/post-exclude-search</id><content type="html" xml:base="http://localhost:4000/jekyll/2017/11/28/post-exclude-search.html">&lt;p&gt;This post should not appear in the search index because it has the following YAML Front Matter:&lt;/p&gt;
+&lt;p&gt;Could I have used a better wiring system? Were the wire solder connections exposed? Could I have aesthetically made it much prettier and safer? Yes to all these questions. I had the idea to create an impact-sensor shield with a built in counter a week before the Bar Mitzvah began, and I managed to finish it the night before. I am amazed I could even finish on time, let alone it working as well as it did.&lt;/p&gt;</content><author><name>Ethan Morchy</name></author><category term="projects" /><category term="engineering, piezo, arduino" /><summary type="html">An impact sensor array for my brother's shield to count deflected candy at his Bar Mitzvah.</summary></entry><entry><title type="html">Exclude Post from Search Index</title><link href="http://localhost:4000/jekyll/2017/11/28/post-exclude-search.html" rel="alternate" type="text/html" title="Exclude Post from Search Index" /><published>2017-11-28T00:00:00-08:00</published><updated>2018-02-19T05:05:34-08:00</updated><id>http://localhost:4000/jekyll/2017/11/28/post-exclude-search</id><content type="html" xml:base="http://localhost:4000/jekyll/2017/11/28/post-exclude-search.html">&lt;p&gt;This post should not appear in the search index because it has the following YAML Front Matter:&lt;/p&gt;
 
 &lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;false&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -487,198 +719,7 @@ img[alt=Shield of Daniel] { width: 50%; margin: auto;}
       &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Syntax_highlighting&quot;&gt;http://en.wikipedia.org/wiki/Syntax_highlighting&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Ethan Morchy</name></author><category term="code" /><category term="syntax highlighting" /><summary type="html">Post displaying the various ways of highlighting code in Markdown.</summary></entry><entry><title type="html">Weather Station Protocol Forwarding</title><link href="http://localhost:4000/writeups/2013/08/16/markup-syntax-highlighting.html" rel="alternate" type="text/html" title="Weather Station Protocol Forwarding" /><published>2013-08-16T00:00:00-07:00</published><updated>2013-08-16T00:00:00-07:00</updated><id>http://localhost:4000/writeups/2013/08/16/markup-syntax-highlighting</id><content type="html" xml:base="http://localhost:4000/writeups/2013/08/16/markup-syntax-highlighting.html">&lt;style&gt;
-#markdown-toc::before {
-    content: &quot;Contents&quot;;
-    font-weight: bold;
-}
-#markdown-toc {
-    border: 1px solid #aaa;
-    padding: 1.5em;
-    list-style: decimal;
-    display: inline-block;
-}
-
-img + em {
-  display: block;
-  text-align: center;
-  margin: auto;
-}
-img[alt=lacrosse.webp] { width: 100%; margin: auto;}
-img.centered {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-&lt;/style&gt;
-
-&lt;h1 id=&quot;weather-station-protocol-forwarding&quot;&gt;Weather Station Protocol Forwarding&lt;/h1&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#weather-station-protocol-forwarding&quot; id=&quot;markdown-toc-weather-station-protocol-forwarding&quot;&gt;Weather Station Protocol Forwarding&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#overview&quot; id=&quot;markdown-toc-overview&quot;&gt;Overview&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#code-creation&quot; id=&quot;markdown-toc-code-creation&quot;&gt;Code Creation&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#receive-acurite&quot; id=&quot;markdown-toc-receive-acurite&quot;&gt;Receive Acurite&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#demodulation&quot; id=&quot;markdown-toc-demodulation&quot;&gt;Demodulation&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#decoding&quot; id=&quot;markdown-toc-decoding&quot;&gt;Decoding&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#transmit-la-crosse&quot; id=&quot;markdown-toc-transmit-la-crosse&quot;&gt;Transmit La Crosse&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;I own a La Crosse weather transmitter and station. Several years ago, my transmitter stopped working. It wasn’t until recently when I began working on &lt;a href=&quot;/2023/08/04/TPMS.html&quot;&gt;another project&lt;/a&gt; that I discovered a wireless weather transmission coming from nearby.
-I used a 433MHz radio receiver and transmitter with an Attiny chip to interface my neighbor’s AcuRite weather transmitter with my La Crosse weather display.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/files/weather/lacrosse.webp&quot; alt=&quot;lacrosse.webp&quot; class=&quot;centered&quot; /&gt;
-&lt;em&gt;La Crosse Weather Sensor and Station&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&quot;code-creation&quot;&gt;Code Creation&lt;/h2&gt;
-&lt;h2 id=&quot;receive-acurite&quot;&gt;Receive Acurite&lt;/h2&gt;
-&lt;p&gt;Using a RTL-SDR with the “rtl_433” program, I was able to see that someone owned a weather station in the general vicinity.
-&lt;img src=&quot;/assets/files/weather/rtl.png&quot; alt=&quot;rtl.png&quot; class=&quot;centered&quot; /&gt;
-&lt;em&gt;rtl_433 output&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;From the output, my neighbor owns an AcuRite 5-in-1 weather sensor. This device transmits temperature, humidity, wind speed, wind direction, and rainfall on the 433MHz frequency. Every 30 seconds, an AcuRite transmitter will send 3 identical messages (not including the sequence number). An AcuRite weather station (usually some sort of display) will demodulate and process the received data into a handy human-readable display.&lt;/p&gt;
-&lt;h3 id=&quot;demodulation&quot;&gt;Demodulation&lt;/h3&gt;
-&lt;!--
-![5in1.png](/assets/files/weather/5in1.png){:.centered}
-*AcuRite 5-in-1 Weather Station*
---&gt;
-&lt;p&gt;To receive AcuRite data using an arduino (or attiny chip), a 433 MHz receiver must connect to the microcontroller. I will be using the &lt;a href=&quot;https://github.com/sui77/rc-switch/wiki&quot;&gt;RC Switch&lt;/a&gt; library, which can be used send and receive RC codes.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;RCSwitch.h&amp;gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RCSwitch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;receiver&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RCSwitch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;snip&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;receive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;receiver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;enableReceive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// Receiver on interrupt 0 =&amp;gt; that is pin #2&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RCSwitch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Protocol&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;acurite&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;204&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;receiver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setProtocol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;acurite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;receiver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;available&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;receiver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;resetAvailable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;snip&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;receive()&lt;/code&gt; function first enables the receiver on pin #2. In order to differentiate an AcuRite transmission from random noise, the protocol uses &lt;a href=&quot;https://en.wikipedia.org/wiki/Pulse-width_modulation#Telecommunications&quot;&gt;Pulse Width Modulation&lt;/a&gt;. As a quick AcuRite PWM crash course, data is read one bit every clock cycle. In each cycle, a digital 1 is represented by a short pulse, and a digital 0 is represented by a long pulse. Thanks to rtl_433, we are able to &lt;a href=&quot;https://triq.org/pdv/#AAB00B0404026000D4019027148055+AAB04B0401026000D401902714929292929292A1A1A192A1929292A19292A1A1A1A19292929292929292929292A19292A1A192A19292A1A1A192A1A1A1A19292A1A19292A1A1A1929292A1A1A19055+AAB00B0404026000D4019027148055+AAB04B0401026000D401902714929292A19292A1A1A192A1929292A19292A1A1A1A19292929292929292929292A19292A1A192A19292A1A1A192A1A1A1A19292A1A19292A1A1A192A192A1A1A19055+AAB00B0404026000D4019027148055+AAB04B0401026000D4019027149292A1929292A1A1A192A1929292A19292A1A1A1A19292929292929292929292A19292A1A192A19292A1A1A192A1A1A1A19292A1A19292A1A1A1A19292A1A1A19355&quot;&gt;visualize the pulsedata&lt;/a&gt; coming from Acurite.
-&lt;img src=&quot;/assets/files/weather/triq.png&quot; alt=&quot;triq.png&quot; class=&quot;centered&quot; /&gt;
-&lt;em&gt;Acurite PWM visualization&lt;/em&gt;
-As shown above on the right side, a bit is read every 612ms.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Note&lt;/em&gt;: There is a margin of error for received pulse data. I set the pulse length to two short pulses equal one long pulse.&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    __
-0: |  |_ : long high pulse (~408ms), short low pulse (~204ms)
-    _
-1: | |__ : short high pulse (~204ms), long low pulse (~408ms)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The acurite protocol definition is in the format: {pulselength, Sync bit, “0” bit, “1” bit, invertedSignal}. Given that each bit is composed of 3 short pulses (204ms * 3 = 612ms):&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;pulselength&lt;/td&gt;
-      &lt;td&gt;204ms&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Off bit&lt;/td&gt;
-      &lt;td&gt;{2,1} #2 high pulses, 1 low pulse&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;On bit&lt;/td&gt;
-      &lt;td&gt;{1,2} #1 high pulse, 2 low pulses&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;sync header&lt;/td&gt;
-      &lt;td&gt;3 high pulses and 3 low pulses x4 (612ms up, 612ms down) x4&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;invertedSignal&lt;/td&gt;
-      &lt;td&gt;false&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;decoding&quot;&gt;Decoding&lt;/h3&gt;
-&lt;p&gt;As mentioned before, 3 near-identical messages are released every 30 seconds. Here is an example message set:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[01] {65} 03 a2 78 00 88 36 d2 ad 00 
-[02] {65} 13 a2 78 00 88 36 d2 bd 00 
-[03] {65} 23 a2 78 00 88 36 d2 cd 00 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Once again, the rtl_433 repository proves invaluable with the Acurite data decoding. The &lt;a href=&quot;https://github.com/merbanan/rtl_433/blob/master/src/devices/acurite.c#L632C1-L695&quot;&gt;acurite.c&lt;/a&gt; that exists in the rtl_433 repository demonstrates the decoding process of an Acurite message.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{65} 03 a2 78 00 88 36 d2 ad 00 
- ^^ sync byte (in buf as item 0)
-     ^^ ^^ ^^ id, seq, status, etc
-              ^^ ^^ wind speed
-                 ^^ ^^ temperature
-                       ^^ humidity
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;receive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;snip&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x3f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;56&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//correct message type&lt;/span&gt;
-      &lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;failure&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp_raw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x0F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x7F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-      &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tempf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;temp_raw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;kt&quot;&gt;uint8_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;humidity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;0x7f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;humidity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;humidity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tempf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tempf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;158&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;failure&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//data sanity&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;snip&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;transmit-la-crosse&quot;&gt;Transmit La Crosse&lt;/h2&gt;
-&lt;p&gt;Now that we have temperature and humidity stored in a variable, it is time to transmit the data to the La Crosse weather station. I emulated the La Crosse TX141TH-Bv2 sensor.&lt;/p&gt;
-
-&lt;p&gt;According to &lt;a href=&quot;https://github.com/merbanan/rtl_433/blob/master/src/devices/lacrosse_tx141x.c#L33-L64&quot;&gt;rtl_433&lt;/a&gt;, “The TX141TH-Bv2 sensor sends 12 of identical packets, one immediately following the other, in a single burst. These 12-packet bursts repeat every 50 seconds.” From the description in &lt;a href=&quot;https://github.com/merbanan/rtl_433/blob/master/src/devices/lacrosse_tx141x.c#L33-L47&quot;&gt;lacrosse_tx141x.c&lt;/a&gt;, we can gather a PWM profile for rc-switch:&lt;/p&gt;
-
-&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;RCSwitch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RCSwitch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;transmit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tempc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;humi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;enableTransmit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//arduino pin #10&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setRepeatTransmit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//disables repeat&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RCSwitch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Protocol&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sync&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;833&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;//833ms apart&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RCSwitch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Protocol&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lacrosse&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;208&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;snip&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;I created a different protocol for the sync header because the preamble is 833ms high and 833ms low repeated 4 times. RCSwitch does not allow repeated sync packets, so I used a different protocol for sync. Following the &lt;a href=&quot;https://github.com/merbanan/rtl_433/blob/master/src/devices/lacrosse_tx141x.c#L58-L64&quot;&gt;La Crosse transmission analysis&lt;/a&gt;, the protocol can be coded as such:&lt;/p&gt;
-&lt;center&gt;
-&lt;code&gt;
-[id] [id] [flags] [temp] [temp] [temp] [humi] [humi] [chk] [chk]
-&lt;/code&gt;
-&lt;/center&gt;
-&lt;center&gt;&lt;p&gt;Every 4 bits of data is enclosed in [ ] for a total of 40 bits.&lt;/p&gt;&lt;/center&gt;
-&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;snip&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setProtocol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1111&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//initial sync of 4x 833us high and low&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setProtocol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lacrosse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mh&quot;&gt;0xFF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;//bogus nonzero ID;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1001&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;//flags: battery 0 (!1), test 0, channel 01&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;temp_raw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//12 bit packet&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;humi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;//8 bit packet&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;11111111&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;//dummy CRC is unchecked&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;snip&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;According to &lt;a href=&quot;https://github.com/merbanan/rtl_433/blob/master/src/devices/lacrosse_tx141x.c#L50-L52&quot;&gt;rtl_433&lt;/a&gt;, “The TX141TH-Bv2 sensor sends 12 of identical packets, one immediately following the other, in a single burst. These 12-packet bursts repeat every 50 seconds”. The final transmission function is shown below:&lt;/p&gt;
-&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;transmit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tempc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;humi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;enableTransmit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//arduino pin #10&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setRepeatTransmit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//disables repeat&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RCSwitch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Protocol&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sync&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;833&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;//833ms apart&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RCSwitch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Protocol&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lacrosse&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;208&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp_raw&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tempc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//converts Celcius to La Crosse 12 bits&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//12 repeated packets&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setProtocol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1111&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//initial sync of 4x 833us high and low&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setProtocol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lacrosse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mh&quot;&gt;0xFF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;//bogus nonzero ID;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1001&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;//flags: battery 0 (!1), test 0, channel 01&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;temp_raw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//12 bit packet&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;humi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;//8 bit packet&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;11111111&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;//dummy CRC is unchecked&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setProtocol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;11&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//post-amble 2x 833us high and low&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;disableTransmit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Ethan Morchy</name></author><category term="writeups" /><category term="rf" /><summary type="html">I used a 433MHz radio receiver and transmitter with an Attiny chip to interface my neighbor's AcuRite weather transmitter with my La Crosse weather display.</summary></entry><entry><title type="html">Markup: Another Post with Images</title><link href="http://localhost:4000/2013/05/22/markup-more-images.html" rel="alternate" type="text/html" title="Markup: Another Post with Images" /><published>2013-05-22T00:00:00-07:00</published><updated>2013-05-22T00:00:00-07:00</updated><id>http://localhost:4000/2013/05/22/markup-more-images</id><content type="html" xml:base="http://localhost:4000/2013/05/22/markup-more-images.html">&lt;p&gt;Here are some examples of what a post with images might look like. If you want to display two or three images next to each other responsively use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;figure&lt;/code&gt; with the appropriate &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class&lt;/code&gt;. Each instance of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;figure&lt;/code&gt; is auto-numbered and displayed in the caption.&lt;/p&gt;
+&lt;/div&gt;</content><author><name>Ethan Morchy</name></author><category term="code" /><category term="syntax highlighting" /><summary type="html">Post displaying the various ways of highlighting code in Markdown.</summary></entry><entry><title type="html">Markup: Another Post with Images</title><link href="http://localhost:4000/2013/05/22/markup-more-images.html" rel="alternate" type="text/html" title="Markup: Another Post with Images" /><published>2013-05-22T00:00:00-07:00</published><updated>2013-05-22T00:00:00-07:00</updated><id>http://localhost:4000/2013/05/22/markup-more-images</id><content type="html" xml:base="http://localhost:4000/2013/05/22/markup-more-images.html">&lt;p&gt;Here are some examples of what a post with images might look like. If you want to display two or three images next to each other responsively use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;figure&lt;/code&gt; with the appropriate &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class&lt;/code&gt;. Each instance of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;figure&lt;/code&gt; is auto-numbered and displayed in the caption.&lt;/p&gt;
 
 &lt;h3 id=&quot;figures-for-images-or-video&quot;&gt;Figures (for images or video)&lt;/h3&gt;
 

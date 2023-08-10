@@ -377,12 +377,6 @@ var store = [{
         "url": "/2013/08/16/markup-syntax-highlighting.html",
         "teaser": "/assets/images/markup-syntax-highlighting-teaser.jpg"
       },{
-        "title": "Weather Station Protocol Forwarding",
-        "excerpt":"Weather Station Protocol Forwarding Weather Station Protocol Forwarding Overview Code Creation Receive Acurite Demodulation Decoding Transmit La Crosse Overview I own a La Crosse weather transmitter and station. Several years ago, my transmitter stopped working. It wasn’t until recently when I began working on another project that I discovered a...","categories": ["writeups"],
-        "tags": ["rf"],
-        "url": "/writeups/2013/08/16/markup-syntax-highlighting.html",
-        "teaser": null
-      },{
         "title": "Welcome to Jekyll!",
         "excerpt":"You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when...","categories": ["Jekyll"],
         "tags": ["update"],
@@ -398,7 +392,13 @@ var store = [{
         "title": "Bar Mitzvah Shield",
         "excerpt":"What is a Bar Mitzvah? A Bar Mitzvah is a Jewish rite of passage where a boy becomes a man in the eyes of Jewish talmudic law. A Bar Mitzvah student leads part of the Saturday morning service, consisting of reading from the holy book (Torah), reciting/singing from scriptures (Haftarah),...","categories": ["projects"],
         "tags": ["engineering, piezo, arduino"],
-        "url": "/projects/2023/08/04/piezo-shield.html",
+        "url": "/projects/2023/02/25/piezo-shield.html",
+        "teaser": null
+      },{
+        "title": "PicoCTF Power Analysis",
+        "excerpt":"PowerAnalysisWarm Description This encryption algorithm leaks a \"bit\" of data every time it does a computation. Use this to figure out the encryption key. Additional details will be available after launching your challenge instance. Precursor What is AES? Advanced Encryption Standard (AES) is a symmetric-key block cipher used in VPNs,...","categories": ["writeups"],
+        "tags": ["cpa,","aes,","side-channel"],
+        "url": "/writeups/2023/03/30/picoctf-poweranalysis.html",
         "teaser": null
       },{
         "title": "Resume",

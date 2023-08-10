@@ -18,6 +18,34 @@ img.centered {
 img[alt=Bit-O-Honey] { width: 15%; margin: auto;}
 img[alt=Shield of Daniel] { width: 50%; margin: auto;}
 img[alt=Fritzing Model] { width: 50%; margin: auto;}
+img[alt=Exposed] { width: 50%; margin: auto;}
+img[alt=Covered] { width: 50%; margin: auto;}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+iframe {
+    display: block;
+    aspect-ratio: 1080/1920;
+    width: 25%;
+    margin: 0 auto;
+}
+.aspect-ratio{
+    position: relative;
+    height: 0;
+    padding-top: 0%;
+}
 </style>
 
 # What is a Bar Mitzvah?
@@ -43,6 +71,7 @@ In a moment of "divine inspiration", I wondered how easy it could be to count ho
 - 1 DC voltage boost converter
 - 1 TM1637 LED digit counter
 - 5 Piezo ceramic wafer plates
+- 1 push-button
 
 I took a deep dive into piezoelectricity several months prior to this project, and I was excited to finally have an applied project for this fascinating phenomenon. I will be using manufactured piezoelectric ceramic wafers instead of quartz crystals, but the piezoelectric process is essentially the same.
 ### Piezoelectricity - Quartz
@@ -57,13 +86,36 @@ Piezoelectricity occurs when physical pressure is converted to an electric charg
 
 The Piezo wafer sensors are connected to the analog ports to provide different feedback for various pressures. I also attached a 100KΩ resistor to each wafer to prevent damage to the Nano. I used whatever large-load resistors were lying around, but I recommend 1MΩ for future projects.
 
-I used [this](https://www.amazon.com/MakerFocus-Discharge-Integrated-Charging-Protection/dp/B07PZT3ZW2/) boost converter in my project because of its battery charging capabilities bundled with a pretty cool battery indicator. I desoldered the "key" button and bridged the connection with a wire to prevent powering off.
+I used [this](https://www.amazon.com/MakerFocus-Discharge-Integrated-Charging-Protection/dp/B07PZT3ZW2/) boost converter in my project because of its battery charging capabilities bundled with a pretty cool battery indicator. I desoldered the "key" button and bridged the connection with the push-button to allow turning on and prevent powering off.
 
 ## Code
 
 This is the first completed project where I used a C++ class in a practical scenario. Although OOP wasn't necessary, it was interesting to complete. You can find the code [here](https://github.com/emorchy/piezo-shield).
 
 ## Images
+<div class="row">
+  <div class="column">
+<div markdown="1">
+![Exposed](/assets/files/bar-mitzvah/unconnected.jpg){:.centered}
+*Sensor Placement*
+</div>
+  </div>
+  <div class="column">
+<div markdown="1">
+![Covered](/assets/files/bar-mitzvah/cardboard.jpg){:.centered}
+*Final Product*
+</div>
+  </div>
+</div>
+
+<div markdown="1">
+<center>
+  <iframe src="/assets/files/bar-mitzvah/livedemo.mp4" allowfullscreen></iframe>
+  <p>
+  <em>Shield Sensors Demo (2 candies thrown simultaneously)</em>
+  </p>
+</center>
+</div>
 
 ## Final Thoughts
 The shield detected a total of 44 candies. My brother got recognition of having the coolest and most well thought out Bar Mitzvah candy blocker in the synagogue. Sure, other children had tennis raquets or fly swatters, but they all cower at the might of Daniel's mighty Shield!
