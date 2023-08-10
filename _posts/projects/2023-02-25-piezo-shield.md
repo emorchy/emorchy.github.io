@@ -118,6 +118,6 @@ This is the first completed project where I used a C++ class in a practical scen
 </div>
 
 ## Final Thoughts
-The shield detected a total of 44 candies. My brother got recognition of having the coolest and most well thought out Bar Mitzvah candy blocker in the synagogue. Sure, other children had tennis raquets or fly swatters, but they all cower at the might of Daniel's mighty Shield!
+The shield detected a total of 44 candies during his service. My brother got recognition of having the coolest and most well thought out Bar Mitzvah candy blocker in the synagogue. Sure, other children had tennis raquets or fly swatters, but they all cower at the might of Daniel's mighty Shield!
 
 Could I have used a better wiring system? Were the wire solder connections exposed? Could I have aesthetically made it much prettier and safer? Yes to all these questions. I had the idea to create an impact-sensor shield with a built in counter a week before the Bar Mitzvah began, and I managed to finish it the night before. I am amazed I could even finish on time, let alone it working as well as it did.
