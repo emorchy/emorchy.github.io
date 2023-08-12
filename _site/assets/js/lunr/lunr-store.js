@@ -384,9 +384,15 @@ var store = [{
         "teaser": "https://farm5.staticflickr.com/4076/4940499208_b79b77fb0a_z.jpg"
       },{
         "title": "Layout: Header Video",
-        "excerpt":"This post should display a header with a responsive video, if the theme supports it. Settings Parameter Required Description id Required ID of the video provider Required Hosting provider of the video, either youtube or vimeo YouTube To embed the following YouTube video at url https://www.youtube.com/watch?v=-PVofD2A9t8 (long version) or https://youtu.be/-PVofD2A9t8...","categories": ["Layout","Uncategorized"],
+        "excerpt":"This post should display a header with a responsive video, if the theme supports it. Settings Parameter Required Description id **Required** ID of the video provider **Required** Hosting provider of the video, either youtube or vimeo YouTube To embed the following YouTube video at url https://www.youtube.com/watch?v=-PVofD2A9t8 (long version) or https://youtu.be/-PVofD2A9t8...","categories": ["Layout","Uncategorized"],
         "tags": ["video","layout"],
         "url": "/layout/uncategorized/2017/01/23/layout-header-video.html",
+        "teaser": null
+      },{
+        "title": "Cryptohack Euler's Totient",
+        "excerpt":"Description RSA relies on the difficulty of the factorisation of the modulus N. If the primes can be found then we can calculate the Euler totient of N and thus decrypt the ciphertext. Given N = p*q and two primes: p = 857504083339712752489993810777 q = 1029224947942998075080348647219 What is the totient...","categories": ["writeups"],
+        "tags": ["rsa,","cryptohack"],
+        "url": "/writeups/2021/03/26/cryptohack.html",
         "teaser": null
       },{
         "title": "Bar Mitzvah Shield",

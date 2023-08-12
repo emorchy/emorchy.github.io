@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-08-10T00:34:04-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ethan’s Blog</title><subtitle>This is the early stages of this site. Until I get a feel for the software and until I make my first project post, this description will remain up.</subtitle><author><name>Ethan Morchy</name></author><entry><title type="html">Companion cube</title><link href="http://localhost:4000/projects/2023/08/06/companion-cube.html" rel="alternate" type="text/html" title="Companion cube" /><published>2023-08-06T00:00:00-07:00</published><updated>2023-08-06T00:00:00-07:00</updated><id>http://localhost:4000/projects/2023/08/06/companion-cube</id><content type="html" xml:base="http://localhost:4000/projects/2023/08/06/companion-cube.html">&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-08-12T01:02:10-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ethan’s Blog</title><subtitle>This is the early stages of this site. Until I get a feel for the software and until I make my first project post, this description will remain up.</subtitle><author><name>Ethan Morchy</name></author><entry><title type="html">Companion cube</title><link href="http://localhost:4000/projects/2023/08/06/companion-cube.html" rel="alternate" type="text/html" title="Companion cube" /><published>2023-08-06T00:00:00-07:00</published><updated>2023-08-06T00:00:00-07:00</updated><id>http://localhost:4000/projects/2023/08/06/companion-cube</id><content type="html" xml:base="http://localhost:4000/projects/2023/08/06/companion-cube.html">&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
 &lt;p&gt;This 3D-printed companion cube from Portal plays one of sixty messages with each press of the button heart.&lt;/p&gt;
 &lt;h2 id=&quot;formal-latex-document&quot;&gt;Formal Latex Document&lt;/h2&gt;
 &lt;ul&gt;
@@ -176,7 +176,7 @@ As shown above on the right side, a bit is read every 612ms.&lt;/p&gt;
   &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;11&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;//post-amble 2x 833us high and low&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;transmitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;disableTransmit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Ethan Morchy</name></author><category term="projects" /><category term="rf" /><summary type="html">I used a 433MHz radio receiver and transmitter with an Attiny chip to interface my neighbor's AcuRite weather transmitter with my La Crosse weather display.</summary></entry><entry><title type="html">Resume</title><link href="http://localhost:4000/projects/2023/08/04/resume.html" rel="alternate" type="text/html" title="Resume" /><published>2023-08-04T00:00:00-07:00</published><updated>2023-08-04T00:00:00-07:00</updated><id>http://localhost:4000/projects/2023/08/04/resume</id><content type="html" xml:base="http://localhost:4000/projects/2023/08/04/resume.html">&lt;h1 id=&quot;this-is-the-post-for-the-resume&quot;&gt;This is the post for the resume&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Ethan Morchy</name></author><category term="projects" /><category term="rf" /><summary type="html"></summary></entry><entry><title type="html">Resume</title><link href="http://localhost:4000/projects/2023/08/04/resume.html" rel="alternate" type="text/html" title="Resume" /><published>2023-08-04T00:00:00-07:00</published><updated>2023-08-04T00:00:00-07:00</updated><id>http://localhost:4000/projects/2023/08/04/resume</id><content type="html" xml:base="http://localhost:4000/projects/2023/08/04/resume.html">&lt;h1 id=&quot;this-is-the-post-for-the-resume&quot;&gt;This is the post for the resume&lt;/h1&gt;
 &lt;h2 id=&quot;formal-latex-document&quot;&gt;Formal Latex Document&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Learned LaTeX&lt;/li&gt;
@@ -472,9 +472,89 @@ iframe {
 &lt;/div&gt;
 
 &lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h2&gt;
-&lt;p&gt;The shield detected a total of 44 candies. My brother got recognition of having the coolest and most well thought out Bar Mitzvah candy blocker in the synagogue. Sure, other children had tennis raquets or fly swatters, but they all cower at the might of Daniel’s mighty Shield!&lt;/p&gt;
+&lt;p&gt;The shield detected a total of 44 candies during his service. My brother got recognition of having the coolest and most well thought out Bar Mitzvah candy blocker in the synagogue. Sure, other children had tennis raquets or fly swatters, but they all cower at the might of Daniel’s mighty Shield!&lt;/p&gt;
 
-&lt;p&gt;Could I have used a better wiring system? Were the wire solder connections exposed? Could I have aesthetically made it much prettier and safer? Yes to all these questions. I had the idea to create an impact-sensor shield with a built in counter a week before the Bar Mitzvah began, and I managed to finish it the night before. I am amazed I could even finish on time, let alone it working as well as it did.&lt;/p&gt;</content><author><name>Ethan Morchy</name></author><category term="projects" /><category term="engineering, piezo, arduino" /><summary type="html">An impact sensor array for my brother's shield to count deflected candy at his Bar Mitzvah.</summary></entry><entry><title type="html">Exclude Post from Search Index</title><link href="http://localhost:4000/jekyll/2017/11/28/post-exclude-search.html" rel="alternate" type="text/html" title="Exclude Post from Search Index" /><published>2017-11-28T00:00:00-08:00</published><updated>2018-02-19T05:05:34-08:00</updated><id>http://localhost:4000/jekyll/2017/11/28/post-exclude-search</id><content type="html" xml:base="http://localhost:4000/jekyll/2017/11/28/post-exclude-search.html">&lt;p&gt;This post should not appear in the search index because it has the following YAML Front Matter:&lt;/p&gt;
+&lt;p&gt;Could I have used a better wiring system? Were the wire solder connections exposed? Could I have aesthetically made it much prettier and safer? Yes to all these questions. I had the idea to create an impact-sensor shield with a built in counter a week before the Bar Mitzvah began, and I managed to finish it the night before. I am amazed I could even finish on time, let alone it working as well as it did.&lt;/p&gt;</content><author><name>Ethan Morchy</name></author><category term="projects" /><category term="engineering, piezo, arduino" /><summary type="html">An impact sensor array for my brother's shield to count deflected candy at his Bar Mitzvah.</summary></entry><entry><title type="html">Cryptohack Euler’s Totient</title><link href="http://localhost:4000/writeups/2021/03/26/cryptohack.html" rel="alternate" type="text/html" title="Cryptohack Euler’s Totient" /><published>2021-03-26T00:00:00-07:00</published><updated>2021-03-26T00:00:00-07:00</updated><id>http://localhost:4000/writeups/2021/03/26/cryptohack</id><content type="html" xml:base="http://localhost:4000/writeups/2021/03/26/cryptohack.html">&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+&lt;/script&gt;
+
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+
+&lt;details&gt;
+&lt;summary&gt;Description&lt;/summary&gt;
+RSA relies on the difficulty of the factorisation of the modulus N. If the primes can be found then we can calculate the Euler totient of N and thus decrypt the ciphertext.
+
+Given N = p*q and two primes:
+
+p = 857504083339712752489993810777
+
+q = 1029224947942998075080348647219
+
+What is the totient of N?
+&lt;/details&gt;
+
+&lt;h1 id=&quot;solution&quot;&gt;Solution&lt;/h1&gt;
+&lt;p&gt;p = 857504083339712752489993810777
+q = 1029224947942998075080348647219
+N = (p-1)*(q-1)&lt;/p&gt;
+
+&lt;p&gt;#882564595536224140639625987657529300394956519977044270821168&lt;/p&gt;
+&lt;h1 id=&quot;extended-mathematics&quot;&gt;Extended Mathematics&lt;/h1&gt;
+&lt;p&gt;$$de - y(\phi(n)) \equiv 1 \pmod{\phi(n)}$$&lt;/p&gt;
+
+&lt;p&gt;$882564595536224140639625987657529300394956519977044270821168 = 13466661512370479891353372715527553906876367852923451955*65537 + 46333$&lt;/p&gt;
+
+&lt;p&gt;$65537 = 1*46333 + 19204$&lt;/p&gt;
+
+&lt;p&gt;$46333 = 2*19204 + 7925$&lt;/p&gt;
+
+&lt;p&gt;$19204 = 2*7925 + 3354$&lt;/p&gt;
+
+&lt;p&gt;$7925 = 2*3354 + 1217$&lt;/p&gt;
+
+&lt;p&gt;$3354 = 2*1217 + 920$&lt;/p&gt;
+
+&lt;p&gt;$1217 + 1*920 + 297$&lt;/p&gt;
+
+&lt;p&gt;$920 = 3*297 + 29$&lt;/p&gt;
+
+&lt;p&gt;$297 = 10*29 + 7$&lt;/p&gt;
+
+&lt;p&gt;$29 = 4*7 + 1$ (GCD: 1)&lt;/p&gt;
+
+&lt;p&gt;$1 = 29 - 4*7$&lt;/p&gt;
+
+&lt;p&gt;$= 29 - 4*(297 - 10*29) = 41*29 - 4*297$&lt;/p&gt;
+
+&lt;p&gt;$= 41(920-3*297) - 4*297 = 41*920 - 127*297$&lt;/p&gt;
+
+&lt;p&gt;$= 41*920 - 127(1217 - 1*920) = 168*920 - 127*1217$&lt;/p&gt;
+
+&lt;p&gt;$= 168(3354 - 2*1217) - 127*1217 = 168*3354 - 463*1217$&lt;/p&gt;
+
+&lt;p&gt;$= 168*3354 - 463(7925 - 2*3354) = 1094*3354 - 463*7925$&lt;/p&gt;
+
+&lt;p&gt;$= 1094*(19204 - 2*7925) - 463*7925 = 1094*19204 - 2651*7925$&lt;/p&gt;
+
+&lt;p&gt;$= 1094*19204 - 2651*(46333 - 2*19204) = 6396*19204 - 2651*46333$&lt;/p&gt;
+
+&lt;p&gt;$= 6396*(65537 - 1*46333) - 2651*46333 = 6396*65537 - 9047*46333$&lt;/p&gt;
+
+&lt;p&gt;$= 6396*65537 - 9047*(882564595536224140639625987657529300394956519977044270821168 - 121832886702415731577073962957377780195510499965398469843281*65537) = *65537 - 9047*882564595536224140639625987657529300394956519977044270821168$&lt;/p&gt;
+
+&lt;p&gt;$1 = 121832886702415731577073962957377780195510499965398469843281*65537 - 9047*882564595536224140639625987657529300394956519977044270821168$&lt;/p&gt;
+
+&lt;p&gt;$$d = 121832886702415731577073962957377780195510499965398469843281$$&lt;/p&gt;
+
+&lt;h1 id=&quot;verification&quot;&gt;Verification&lt;/h1&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1 == 121832886702415731577073962957377780195510499965398469843281*65537 - 9047*882564595536224140639625987657529300394956519977044270821168
+#True
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Ethan Morchy</name></author><category term="writeups" /><category term="rsa," /><category term="cryptohack" /><summary type="html"></summary></entry><entry><title type="html">Exclude Post from Search Index</title><link href="http://localhost:4000/jekyll/2017/11/28/post-exclude-search.html" rel="alternate" type="text/html" title="Exclude Post from Search Index" /><published>2017-11-28T00:00:00-08:00</published><updated>2018-02-19T05:05:34-08:00</updated><id>http://localhost:4000/jekyll/2017/11/28/post-exclude-search</id><content type="html" xml:base="http://localhost:4000/jekyll/2017/11/28/post-exclude-search.html">&lt;p&gt;This post should not appear in the search index because it has the following YAML Front Matter:&lt;/p&gt;
 
 &lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;false&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -506,12 +586,12 @@ iframe {
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;Required&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;**Required**&lt;/td&gt;
       &lt;td&gt;ID of the video&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;provider&lt;/code&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;Required&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;**Required**&lt;/td&gt;
       &lt;td&gt;Hosting provider of the video, either &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;youtube&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vimeo&lt;/code&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
@@ -719,55 +799,4 @@ iframe {
       &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Syntax_highlighting&quot;&gt;http://en.wikipedia.org/wiki/Syntax_highlighting&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Ethan Morchy</name></author><category term="code" /><category term="syntax highlighting" /><summary type="html">Post displaying the various ways of highlighting code in Markdown.</summary></entry><entry><title type="html">Markup: Another Post with Images</title><link href="http://localhost:4000/2013/05/22/markup-more-images.html" rel="alternate" type="text/html" title="Markup: Another Post with Images" /><published>2013-05-22T00:00:00-07:00</published><updated>2013-05-22T00:00:00-07:00</updated><id>http://localhost:4000/2013/05/22/markup-more-images</id><content type="html" xml:base="http://localhost:4000/2013/05/22/markup-more-images.html">&lt;p&gt;Here are some examples of what a post with images might look like. If you want to display two or three images next to each other responsively use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;figure&lt;/code&gt; with the appropriate &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class&lt;/code&gt;. Each instance of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;figure&lt;/code&gt; is auto-numbered and displayed in the caption.&lt;/p&gt;
-
-&lt;h3 id=&quot;figures-for-images-or-video&quot;&gt;Figures (for images or video)&lt;/h3&gt;
-
-&lt;h4 id=&quot;one-up&quot;&gt;One Up&lt;/h4&gt;
-
-&lt;figure&gt;
-	&lt;a href=&quot;http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg&quot;&gt;&lt;img src=&quot;http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg&quot; /&gt;&lt;/a&gt;
-	&lt;figcaption&gt;&lt;a href=&quot;http://www.flickr.com/photos/80901381@N04/7758832526/&quot; title=&quot;Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr&quot;&gt;Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr&lt;/a&gt;.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Vero laborum commodo occupy. Semiotics voluptate mumblecore pug. Cosby sweater ullamco quinoa ennui assumenda, sapiente occupy delectus lo-fi. Ea fashion axe Marfa cillum aliquip. Retro Bushwick keytar cliche. Before they sold out sustainable gastropub Marfa readymade, ethical Williamsburg skateboard brunch qui consectetur gentrify semiotics. Mustache cillum irony, fingerstache magna pour-over keffiyeh tousled selfies.&lt;/p&gt;
-
-&lt;h4 id=&quot;two-up&quot;&gt;Two Up&lt;/h4&gt;
-
-&lt;p&gt;Apply the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;half&lt;/code&gt; class like so to display two images side by side that share the same caption.&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;figure&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;half&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/images/image-filename-1-large.jpg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/images/image-filename-1.jpg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/images/image-filename-2-large.jpg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/images/image-filename-2.jpg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;figcaption&amp;gt;&lt;/span&gt;Caption describing these two images.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figcaption&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figure&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;And you’ll get something that looks like this:&lt;/p&gt;
-
-&lt;figure class=&quot;half&quot;&gt;
-	&lt;a href=&quot;http://placehold.it/1200x600.JPG&quot;&gt;&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; /&gt;&lt;/a&gt;
-	&lt;a href=&quot;http://placehold.it/1200x600.jpeg&quot;&gt;&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; /&gt;&lt;/a&gt;
-	&lt;figcaption&gt;Two images.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h4 id=&quot;three-up&quot;&gt;Three Up&lt;/h4&gt;
-
-&lt;p&gt;Apply the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;third&lt;/code&gt; class like so to display three images side by side that share the same caption.&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;figure&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;third&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/images/image-filename-1.jpg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/images/image-filename-2.jpg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/images/image-filename-3.jpg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;&amp;lt;figcaption&amp;gt;&lt;/span&gt;Caption describing these three images.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figcaption&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figure&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;And you’ll get something that looks like this:&lt;/p&gt;
-
-&lt;figure class=&quot;third&quot;&gt;
-	&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; /&gt;
-	&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; /&gt;
-	&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; /&gt;
-	&lt;figcaption&gt;Three images.&lt;/figcaption&gt;
-&lt;/figure&gt;</content><author><name>Ethan Morchy</name></author><category term="sample post" /><category term="images" /><category term="test" /><summary type="html">Examples and code for displaying images in posts.</summary></entry></feed>
+&lt;/div&gt;</content><author><name>Ethan Morchy</name></author><category term="code" /><category term="syntax highlighting" /><summary type="html">Post displaying the various ways of highlighting code in Markdown.</summary></entry></feed>

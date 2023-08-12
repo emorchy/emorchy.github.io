@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Weather Station Protocol Forwarding - Ethan’s Blog</title>
@@ -112,15 +112,20 @@
           Ethan's Blog
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
+        <ul class="visible-links">
+<li class="masthead__menu-item">
               <a href="/resume/">Resume</a>
-            </li><li class="masthead__menu-item">
+            </li>
+<li class="masthead__menu-item">
               <a href="/writeups/">Writeups</a>
-            </li><li class="masthead__menu-item">
+            </li>
+<li class="masthead__menu-item">
               <a href="/projects/">Projects</a>
-            </li><li class="masthead__menu-item">
+            </li>
+<li class="masthead__menu-item">
               <a href="/sitemap/">Sitemap</a>
-            </li></ul>
+            </li>
+</ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">Toggle menu</span>
@@ -284,8 +289,22 @@
         
           <aside class="sidebar__right ">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Contents</h4></header>
-              <ul class="toc__menu"><li><a href="#overview">Overview</a></li><li><a href="#code-creation">Code Creation</a><ul><li><a href="#receive-acurite">Receive Acurite</a><ul><li><a href="#demodulation">Demodulation</a></li><li><a href="#decoding">Decoding</a></li></ul></li><li><a href="#transmit-la-crosse">Transmit La Crosse</a></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> Contents</h4></header>
+              <ul class="toc__menu">
+<li><a href="#overview">Overview</a></li>
+<li>
+<a href="#code-creation">Code Creation</a><ul>
+<li>
+<a href="#receive-acurite">Receive Acurite</a><ul>
+<li><a href="#demodulation">Demodulation</a></li>
+<li><a href="#decoding">Decoding</a></li>
+</ul>
+</li>
+<li><a href="#transmit-la-crosse">Transmit La Crosse</a></li>
+</ul>
+</li>
+</ul>
             </nav>
           </aside>
         
@@ -307,12 +326,12 @@ img.centered {
 <p>I own a La Crosse weather transmitter and station. Several years ago, my transmitter stopped working. It wasn’t until recently when I began working on <a href="/2023/08/04/TPMS.html">another project</a> that I discovered a wireless weather transmission coming from nearby.
 I used a 433MHz radio receiver and transmitter with an Attiny chip to interface my neighbor’s AcuRite weather transmitter with my La Crosse weather display.</p>
 
-<p><img src="/assets/files/weather/lacrosse.webp" alt="lacrosse.webp" class="centered" />
+<p><img src="/assets/files/weather/lacrosse.webp" alt="lacrosse.webp" class="centered">
 <em>La Crosse Weather Sensor and Station</em></p>
 <h1 id="code-creation">Code Creation</h1>
 <h2 id="receive-acurite">Receive Acurite</h2>
 <p>Using a RTL-SDR with the “rtl_433” program, I was able to see that someone owned a weather station in the general vicinity.
-<img src="/assets/files/weather/rtl.png" alt="rtl.png" class="centered" />
+<img src="/assets/files/weather/rtl.png" alt="rtl.png" class="centered">
 <em>rtl_433 output</em></p>
 
 <p>From the output, my neighbor owns an AcuRite 5-in-1 weather sensor. This device transmits temperature, humidity, wind speed, wind direction, and rainfall on the 433MHz frequency. Every 30 seconds, an AcuRite transmitter will send 3 identical messages (not including the sequence number). An AcuRite weather station (usually some sort of display) will demodulate and process the received data into a handy human-readable display.</p>
@@ -335,7 +354,7 @@ I used a 433MHz radio receiver and transmitter with an Attiny chip to interface 
 <span class="o">---</span><span class="n">snip</span><span class="o">---</span></code></pre></figure>
 
 <p>The <code class="language-plaintext highlighter-rouge">receive()</code> function first enables the receiver on pin #2. In order to differentiate an AcuRite transmission from random noise, the protocol uses <a href="https://en.wikipedia.org/wiki/Pulse-width_modulation#Telecommunications">Pulse Width Modulation</a>. As a quick AcuRite PWM crash course, data is read one bit every clock cycle. In each cycle, a digital 1 is represented by a short pulse, and a digital 0 is represented by a long pulse. Thanks to rtl_433, we are able to <a href="https://triq.org/pdv/#AAB00B0404026000D4019027148055+AAB04B0401026000D401902714929292929292A1A1A192A1929292A19292A1A1A1A19292929292929292929292A19292A1A192A19292A1A1A192A1A1A1A19292A1A19292A1A1A1929292A1A1A19055+AAB00B0404026000D4019027148055+AAB04B0401026000D401902714929292A19292A1A1A192A1929292A19292A1A1A1A19292929292929292929292A19292A1A192A19292A1A1A192A1A1A1A19292A1A19292A1A1A192A192A1A1A19055+AAB00B0404026000D4019027148055+AAB04B0401026000D4019027149292A1929292A1A1A192A1929292A19292A1A1A1A19292929292929292929292A19292A1A192A19292A1A1A192A1A1A1A19292A1A19292A1A1A1A19292A1A1A19355">visualize the pulsedata</a> coming from Acurite.
-<img src="/assets/files/weather/triq.png" alt="triq.png" class="centered" />
+<img src="/assets/files/weather/triq.png" alt="triq.png" class="centered">
 <em>Acurite PWM visualization</em>
 As shown above on the right side, a bit is read every 612ms.</p>
 
@@ -686,7 +705,7 @@ Formal Latex Document
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2023 Ethan's Blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2023 Ethan's Blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

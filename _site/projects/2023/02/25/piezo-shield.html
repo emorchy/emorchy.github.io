@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Bar Mitzvah Shield - Ethan’s Blog</title>
@@ -112,15 +112,20 @@
           Ethan's Blog
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
+        <ul class="visible-links">
+<li class="masthead__menu-item">
               <a href="/resume/">Resume</a>
-            </li><li class="masthead__menu-item">
+            </li>
+<li class="masthead__menu-item">
               <a href="/writeups/">Writeups</a>
-            </li><li class="masthead__menu-item">
+            </li>
+<li class="masthead__menu-item">
               <a href="/projects/">Projects</a>
-            </li><li class="masthead__menu-item">
+            </li>
+<li class="masthead__menu-item">
               <a href="/sitemap/">Sitemap</a>
-            </li></ul>
+            </li>
+</ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">Toggle menu</span>
@@ -284,8 +289,22 @@
         
           <aside class="sidebar__right ">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Contents</h4></header>
-              <ul class="toc__menu"><li><a href="#what-is-a-bar-mitzvah">What is a Bar Mitzvah?</a></li><li><a href="#shield-of-daniel">Shield of Daniel</a><ul><li><a href="#engineering-parts">Engineering Parts</a><ul><li><a href="#piezoelectricity---quartz">Piezoelectricity - Quartz</a></li></ul></li><li><a href="#physical-routing">Physical Routing</a></li><li><a href="#code">Code</a></li><li><a href="#images">Images</a></li><li><a href="#final-thoughts">Final Thoughts</a></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> Contents</h4></header>
+              <ul class="toc__menu">
+<li><a href="#what-is-a-bar-mitzvah">What is a Bar Mitzvah?</a></li>
+<li>
+<a href="#shield-of-daniel">Shield of Daniel</a><ul>
+<li>
+<a href="#engineering-parts">Engineering Parts</a><ul><li><a href="#piezoelectricity---quartz">Piezoelectricity - Quartz</a></li></ul>
+</li>
+<li><a href="#physical-routing">Physical Routing</a></li>
+<li><a href="#code">Code</a></li>
+<li><a href="#images">Images</a></li>
+<li><a href="#final-thoughts">Final Thoughts</a></li>
+</ul>
+</li>
+</ul>
             </nav>
           </aside>
         
@@ -338,13 +357,15 @@ iframe {
 
 <p>I completed my Bar Mitzvah in my <a href="https://www.myjewishlearning.com/article/conservative-judaism-how-the-middle-became-a-movement/">conservative</a> synagogue at the age of 13 (conservative being a semi-strict Jewish branch, not an economic ideology). As the eldest child, I set the standard for my siblings to go above and beyond with extra prayers during the Bar Mitzvah service. Per custom, the congregation threw candy at me after I finished a 10 minute chanting of a Hebrew scripture. As a personal form of amusement, I wore a riot helmet as I was pelted with Bit-O-Honey.</p>
 
-<p><img src="/assets/files/bar-mitzvah/bit-o-honey.png" alt="Bit-O-Honey" class="centered" /></p>
-<center><em>If God made a candy even</em> he <em>couldn't break.</em></center>
+<p><img src="/assets/files/bar-mitzvah/bit-o-honey.png" alt="Bit-O-Honey" class="centered"></p>
+<center>
+<em>If God made a candy even</em> he <em>couldn't break.</em>
+</center>
 
 <h1 id="shield-of-daniel">Shield of Daniel</h1>
 <p>When my brother Daniel’s Bar Mitzvah rolled around several years later, he wanted something above and beyond as well. To block the candy, he crafted a wooden shield with a Jewish Star in the center. The humor is not lost on Hebrew-speaking people when the Jewish Star (known as the “Shield of David”) is superglued on a shield for a child’s Bar Mitzvah.</p>
 
-<p><img src="/assets/files/bar-mitzvah/shield-of-daniel.jpeg" alt="Shield of Daniel" class="centered" />
+<p><img src="/assets/files/bar-mitzvah/shield-of-daniel.jpeg" alt="Shield of Daniel" class="centered">
 <em>Shield of Daniel</em></p>
 
 <p>In a moment of “divine inspiration”, I wondered how easy it could be to count how many candies were deflected by the shield.</p>
@@ -364,12 +385,12 @@ iframe {
 <h3 id="piezoelectricity---quartz">Piezoelectricity - Quartz</h3>
 <p>Piezoelectricity occurs when physical pressure is converted to an electric charge. Quartz is a beautiful example of piezoelecricity: when a precisely angled cut of quartz is struck, it releases voltage. One interesting quality of quartz is that every time it is struck with the same force, it releases the same voltage every time. This is why quartz is used in elecronic oscillators, clocks, and watches.</p>
 
-<p><img src="/assets/files/bar-mitzvah/silicon-dioxide.gif" alt="Silicon Dioxide" class="centered" />
+<p><img src="/assets/files/bar-mitzvah/silicon-dioxide.gif" alt="Silicon Dioxide" class="centered">
 <em>This is how silicon dioxide materials (e.g quartz) create DC voltage with pressure</em></p>
 
 <h2 id="physical-routing">Physical Routing</h2>
 
-<p><img src="/assets/files/bar-mitzvah/shield-bb.jpg" alt="Fritzing Model" class="centered" /></p>
+<p><img src="/assets/files/bar-mitzvah/shield-bb.jpg" alt="Fritzing Model" class="centered"></p>
 
 <p>The Piezo wafer sensors are connected to the analog ports to provide different feedback for various pressures. I also attached a 100KΩ resistor to each wafer to prevent damage to the Nano. I used whatever large-load resistors were lying around, but I recommend 1MΩ for future projects.</p>
 
@@ -383,13 +404,13 @@ iframe {
 <div class="row">
   <div class="column">
 <div>
-      <p><img src="/assets/files/bar-mitzvah/unconnected.jpg" alt="Exposed" class="centered" />
+      <p><img src="/assets/files/bar-mitzvah/unconnected.jpg" alt="Exposed" class="centered">
 <em>Sensor Placement</em></p>
     </div>
   </div>
   <div class="column">
 <div>
-      <p><img src="/assets/files/bar-mitzvah/cardboard.jpg" alt="Covered" class="centered" />
+      <p><img src="/assets/files/bar-mitzvah/cardboard.jpg" alt="Covered" class="centered">
 <em>Final Product</em></p>
     </div>
   </div>
@@ -405,7 +426,7 @@ iframe {
 </div>
 
 <h2 id="final-thoughts">Final Thoughts</h2>
-<p>The shield detected a total of 44 candies. My brother got recognition of having the coolest and most well thought out Bar Mitzvah candy blocker in the synagogue. Sure, other children had tennis raquets or fly swatters, but they all cower at the might of Daniel’s mighty Shield!</p>
+<p>The shield detected a total of 44 candies during his service. My brother got recognition of having the coolest and most well thought out Bar Mitzvah candy blocker in the synagogue. Sure, other children had tennis raquets or fly swatters, but they all cower at the might of Daniel’s mighty Shield!</p>
 
 <p>Could I have used a better wiring system? Were the wire solder connections exposed? Could I have aesthetically made it much prettier and safer? Yes to all these questions. I had the idea to create an impact-sensor shield with a built in counter a week before the Bar Mitzvah began, and I managed to finish it the night before. I am amazed I could even finish on time, let alone it working as well as it did.</p>
 
@@ -428,7 +449,7 @@ iframe {
       
   <nav class="pagination">
     
-      <a href="/jekyll/2017/11/28/post-exclude-search.html" class="pagination--pager" title="Exclude Post from Search Index
+      <a href="/writeups/2021/03/26/cryptohack.html" class="pagination--pager" title="Cryptohack Euler’s Totient
 ">Previous</a>
     
     
@@ -638,7 +659,7 @@ Formal Latex Document
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2023 Ethan's Blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2023 Ethan's Blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

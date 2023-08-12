@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>PicoCTF Power Analysis - Ethan’s Blog</title>
@@ -112,15 +112,20 @@
           Ethan's Blog
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
+        <ul class="visible-links">
+<li class="masthead__menu-item">
               <a href="/resume/">Resume</a>
-            </li><li class="masthead__menu-item">
+            </li>
+<li class="masthead__menu-item">
               <a href="/writeups/">Writeups</a>
-            </li><li class="masthead__menu-item">
+            </li>
+<li class="masthead__menu-item">
               <a href="/projects/">Projects</a>
-            </li><li class="masthead__menu-item">
+            </li>
+<li class="masthead__menu-item">
               <a href="/sitemap/">Sitemap</a>
-            </li></ul>
+            </li>
+</ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">Toggle menu</span>
@@ -284,15 +289,36 @@
         
           <aside class="sidebar__right ">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Contents</h4></header>
-              <ul class="toc__menu"><li><a href="#poweranalysiswarm">PowerAnalysisWarm</a><ul><li><a href="#precursor">Precursor</a><ul><li><a href="#what-is-aes">What is AES?</a></li><li><a href="#why-aes">Why AES?</a></li><li><a href="#how-aes">How AES?</a><ul><li><a href="#xor">XOR</a></li><li><a href="#sub-bytes">Sub-bytes</a></li></ul></li><li><a href="#where-aes">Where AES?</a></li></ul></li><li><a href="#theory">Theory</a></li><li><a href="#isolating-the-lsbs">Isolating the LSBs</a></li><li><a href="#solving">Solving</a></li><li><a href="#final-thoughts">Final Thoughts</a></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> Contents</h4></header>
+              <ul class="toc__menu"><li>
+<a href="#poweranalysiswarm">PowerAnalysisWarm</a><ul>
+<li>
+<a href="#precursor">Precursor</a><ul>
+<li><a href="#what-is-aes">What is AES?</a></li>
+<li><a href="#why-aes">Why AES?</a></li>
+<li>
+<a href="#how-aes">How AES?</a><ul>
+<li><a href="#xor">XOR</a></li>
+<li><a href="#sub-bytes">Sub-bytes</a></li>
+</ul>
+</li>
+<li><a href="#where-aes">Where AES?</a></li>
+</ul>
+</li>
+<li><a href="#theory">Theory</a></li>
+<li><a href="#isolating-the-lsbs">Isolating the LSBs</a></li>
+<li><a href="#solving">Solving</a></li>
+<li><a href="#final-thoughts">Final Thoughts</a></li>
+</ul>
+</li></ul>
             </nav>
           </aside>
         
         <h1 id="poweranalysiswarm">PowerAnalysisWarm</h1>
 <details>
 <summary>Description</summary>
-<br />
+<br>
 This encryption algorithm leaks a "bit" of data every time it does a computation. Use this to figure out the encryption key.
 
 Additional details will be available after launching your challenge instance.
@@ -312,7 +338,7 @@ Additional details will be available after launching your challenge instance.
 
 <p>Plaintext: “Are belong to us”</p>
 
-<p><img src="/assets/files/picoctf/aes.png" alt="AES" /></p>
+<p><img src="/assets/files/picoctf/aes.png" alt="AES"></p>
 <h4 id="xor">XOR</h4>
 <p>Alice first converts the key and the plaintext to hex:</p>
 
@@ -320,21 +346,21 @@ Additional details will be available after launching your challenge instance.
 
 <p>Plaintext: 4172652062656c6f6e6720746f207573</p>
 
-<p><br />
+<p><br>
 She then begins by XORing the plaintext and the key.</p>
 
 <p>Ex. First byte: 0x4d XOR 0x41 = 0x0c</p>
 
 <p>Second byte: 0x79 XOR 0x72 = 0x0b
-  <br />
-  <br />
+  <br>
+  <br>
 Key XOR Plaintext = 0c0b455010000f060112535404450c52</p>
 <h4 id="sub-bytes">Sub-bytes</h4>
 <p>Next, Alice takes each byte in the XORed result and matches it with a substitution box (S-box). Because the first byte of the XORed value is 0x0c, Alice indexes the 13th value in the S-box and substitutes it for 0x0c.</p>
 
 <p>Luckily, the AES S-box is a standard lookup table originating from the <a href="https://en.wikipedia.org/wiki/Rijndael_S-box">Rijndael S-box</a>.</p>
 
-<p><img src="/assets/files/picoctf/sbox.png" alt="S-box" /></p>
+<p><img src="/assets/files/picoctf/sbox.png" alt="S-box"></p>
 
 <p>The left column indexes with first half byte and the top row indexes using the last half byte of the input.</p>
 
@@ -364,7 +390,7 @@ Key XOR Plaintext = 0c0b455010000f060112535404450c52</p>
 <h2 id="theory">Theory</h2>
 <p>We are dealing with a <a href="https://en.wikipedia.org/wiki/Side-channel_attack">side channel attack</a>. The least significant bit of each byte is calculated and the total is leaked to the user.</p>
 
-<p><img src="/assets/files/picoctf/algo.png" alt="algorithm" /></p>
+<p><img src="/assets/files/picoctf/algo.png" alt="algorithm"></p>
 
 <p>View example on <a href="https://github.com/emorchy/PicoCTF2023-PowerAnalysis/blob/main/README.md#Theory">my github repo</a>.</p>
 
@@ -398,7 +424,7 @@ For the first byte of the payload, increment value until it returns a bit leakag
 Repeat for each byte while prepending the bytes from the previous result to craft a “zero payload”.
 Thus, when we submit the “zero payload”, the bit leakage will always be 0.</p>
 
-<p><img src="/assets/files/picoctf/zero.png" alt="zeropayload" /></p>
+<p><img src="/assets/files/picoctf/zero.png" alt="zeropayload"></p>
 
 <h2 id="solving">Solving</h2>
 <p>Now, we solve!</p>
@@ -426,11 +452,11 @@ Thus, when we submit the “zero payload”, the bit leakage will always be 0.</
 
 <p>By curating a list of returned LSBs, it is possible to brute force the key byte by byte.</p>
 
-<p><img src="/assets/files/picoctf/onebyte.png" alt="onebyte" /></p>
+<p><img src="/assets/files/picoctf/onebyte.png" alt="onebyte"></p>
 
 <p>As the payload byte increments, XORing with the static key changes its value, returning different Sbox numbers. Therefore, the list of leaked Sbox LSBs matches the Sbox LSBs of a given key byte XORed with the incremented payload byte.</p>
 
-<p><img src="/assets/files/picoctf/bytesolve.png" alt="bytesolve" /></p>
+<p><img src="/assets/files/picoctf/bytesolve.png" alt="bytesolve"></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mh">0xff</span><span class="p">):</span> <span class="c1">#tests all possible bytes
 </span>    <span class="n">testleak</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">size</span>
@@ -446,7 +472,7 @@ Thus, when we submit the “zero payload”, the bit leakage will always be 0.</
 
 <p>For the python solution code, see “power.py”.</p>
 
-<p><a href="https://asciinema.org/a/SyBN8KQjmwGWnoWazw0GeCZEH?speed=2&amp;autoplay=1"><img src="https://asciinema.org/a/SyBN8KQjmwGWnoWazw0GeCZEH.png" alt="asciinema" /></a></p>
+<p><a href="https://asciinema.org/a/SyBN8KQjmwGWnoWazw0GeCZEH?speed=2&autoplay=1"><img src="https://asciinema.org/a/SyBN8KQjmwGWnoWazw0GeCZEH.png" alt="asciinema"></a></p>
 
 <h2 id="final-thoughts">Final Thoughts</h2>
 <p>Overall, this was a fun challenge and a fantastic introduction to side-channel attacks. After several hours of scripting, the key is produced in 90 seconds. I love scripting.</p>
@@ -456,7 +482,7 @@ Thus, when we submit the “zero payload”, the bit leakage will always be 0.</
 <p>My prior experience with <a href="https://www.cryptopals.com/">CryptoPals</a> helped me the most with solving this challenge.</p>
 
 <details><summary>Author's Note</summary>
-<br />
+<br>
 Use the variable `SILENT=1` with `python3 power.py` to witness the beauty of the password oracle.
 </details>
 
@@ -689,7 +715,7 @@ Formal Latex Document
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2023 Ethan's Blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2023 Ethan's Blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

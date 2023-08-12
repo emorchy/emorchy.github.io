@@ -1,67 +1,54 @@
 ---
-title: "Splash Page"
-layout: splash
-permalink: /splash-page/
-date: 2016-03-23T11:48:41-04:00
+title: "Home Page"
+layout: single
+permalink: /123/
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/unsplash-image-1.jpg
+  overlay_image: /assets/images/wallpaper.jpg
   actions:
-    - label: "Learn More"
-      url: "/terms/"
-  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
-excerpt: "Bacon ipsum dolor sit amet salami ham hock ham, hamburger corned beef short ribs kielbasa biltong t-bone drumstick tri-tip tail sirloin pork chop."
-intro: 
-  - excerpt: 'Nullam suscipit et nam, tellus velit pellentesque at malesuada, enim eaque. Quis nulla, netus tempor in diam gravida tincidunt, *proin faucibus* voluptate felis id sollicitudin. Centered with `type="center"`'
-feature_row:
-  - image_path: assets/images/unsplash-gallery-image-1-th.jpg
-    image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
-    alt: "placeholder image 1"
-    title: "Placeholder 1"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    alt: "placeholder image 2"
-    title: "Placeholder 2"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
-  - image_path: /assets/images/unsplash-gallery-image-3-th.jpg
-    title: "Placeholder 3"
-    excerpt: "This is some sample content that goes here with **Markdown** formatting."
-feature_row2:
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    alt: "placeholder image 2"
-    title: "Placeholder Image Left Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Left aligned with `type="left"`'
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
-feature_row3:
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    alt: "placeholder image 2"
-    title: "Placeholder Image Right Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Right aligned with `type="right"`'
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
-feature_row4:
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    alt: "placeholder image 2"
-    title: "Placeholder Image Center Aligned"
-    excerpt: 'This is some sample content that goes here with **Markdown** formatting. Centered with `type="center"`'
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
+    - label: "GitHub"
+      url: "https://github.com/emorchy"
+excerpt: "Welcome to my website!"
 ---
+{% comment %}
+You found a secret text! Gold star!
+{% endcomment %}
 
-{% include feature_row id="intro" type="center" %}
+<style>
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
 
-{% include feature_row %}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
 
-{% include feature_row id="feature_row2" type="left" %}
+My name is Ethan Morchy, and I am a cybersecurity specialist with an emphasis on binary exploitation and cryptography. I enjoy making engineering projects and competing in CTFs.
 
-{% include feature_row id="feature_row3" type="right" %}
+<div class="row">
+  <div class="column">
+  <div markdown=1>
+  This website is split into several pages: resume(s), writeups, and projects. Navigate to any by clicking the links to the right or by visiting the top menu.
 
-{% include feature_row id="feature_row4" type="center" %}
+  If you wish to contribute to this website, pull requests are appreciated [here](https://github.com/emorchy/emorchy.github.io). Thank you.
+  </div>
+  </div>
+  <div class="column">
+  <div markdown=1>
+# [Resume](/resume)
+A polyglot PDF, a $\LaTeX{}$ document, and a Gameboy web emulator.
+# [Writeups](/writeups)
+A collection of CTF writeups written by me. Includes competitions (e.g [PicoCTF](https://play.picoctf.org/users/aloevera)) and offline challenges (e.g [Cryptohack](https://cryptohack.org/user/emorchy/)).
+# [Projects](/projects)
+A beautiful conglomeration of computer software and embedded microcontrollers to engineer fun projects for myself and others.
+  </div>
+</div>
+</div>

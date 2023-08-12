@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Markup: Syntax Highlighting - Ethan’s Blog</title>
@@ -116,15 +116,20 @@
           Ethan's Blog
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
+        <ul class="visible-links">
+<li class="masthead__menu-item">
               <a href="/resume/">Resume</a>
-            </li><li class="masthead__menu-item">
+            </li>
+<li class="masthead__menu-item">
               <a href="/writeups/">Writeups</a>
-            </li><li class="masthead__menu-item">
+            </li>
+<li class="masthead__menu-item">
               <a href="/projects/">Projects</a>
-            </li><li class="masthead__menu-item">
+            </li>
+<li class="masthead__menu-item">
               <a href="/sitemap/">Sitemap</a>
-            </li></ul>
+            </li>
+</ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">Toggle menu</span>
@@ -288,8 +293,14 @@
         
           <aside class="sidebar__right ">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Contents</h4></header>
-              <ul class="toc__menu"><li><a href="#gfm-code-blocks">GFM Code Blocks</a></li><li><a href="#code-blocks-in-lists">Code Blocks in Lists</a></li><li><a href="#jekyll-highlight-tag">Jekyll Highlight Tag</a></li><li><a href="#github-gist-embed">GitHub Gist Embed</a></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> Contents</h4></header>
+              <ul class="toc__menu">
+<li><a href="#gfm-code-blocks">GFM Code Blocks</a></li>
+<li><a href="#code-blocks-in-lists">Code Blocks in Lists</a></li>
+<li><a href="#jekyll-highlight-tag">Jekyll Highlight Tag</a></li>
+<li><a href="#github-gist-embed">GitHub Gist Embed</a></li>
+</ul>
             </nav>
           </aside>
         
@@ -352,7 +363,8 @@
   <li>
     <p>Now do this:</p>
 
-    <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+    <div class="language-ruby highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
   <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
 <span class="k">end</span>
 <span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
@@ -366,7 +378,8 @@
 
 <p>An example of a code blocking using Jekyll’s <a href="https://jekyllrb.com/docs/templates/#code-snippet-highlighting"><code class="language-plaintext highlighter-rouge">{% highlight %}</code> tag</a>.</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -388,7 +401,8 @@
 20
 21
 22
-</pre></td><td class="code"><pre><span class="c1">// 'gulp html' -- does nothing</span>
+</pre></td>
+<td class="code"><pre><span class="c1">// 'gulp html' -- does nothing</span>
 <span class="c1">// 'gulp html --prod' -- minifies and gzips HTML files for production</span>
 <span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="dl">'</span><span class="s1">html</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">siteFolderName</span> <span class="o">+</span> <span class="nx">paths</span><span class="p">.</span><span class="nx">htmlPattern</span><span class="p">)</span>
@@ -410,17 +424,21 @@
     <span class="p">})))</span>
     <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">when</span><span class="p">(</span><span class="nx">argv</span><span class="p">.</span><span class="nx">prod</span><span class="p">,</span> <span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">siteFolderName</span><span class="p">)))</span>
 <span class="p">});</span>
-</pre></td></tr></tbody></table></code></pre></figure>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-wl" data-lang="wl"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-wl" data-lang="wl"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
-</pre></td><td class="code"><pre><span class="bp">Module</span><span class="p">[{}</span><span class="o">,</span><span class="w">
+</pre></td>
+<td class="code"><pre><span class="bp">Module</span><span class="p">[{}</span><span class="o">,</span><span class="w">
   </span><span class="nb">Sqrt</span><span class="p">[</span><span class="m">2</span><span class="p">]</span><span class="w">
   </span><span class="m">4</span><span class="w">
 </span><span class="p">]</span>
-</pre></td></tr></tbody></table></code></pre></figure>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <h3 id="github-gist-embed">GitHub Gist Embed</h3>
 
@@ -431,7 +449,7 @@
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:1" role="doc-endnote">
-      <p><a href="http://en.wikipedia.org/wiki/Syntax_highlighting">http://en.wikipedia.org/wiki/Syntax_highlighting</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p><a href="http://en.wikipedia.org/wiki/Syntax_highlighting">http://en.wikipedia.org/wiki/Syntax_highlighting</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
 </div>
@@ -665,7 +683,7 @@ Formal Latex Document
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2023 Ethan's Blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2023 Ethan's Blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
