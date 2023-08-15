@@ -1,17 +1,54 @@
 ---
-title: About
+title: "About Page"
 permalink: /about/
+layout: single
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/wallpaper.jpg
+  actions:
+    - label: "GitHub"
+      url: "https://github.com/emorchy"
+excerpt: "Welcome to my website!"
 ---
+{% comment %}
+You found a secret text! Gold star!
+{% endcomment %}
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+<style>
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+My name is Ethan Morchy, and I am a cybersecurity specialist with an emphasis on binary exploitation and cryptography. I enjoy making engineering projects and competing in CTFs.
 
+<div class="row">
+  <div class="column">
+  <div markdown=1>
+  This website is split into several pages: resume(s), writeups, and projects. Navigate to any by clicking the links to the right or by visiting the top menu.
 
-[jekyll-organization]: https://github.com/jekyll
+  If you wish to contribute to this website, pull requests are appreciated [here](https://github.com/emorchy/emorchy.github.io). Thank you.
+  </div>
+  </div>
+  <div class="column">
+  <div markdown=1>
+# [Resume](/resume)
+A polyglot PDF, a $\LaTeX{}$ document, and a Gameboy web emulator.
+# [Writeups](/writeups)
+A collection of CTF writeups written by me. Includes competitions (e.g [PicoCTF](https://play.picoctf.org/users/aloevera)) and offline challenges (e.g [Cryptohack](https://cryptohack.org/user/emorchy/)).
+# [Projects](/projects)
+A beautiful conglomeration of computer software and embedded microcontrollers to engineer fun projects for myself and others.
+  </div>
+</div>
+</div>

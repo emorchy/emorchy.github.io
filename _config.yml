@@ -61,7 +61,7 @@ include:
 author:
   name             : "Ethan Morchy"
     #avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "I am a cybersecurity specialist with an emphasis on binary exploitation and cryptography. I enjoy making engineering projects and competing in CTFs."
+  bio              : "Cybersecurity specialist with an emphasis on binary exploitation and cryptography."
   location         : "Los Angeles, CA"
   links:
     #- label: "This website"
