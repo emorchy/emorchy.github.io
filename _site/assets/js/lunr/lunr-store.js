@@ -6,7 +6,7 @@ var store = [{
         "teaser": null
       },{
         "title": "RSA Talk",
-        "excerpt":"RSA Talk - Beamer Presentation   RSA Talk - Speaker Notes   ","categories": ["writeups"],
+        "excerpt":"RSA Talk - Beamer Presentation   Download  RSA Talk - Speaker Notes   Download  ","categories": ["writeups"],
         "tags": ["rsa,","latex"],
         "url": "/writeups/2021/06/15/rsa-talk.html",
         "teaser": null
