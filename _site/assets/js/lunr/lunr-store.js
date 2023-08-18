@@ -5,6 +5,12 @@ var store = [{
         "url": "/writeups/2021/03/26/cryptohack.html",
         "teaser": null
       },{
+        "title": "RSA Talk",
+        "excerpt":"RSA Talk - Beamer Presentation   RSA Talk - Speaker Notes   ","categories": ["writeups"],
+        "tags": ["rsa,","latex"],
+        "url": "/writeups/2021/06/15/rsa-talk.html",
+        "teaser": null
+      },{
         "title": "Piezo Impact Sensor Shield",
         "excerpt":"What is a Bar Mitzvah? A Bar Mitzvah is a Jewish rite of passage where a boy becomes a man in the eyes of Jewish talmudic law. er custom, the congregation throws candy after they finish a 10 minute chanting of a Hebrew scripture. Usually it is Bit-O-Honey. If God...","categories": ["projects"],
         "tags": ["engineering, piezo, arduino"],

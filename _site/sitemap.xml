@@ -5,6 +5,10 @@
 <lastmod>2021-03-26T00:00:00-07:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/writeups/2021/06/15/rsa-talk.html</loc>
+<lastmod>2021-06-15T00:00:00-07:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/projects/2023/02/25/piezo-shield.html</loc>
 <lastmod>2023-02-25T00:00:00-08:00</lastmod>
 </url>
@@ -314,5 +318,13 @@
 <url>
 <loc>http://localhost:4000/assets/files/resume/simple.html</loc>
 <lastmod>2023-08-08T00:56:14-07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/files/rsa/beamer.pdf</loc>
+<lastmod>2023-08-17T19:39:45-07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/files/rsa/speaker_notes.pdf</loc>
+<lastmod>2023-08-17T19:39:50-07:00</lastmod>
 </url>
 </urlset>

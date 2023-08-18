@@ -1,0 +1,8 @@
+python3 -i rsa.txt to declare the variables
+Find the totient of n: (p - 1) * (q - 1)
+Find d, the inverse of e with mod totient of n: pow(e,-1,totient)
+Decrypt c to the power of d mod n: pow(c,d,n)
+from Crypto.Util.number import long_to_bytes
+long_to_bytes(m) # The plaintext number becomes the flag
+
+actf{old_but_still_good_well_at_least_until_quantum_computing}

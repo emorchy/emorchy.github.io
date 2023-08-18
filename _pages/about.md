@@ -44,7 +44,7 @@ My name is Ethan Morchy, and I am a cybersecurity specialist with an emphasis on
   <div class="column">
   <div markdown=1>
 # [Resume](/resume)
-A polyglot PDF, a $\LaTeX{}$ document, and a Gameboy web emulator.
+A polyglot PDF and a Gameboy web emulator.
 # [Writeups](/writeups)
 A collection of CTF writeups written by me. Includes competitions (e.g [PicoCTF](https://play.picoctf.org/users/aloevera)) and offline challenges (e.g [Cryptohack](https://cryptohack.org/user/emorchy/)).
 # [Projects](/projects)
