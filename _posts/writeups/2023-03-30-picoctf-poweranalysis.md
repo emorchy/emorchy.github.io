@@ -5,7 +5,7 @@ tags: cpa, aes, side-channel
 excerpt: This is a writeup for the PicoCTF 2023 PowerAnalysisWarm challenge. Source code on github repo.
 ---
 # PowerAnalysisWarm
-<details>
+<details open>
 <summary>Description</summary>
 <br>
 This encryption algorithm leaks a "bit" of data every time it does a computation. Use this to figure out the encryption key.
@@ -165,16 +165,14 @@ We have successfully brute forced the first byte of the AES key. Now repeat 15 m
 
 For the python solution code, see "power.py".
 
-[![asciinema](https://asciinema.org/a/SyBN8KQjmwGWnoWazw0GeCZEH.png)](https://asciinema.org/a/SyBN8KQjmwGWnoWazw0GeCZEH?speed=2&autoplay=1)
+[![asciinema](https://asciinema.org/a/4FEbdqMm97Jis2h5a4r6zoXP7.png)](https://asciinema.org/a/4FEbdqMm97Jis2h5a4r6zoXP7?speed=2&autoplay=1)
 
 ## Final Thoughts
-Overall, this was a fun challenge and a fantastic introduction to side-channel attacks. After several hours of scripting, the key is produced in 90 seconds. I love scripting.
+Overall, this was a fun challenge and a fantastic introduction to side-channel attacks. After several hours of scripting, the key is produced in 90 seconds.
 
-By the end of the competition, a total of 86 out of 6000 teams solved this challenge. If ranking is measured by total solves instead of points, this would rank me in the top 1%.
+By the end of the competition, a total of 86 out of 6923 teams solved this challenge. Only 1% of the teams that competed managed to solve it.
 
-My prior experience with [CryptoPals](https://www.cryptopals.com/) helped me the most with solving this challenge.
-
-<details><summary>Author's Note</summary>
+<details open><summary>Author's Note</summary>
 <br>
 Use the variable `SILENT=1` with `python3 power.py` to witness the beauty of the password oracle.
 </details>

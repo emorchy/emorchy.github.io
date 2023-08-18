@@ -1,8 +1,8 @@
 ---
-title: "Bar Mitzvah Shield"
+title: "Piezo Impact Sensor Shield"
 category: projects
 tag: engineering, piezo, arduino
-excerpt: An impact sensor array for my brother's shield to count deflected candy at his Bar Mitzvah.
+excerpt: An impact sensor array for my little brother's shield to count deflected candy at his Bar Mitzvah.
 ---
 <style>
 img + em {
@@ -49,15 +49,15 @@ iframe {
 </style>
 
 # What is a Bar Mitzvah?
-A Bar Mitzvah is a Jewish rite of passage where a boy becomes a man in the eyes of Jewish talmudic law. A Bar Mitzvah student leads part of the Saturday morning service, consisting of reading from the holy book (Torah), reciting/singing from scriptures (Haftarah), and delivering several speeches and a sermon.
+A Bar Mitzvah is a Jewish rite of passage where a boy becomes a man in the eyes of Jewish talmudic law. 
 
-I completed my Bar Mitzvah in my [conservative](https://www.myjewishlearning.com/article/conservative-judaism-how-the-middle-became-a-movement/) synagogue at the age of 13 (conservative being a semi-strict Jewish branch, not an economic ideology). As the eldest child, I set the standard for my siblings to go above and beyond with extra prayers during the Bar Mitzvah service. Per custom, the congregation threw candy at me after I finished a 10 minute chanting of a Hebrew scripture. As a personal form of amusement, I wore a riot helmet as I was pelted with Bit-O-Honey.
+er custom, the congregation throws candy after they finish a 10 minute chanting of a Hebrew scripture. Usually it is Bit-O-Honey.
 
 ![Bit-O-Honey](/assets/files/bar-mitzvah/bit-o-honey.png){:.centered}
 <center><em>If God made a candy even</em> he <em>couldn't break.</em></center>
 
 # Shield of Daniel
-When my brother Daniel's Bar Mitzvah rolled around several years later, he wanted something above and beyond as well. To block the candy, he crafted a wooden shield with a Jewish Star in the center. The humor is not lost on Hebrew-speaking people when the Jewish Star (known as the "Shield of David") is superglued on a shield for a child's Bar Mitzvah.
+When my little brother Daniel's Bar Mitzvah rolled around several years later, he wanted something above and beyond as well. To block the candy, he crafted a wooden shield with a Jewish Star in the center. The humor is not lost on Hebrew-speaking people when the Jewish Star (known as the "Shield of David") is superglued on a shield for a child's Bar Mitzvah.
 
 ![Shield of Daniel](/assets/files/bar-mitzvah/shield-of-daniel.jpeg){:.centered}
 *Shield of Daniel*
