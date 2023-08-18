@@ -2,7 +2,7 @@
 title: "Cryptohack Euler's Totient"
 category: writeups
 tags: rsa, cryptohack
-excerpt: Calculate Euler's Totient (φn) using the Extended Euclidean Algorithm.
+excerpt_separator: <!--excerpt-->
 ---
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -14,6 +14,8 @@ MathJax.Hub.Config({
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
+Calculate Euler's Totient (φn) using the Extended Euclidean Algorithm.
+<!--excerpt-->
 <details open>
 <summary>Description</summary>
 RSA relies on the difficulty of the factorisation of the modulus N. If the primes can be found then we can calculate the Euler totient of N and thus decrypt the ciphertext.

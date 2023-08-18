@@ -2,7 +2,7 @@
 title: "Weather Station Protocol Forwarding"
 category: projects
 tags: rf
-excerpt: I used a 433MHz radio receiver and transmitter with an Attiny chip to interface my neighbor's AcuRite weather transmitter with my La Crosse weather display.
+excerpt_separator: <!--excerpt-->
 ---
 <style>
 img + em {
@@ -19,8 +19,9 @@ img.centered {
 </style>
 
 # Overview
+I used a 433MHz radio receiver and transmitter with an Attiny chip to interface an AcuRite weather transmitter with a La Crosse weather display.
+<!--excerpt-->
 I own a La Crosse weather transmitter and station. Several years ago, my transmitter stopped working. It wasn't until recently when I began working on [another project](/2023/08/04/TPMS.html) that I discovered a wireless weather transmission coming from nearby.
-{{ page.excerpt }}
 
 ![lacrosse.webp](/assets/files/weather/lacrosse.webp){:.centered}
 *La Crosse Weather Sensor and Station*
