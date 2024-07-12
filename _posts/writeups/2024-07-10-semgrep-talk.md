@@ -1,0 +1,615 @@
+---
+title: "Automated Bug Hunting with Semgrep"
+category: writeups
+tags: semgrep, manim
+excerpt: A presentation for the "Defcon 858" group about how a static analysis tool called Semgrep can be leveraged to find different vulnerabilities in a variety of languages.
+---
+# Semgrep Talk
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Manim Slides</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/black.min.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <!-- <link rel="stylesheet" href="lib/css/zenburn.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/zenburn.min.css">
+
+    <!-- <link rel="stylesheet" href="index.css"> -->
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides"><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/4f1cd7f087d433b3d8d22ea4e6c122a24ce4adaeb32adfdf958742da386433b3.mp4"
+              data-background-video-muted>
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/125580c33b141afbb13afb6251037ba56255641da08c8567253c310b87b9f092.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/2b71818e1045e9fb8404d6e3270ab3c0f92b47f8c58f6f847a9d36f2682785ac.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/fb770b529e1279f5cce0f44a765f6f81bd51d3603f68fea32edad702c3800cc8.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/b5ba565fb40dda8bba9da1f4827415f54a4e9340abf85d7da0f5317ce9830700.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/7ded896ed7927180bbab170ddb0f43e43fd26bac404dfcf18587e9b3c8d7d5f0.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/b9a147e8b96edaaa41f84bcd592374378291616a6bab71c39da5d02186bf8f4f.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/b7715b25842f07d97667387147539e3a2f823a194ebb2ebd63df667dff8fc8e7.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/eb24532b02938971ede1054af49f72a99e24096f8880c57d20cdcdf4f9c5bc20.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/9a4184cbf664bf5897dc7ef78cf2af0982c260e20237865a3e655bd7ff62c276.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/23476b5f62e4fcbe9f587227dad44c5feb09250be124b2c08d9f3a1158866342.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/34c54c5bcffec025a5066f18833d5b71acc96b9f848cc8cdbc66f929487c4099.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/55b8455c6485b6945f411c3ad52700141463fb03d7e726298e102ba37344174f.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/36f06fffd8a6bfb5ee20c87874436c103bf2701cf26bf050c720db3e00d57681.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/013d5a09676cbfb1e7a020ba462747328532125a404322262e622e117f0f60c9.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/68e553f239fd15c7c7242e265787c642f594c97dbb7f0dff9003d036271a53f9.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/fceff1f60bef826d6c97c7f07f9c537919d8a09f6a8fe20867429897a56840f2.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/83a81b7cf490581f3e5e73994bcf701b753b972a03fd1c9e96fe45ee1a048f73.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/05fe59729edf2bc66e8b43e6503584f9497fe9fd2af9436c645de71a44277237.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/177818444305ae330effa9fd6090a8760a11c5565c928fcf260a455143ad4fca.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/6c5565376ac45251354ba7356bd07d302c2106405a322cc68df7e142c74b62c0.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/efcd5f3c3cf6150cb5249b77df66a162896ef942ac497ba0cedbcf120b20ce9e.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/ba847ee13486efdac3e56d1c5ad6de1bcdc582ce2f5759cbb5d0935907f381be.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/d011e007c21a6364214a37093388bc69b96cf9d183f6d00fe441b6d72b363e62.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/dd149d64c120741650198e173df76c409bbed0dbbb855c2856d8c8229178f9b3.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/2b466ec5fb4ad595a39674a47422fef529de5207faa4f8650ac2ecd22ecf65a1.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/dfbc6fa73468fafed517063fe27803de7d56c2c8b2a22d4ad881748b37b077e3.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/c442549f82495ced93cbb35c4f2677774b3e9e3f52e4f706ee0b25e906f112b9.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/c48e77b6f4980aeb1720ccab5142d9327935b47582ca1e0cef9e88b27e7b9906.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/047dffbcd1ffb3ad2d0e03e69cd9885a164e08e69de90a67dbb5e215b8b2fe73.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/5d9514e4f1dbdeff69814eba01bbb1311a5a59050546b82c59a2d9598f38c7f6.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/971d33c275d9625e3980493ec38ef609e20f2979161bfe4b4b04b3d8b5f65fa2.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/4bce68fe0017eba77c7092802b6aeb2268a99ddec78ff085b6b7f8e8e5c84305.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/00900165771e10621cdc62eebba96683576c69a8aa4d1b48d4f7a23ddff08d08.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/22a79fff8d72c58a4d23c117ca8c8b9a744a4d0258b54eeca7b37d67dda72b44.mp4"
+              data-background-video-loop>
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/cb481f3d6df02e9cbaa5034cd8f4902228082d9ef8108dd16bc8c3b2bbb8cd6f.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/955e2857af12f27616b4ba646dbe3ff36beb3d58cafb560c5b83f953163addff.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/009fc61456d4c97308ef18a9e71bc1e515d0f67335639553b31e458814a9c96c.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/88251dc5797c15c6dd685fc6f653ff557b0969bd48c8165552b0fba2a518d0bc.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/51da28b234ee6e52ca7d65e74223af8e04fb420af331b20fa5b59f3c021a1e11.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/a73f1a33864e8140b059313e956fbe15b41b3b7902882d4c7ae38d80c27bd5ee.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/6017e43f8cbfb75ab720f232160dd73e1dc65351f8e1b47b93cefc6ff27f3f90.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/879767155d7fc78d0898e83604382b0317d88b0247ebba9aca97319cc00d73d0.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/deada79e3e00e8b5bbc176447380e7d4f9c6980124dd049f158f874550027703.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/bb47ff8cb79eb1eec6090b81ce6586a30b873e83a4b729280e12d29fa71c41e9.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/054fa531dd1f0f652b71921358243d1b8458d0c583907e453a3593d32dfec19a.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/608ff2ca1bb6addc69d7943295ba010d747b22d8b1d31f42744efe735f1fb91b.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/fc888e15977f5b4acee2ab5b286d0167f2772f4f66e92612dbaddbd3fc3ed54b.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/ef7990be79cde40e639a6ca41ba1b006ef45da7a46b9df3aafc28b7d1d5c1380.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/eaa3a009fec7d8ec1c9ed314eb45bdf9915b301d5652dc6464d3cdb34bdb8d9c.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/dbe337a4da6df6cd02a56f51ad25d042a9ec1728e23cb16247cbe84ba912bb2a.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/3068f5e50d95779ff068e8127e28f0c372ff479621ffea8ebf873ad8d6d4e54a.mp4"
+              >
+              
+            </section><section
+              data-background-size='contain'
+              data-background-color="black"
+              data-background-video="assets/semgrep/3b0ed6eec3590fc8be8a0aa884cd41ecb70e755de554c94d4f12a17169e6129d.mp4"
+              >
+              
+            </section></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js"></script>
+
+    <!-- To include plugins, see: https://revealjs.com/plugins/ -->
+
+    <!-- <script src="index.js"></script> -->
+    <script>
+      Reveal.initialize({
+        
+        // The "normal" size of the presentation, aspect ratio will
+        // be preserved when the presentation is scaled to fit different
+        // resolutions. Can be specified using percentage units.
+        width: '100%',
+        height: '100%',
+
+        // Factor of the display size that should remain empty around
+        // the content
+        margin: 0.04,
+
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.2,
+        maxScale: 2.0,
+
+        // Display presentation control arrows
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: false,
+
+        // Display the page number of the current slide
+        // - true:    Show slide number
+        // - false:   Hide slide number
+        //
+        // Can optionally be set as a string that specifies the number formatting:
+        // - "h.v":   Horizontal . vertical slide number (default)
+        // - "h/v":   Horizontal / vertical slide number
+        // - "c":   Flattened slide number
+        // - "c/t":   Flattened slide number / total slides
+        //
+        // Alternatively, you can provide a function that returns the slide
+        // number for the current slide. The function should take in a slide
+        // object and return an array with one string [slideNumber] or
+        // three strings [n1,delimiter,n2]. See #formatSlideNumber().
+        slideNumber: false,
+
+        // Can be used to limit the contexts in which the slide number appears
+        // - "all":      Always show the slide number
+        // - "print":    Only when printing to PDF
+        // - "speaker":  Only in the speaker view
+        showSlideNumber: 'all',
+
+        // Use 1 based indexing for # links to match slide number (default is zero
+        // based)
+        hashOneBasedIndex: false,
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: false,
+
+        // Push each slide change to the browser history.  Implies `hash: true`
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Optional function that blocks keyboard events when retuning false
+        //
+        // If you set this to 'focused', we will only capture keyboard events
+        // for embedded decks when they are in focus
+        keyboardCondition: null,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // Changes the behavior of our navigation directions.
+        //
+        // "default"
+        // Left/right arrow keys step between horizontal slides, up/down
+        // arrow keys step between vertical slides. Space key steps through
+        // all slides (both horizontal and vertical).
+        //
+        // "linear"
+        // Removes the up/down arrows. Left/right arrows step through all
+        // slides (both horizontal and vertical).
+        //
+        // "grid"
+        // When this is enabled, stepping left/right from a vertical stack
+        // to an adjacent vertical stack will land you at the same vertical
+        // index.
+        //
+        // Consider a deck with six slides ordered in two vertical stacks:
+        // 1.1    2.1
+        // 1.2    2.2
+        // 1.3    2.3
+        //
+        // If you're on slide 1.3 and navigate right, you will normally move
+        // from 1.3 -> 2.1. If "grid" is used, the same navigation takes you
+        // from 1.3 -> 2.3.
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the question-mark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autolaying embedded media (video/audio/iframe)
+        // - null:   Media will only autoplay if data-autoplay is present
+        // - true:   All media will autoplay, regardless of individual setting
+        // - false:  No media will autoplay, regardless of individual setting
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes
+        // - null:   Iframes with data-src AND data-preload will be loaded when within
+        //           the viewDistance, iframes with only data-src will be loaded when visible
+        // - true:   All iframes with data-src will be loaded when within the viewDistance
+        // - false:  All iframes with data-src will be loaded only when visible
+        preloadIframes: null,
+
+        // Can be used to globally disable auto-animation
+        autoAnimate: true,
+
+        // Optionally provide a custom element matcher that will be
+        // used to dictate which elements we can animate between.
+        autoAnimateMatcher: null,
+
+        // Default settings for our auto-animate transitions, can be
+        // overridden per-slide or per-element via data arguments
+        autoAnimateEasing: 'ease',
+        autoAnimateDuration: 1.0,
+        autoAnimateUnmatched: true,
+
+        // CSS properties that can be auto-animated. Position & scale
+        // is matched separately so there's no need to include styles
+        // like top/right/bottom/left, width/height or margin.
+        autoAnimateStyles: ['opacity', 'color', 'background-color', 'padding', 'font-size', 'line-height', 'letter-spacing', 'border-width', 'border-color', 'border-radius', 'outline', 'outline-offset'],
+
+        // Controls automatic progression to the next slide
+        // - 0:      Auto-sliding only happens if the data-autoslide HTML attribute
+        //           is present on the current slide or fragment
+        // - 1+:     All slides will progress automatically at the given interval
+        // - false:  No auto-sliding, even if data-autoslide is present
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding (defaults to navigateNext)
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // Opens links in an iframe preview overlay
+        // Add `data-preview-link` and `data-preview-link="false"` to customize each link
+        // individually
+        previewLinks: false,
+
+        // Exposes the reveal.js API through window.postMessage
+        postMessage: true,
+
+        // Dispatches all reveal.js events to the parent window through postMessage
+        postMessageEvents: false,
+
+        // Focuses body when page changes visibility to ensure keyboard shortcuts work
+        focusBodyOnPageVisibilityChange: true,
+
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
+
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'none', // none/fade/slide/convex/concave/zoom
+
+        // The maximum number of pages a single slide can expand onto when printing
+        // to PDF, unlimited by default
+        pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+
+        // Prints each fragment on a separate slide
+        pdfSeparateFragments: true,
+
+        // Offset used to reduce the height of content within exported PDF pages.
+        // This exists to account for environment differences based on how you
+        // print to PDF. CLI printing options, like phantomjs and wkpdf, can end
+        // on precisely the total height of the document whereas in-browser
+        // printing has to end one pixel before.
+        pdfPageHeightOffset: -1,
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000
+      });
+
+      
+    </script>
+
+    
+  </body>
+</html>

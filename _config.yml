@@ -61,8 +61,8 @@ include:
 author:
   name             : "Ethan Morchy"
     #avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "Cybersecurity specialist with an emphasis on binary exploitation and cryptography."
-  location         : "Los Angeles, CA"
+  bio              : "Hardware and software penetration tester with an emphasis on binary exploitation and cryptography."
+  location         : "San Diego, CA"
   links:
     #- label: "This website"
     #  icon: "fas fa-fw fa-link"
