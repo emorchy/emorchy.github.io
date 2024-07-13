@@ -6,9 +6,9 @@ var store = [{
         "teaser": null
       },{
         "title": "RSA Talk",
-        "excerpt":"RSA Talk - Beamer Presentation   Download  RSA Talk - Speaker Notes   Download  ","categories": ["writeups"],
+        "excerpt":"RSA Talk - Beamer Presentation   Download  RSA Talk - Speaker Notes   Download  ","categories": ["talks"],
         "tags": ["rsa,","latex"],
-        "url": "/writeups/2021/06/15/rsa-talk.html",
+        "url": "/talks/2021/06/15/rsa-talk.html",
         "teaser": null
       },{
         "title": "Piezo Impact Sensor Shield",
@@ -30,8 +30,8 @@ var store = [{
         "teaser": null
       },{
         "title": "Automated Bug Hunting with Semgrep",
-        "excerpt":"                   Press \"F\" to enable fullscreen. For more keyboard controls, press \"?\". ","categories": ["writeups"],
+        "excerpt":"                   Press \"F\" to enable fullscreen. For more keyboard controls, press \"?\".  This presentation was compiled using “Manim”, a mathematical animation engine. I used the Manim Slides plugin for easy slide creation. The slides can be rendered with the python code found in my semgrep-presentation repository.  ","categories": ["talks"],
         "tags": ["semgrep,","manim"],
-        "url": "/writeups/2024/07/10/semgrep-talk.html",
+        "url": "/talks/2024/07/10/semgrep-talk.html",
         "teaser": null
       }]

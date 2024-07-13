@@ -1,6 +1,6 @@
 ---
 title: "Automated Bug Hunting with Semgrep"
-category: writeups
+category: talks
 tags: semgrep, manim
 excerpt: A presentation for the "Defcon 858" group about how a static analysis tool called Semgrep can be leveraged to find different vulnerabilities in a variety of languages.
 ---
@@ -20,3 +20,5 @@ excerpt: A presentation for the "Defcon 858" group about how a static analysis t
 <script>document.getElementById("presentation_iframe").focus();</script>
 <center>Press "F" to enable fullscreen.</center>
 <center>For more keyboard controls, press "?".</center>
+
+This presentation was compiled using "[Manim](https://www.manim.community/)", a mathematical animation engine. I used the [Manim Slides](https://manim-slides.eertmans.be/latest/index.html) plugin for easy slide creation. The slides can be rendered with the python code found in my [semgrep-presentation](https://github.com/emorchy/semgrep-presentation) repository.
