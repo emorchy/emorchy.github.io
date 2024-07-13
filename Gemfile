@@ -8,7 +8,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 3.9.0"
+gem "jekyll", ">= 3.9.0"
 
 gem "jekyll-toc"
 
@@ -17,7 +17,7 @@ gem "jekyll-toc"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
-gem "github-pages", "~> 228", group: :jekyll_plugins
+gem "github-pages", ">= 228", group: :jekyll_plugins
 gem 'jekyll-spaceship', group: :jekyll_plugins
 
 # If you have any plugins, put them here!
@@ -39,3 +39,5 @@ gem "wdm", "~> 0.1.0", :platforms => [:mingw, :x64_mingw, :mswin]
 # kramdown v2 ships without the gfm parser by default. If you're using
 # kramdown v1, comment out this line.
 gem "kramdown-parser-gfm"
+
+gem "webrick", "~> 1.8"

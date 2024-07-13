@@ -28,4 +28,10 @@ var store = [{
         "tags": ["rf"],
         "url": "/projects/2023/08/05/weather-station.html",
         "teaser": null
+      },{
+        "title": "Automated Bug Hunting with Semgrep",
+        "excerpt":"                   Press \"F\" to enable fullscreen. For more keyboard controls, press \"?\". ","categories": ["writeups"],
+        "tags": ["semgrep,","manim"],
+        "url": "/writeups/2024/07/10/semgrep-talk.html",
+        "teaser": null
       }]
