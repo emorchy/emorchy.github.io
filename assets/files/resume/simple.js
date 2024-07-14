@@ -826,6 +826,16 @@ class Rewind {
   }
 }
 
+function selectCanvas() {
+    var element = document.getElementById('mainCanvas');
+    if (element) {
+        element.focus();
+        element.click();
+    } else {
+        setTimeout(selectCanvas, 100); // Check again in 100 milliseconds
+    }
+}
+
 var button = document.getElementById("player");
 
 button.onclick = function() {
@@ -833,7 +843,5 @@ button.onclick = function() {
   //inside the handler, "this" refers to the button
   go();
   this.parentNode.removeChild(button);
-  document.getElementById("myCanvas").focus();
-  document.body.click();
-
+  setTimeout(selectCanvas, 250); // Check again in 100 milliseconds
 }
