@@ -30,7 +30,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Automated Bug Hunting with Semgrep",
-        "excerpt":"                   Press \"F\" to enable fullscreen. For more keyboard controls, press \"?\".   This presentation was compiled using “Manim”, a mathematical animation engine. I used the Manim Slides plugin for easy slide creation. The slides can be rendered with the python code found in my semgrep-presentation repository.  ","categories": ["talks"],
+        "excerpt":"Interactive Slides Press \"F\" to enable fullscreen. For more keyboard controls, press \"?\". This presentation was compiled using “Manim”, a mathematical animation engine. I used the Manim Slides plugin for easy slide creation. The slides can be rendered with the python code found in my semgrep-presentation repository. Video As of...","categories": ["talks"],
         "tags": ["semgrep,","manim"],
         "url": "/talks/2024/07/10/semgrep-talk.html",
         "teaser": null

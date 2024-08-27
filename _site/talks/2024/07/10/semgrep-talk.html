@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Automated Bug Hunting with Semgrep - Ethan’s Blog</title>
-<meta name="description" content="A presentation for the “Defcon 858” group about how a static analysis tool called Semgrep can be leveraged to find different vulnerabilities in a variety of languages.">
+<meta name="description" content="A presentation about using a static analysis tool called Semgrep to find vulnerabilities in many languages.">
 
 
   <meta name="author" content="Ethan Morchy">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="http://localhost:4000/talks/2024/07/10/semgrep-talk.html">
 
 
-  <meta property="og:description" content="A presentation for the “Defcon 858” group about how a static analysis tool called Semgrep can be leveraged to find different vulnerabilities in a variety of languages.">
+  <meta property="og:description" content="A presentation about using a static analysis tool called Semgrep to find vulnerabilities in many languages.">
 
 
 
@@ -263,7 +263,7 @@
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Automated Bug Hunting with Semgrep">
-    <meta itemprop="description" content="A presentation for the “Defcon 858” group about how a static analysis tool called Semgrep can be leveraged to find different vulnerabilities in a variety of languages.">
+    <meta itemprop="description" content="A presentation about using a static analysis tool called Semgrep to find vulnerabilities in many languages.">
     <meta itemprop="datePublished" content="2024-07-10T00:00:00-07:00">
     
 
@@ -276,24 +276,6 @@
           </h1>
           
 
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
 
         </header>
       
@@ -304,13 +286,18 @@
             <nav class="toc">
               <header><h4 class="nav__title">
 <i class="fas fa-file-alt"></i> Contents</h4></header>
-              
+              <ul class="toc__menu">
+<li><a href="#interactive-slides">Interactive Slides</a></li>
+<li><a href="#video">Video</a></li>
+</ul>
             </nav>
           </aside>
         
-        <div style="position:relative;padding-bottom:56.25%;">
+        <h2 id="interactive-slides">Interactive Slides</h2>
+
+<div style="position:relative;padding-bottom:56.25%;">
     <!-- 56.25 comes from aspect ratio of 16:9, change this accordingly -->
-    <iframe id="presentation_iframe" style="width:100%;height:100%;position:absolute;left:0px;top:0px;" frameborder="0" width="100%" height="100%" allowfullscreen="" allow="autoplay" src="/assets/files/semgrep/reactjs.html">
+    <iframe id="presentation_iframe" style="width:100%;height:100%;position:absolute;left:0px;top:0px;" frameborder="0" width="100%" height="100%" allowfullscreen="" allow="autoplay" src="/assets/files/semgrep/revealjs.html">
     </iframe>
 </div>
 <script>document.getElementById("presentation_iframe").focus();</script>
@@ -319,6 +306,15 @@
 <center>For more keyboard controls, press "?".</center>
 
 <p><br>This presentation was compiled using “<a href="https://www.manim.community/">Manim</a>”, a mathematical animation engine. I used the <a href="https://manim-slides.eertmans.be/latest/index.html">Manim Slides</a> plugin for easy slide creation. The slides can be rendered with the python code found in my <a href="https://github.com/emorchy/semgrep-presentation">semgrep-presentation</a> repository.</p>
+
+<h2 id="video">Video</h2>
+
+<p>As of August 26th, 2024, a video I created with similar presentation slides was created and displayed on Somerset Recon’s blog: <a>https://www.somersetrecon.com/blog/2024/automated-bug-hunting-with-semgrep</a>. The video is embedded below:</p>
+
+<iframe src="https://player.vimeo.com/video/1001793854?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="display:block;" title="Semgrep Presentation"></iframe>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+
 
         
       </section>

@@ -3,6 +3,7 @@ title: "Automated Bug Hunting with Semgrep"
 category: talks
 tags: semgrep, manim
 excerpt: A presentation about using a static analysis tool called Semgrep to find vulnerabilities in many languages.
+read_time: false
 ---
 ## Interactive Slides
 
