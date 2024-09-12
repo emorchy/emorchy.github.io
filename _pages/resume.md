@@ -38,7 +38,7 @@ iframe {
 
 <div class="row">
   <div class="column">
-  <centering><h1>Polyglot Resume</h1></centering>
+  <center><h1>Polyglot Resume</h1></center>
     <object data="../assets/files/resume/resume.pdf" width="100%" height="600" type='application/pdf'>
     <p>Unable to display PDF file. <a href="/assets/files/resume/resume.pdf">Download</a> instead.</p>
     </object>
@@ -46,7 +46,7 @@ iframe {
     <center><p>Executing this PDF opens a unique resume in a GameBoy emulator.</p></center>
   </div>
   <div class="column">
-  <centering><h1>Gameboy Resume</h1></centering>
+  <center><h1>Gameboy Resume</h1></center>
     <p align="center">
     <iframe
       id="emulator"
