@@ -31,12 +31,12 @@ You found a secret text! Gold star!
 }
 </style>
 
-My name is Ethan Morchy, and I am a cybersecurity specialist with an emphasis on binary exploitation and cryptography. I enjoy making engineering projects and competing in CTFs.
+My name is Ethan Morchy, and I am a hardware and software penetration tester with an emphasis on binary exploitation and cryptography. I enjoy making engineering projects and competing in CTFs.
 
 <div class="row">
   <div class="column">
   <div markdown=1>
-  This website is split into several pages: resume(s), talks, writeups, and projects. Navigate to any by clicking the links to the right or by visiting the top menu.
+  This website is split into several pages: resume(s), writeups, talks, and projects. Navigate to any by clicking the links to the right or by visiting the top menu.
 
   If you wish to contribute to this website, pull requests are appreciated [here](https://github.com/emorchy/emorchy.github.io). Thank you.
   </div>
@@ -45,10 +45,10 @@ My name is Ethan Morchy, and I am a cybersecurity specialist with an emphasis on
   <div markdown=1>
 # [Resume](/resume)
 A polyglot PDF and a Gameboy web emulator.
-# [Writeups](/writeups)
-A collection of CTF writeups written by me. Includes competitions (e.g [PicoCTF](https://play.picoctf.org/users/aloevera)) and offline challenges (e.g [Cryptohack](https://cryptohack.org/user/emorchy/)).
 # [Talks](/talks)
 A collection of talks in various forms, from PDFs to videos to interactive slides.
+# [Writeups](/writeups)
+A collection of CTF writeups written by me. Includes competitions (e.g [PicoCTF](https://play.picoctf.org/users/aloevera)) and offline challenges (e.g [Cryptohack](https://cryptohack.org/user/emorchy/)).
 # [Projects](/projects)
 A beautiful conglomeration of computer software and embedded microcontrollers to engineer fun projects for myself and others.
   </div>
