@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href='/css/style.css'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;800&display=swap" rel="stylesheet">
+    
+    <title>Ethan's Blog</title>
+
+    
+  
+    <meta name="author" content="Ethan Morchy">
+    <meta property="og:description" content="This is the early stages of this new site.">
+    <meta property="og:title" content="Ethan's Blog" />
+    <meta property="og:site_name" content="Ethan's Blog" />
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website" />
+    <!--<meta property="og:description" content="" />-->
+    <meta property="og:url" content="/" />
+
+    
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+    
+
+
+  </head>
+  <body>
+
+    <div class="container py-5 d-none d-lg-block"></div>
+
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-4" style="background-color: transparent!important;">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item" >
+                <a class="nav-link " href="/">
+                  <h3 class="navtext">ABOUT</h3>
+                </a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link active" href="/projects/">
+                  <h3 class="navtext">PROJECTS</h3>
+                  <span class="visually-hidden">(current)</span>
+                </a>
+              </li> 
+              <li class="nav-item" aria-current="page">
+                <a class="nav-link" href="/talks/">
+                  <h3 class="navtext">TALKS</h3>
+                </a> 
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link " href="/writeups/">
+                  <h3 class="navtext">WRITEUPS</h3>
+                  
+                </a> 
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+
+    <div class="container pt-5 pb-3 d-lg-none"></div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="content">
+            <div class="row pt-5 pb-5">
+              <div class="offset-lg-1 col-lg-10">
+                <div class="row">
+                  <div class="col-lg"><div class="blog-title">Piezo Impact Sensor Shield</div></div>
+                </div>
+
+                <div class="date pb-4">25 Feb 2023</div>
+                <div>
+
+<h1 id="what-is-a-bar-mitzvah">What is a Bar Mitzvah?</h1>
+<p>A Bar Mitzvah is a Jewish rite of passage where a boy becomes a man in the eyes of Jewish talmudic law.</p>
+
+<p>er custom, the congregation throws candy after they finish a 10 minute chanting of a Hebrew scripture. Usually it is Bit-O-Honey.</p>
+
+<p><img src="/assets/files/bar-mitzvah/bit-o-honey.png" alt="Bit-O-Honey" class="center" style="width:20%;"/></p>
+<center><em>If God made a candy even</em> he <em>couldn't break.</em></center>
+
+<h1 id="shield-of-daniel">Shield of Daniel</h1>
+<p>When my little brother Daniel’s Bar Mitzvah rolled around several years later, he wanted something above and beyond as well. To block the candy, he crafted a wooden shield with a Jewish Star in the center. The humor is not lost on Hebrew-speaking people when the Jewish Star (known as the “Shield of David”) is superglued on a shield for a child’s Bar Mitzvah.</p>
+
+<p><img src="/assets/files/bar-mitzvah/shield-of-daniel.jpeg" alt="Shield of Daniel" class="center" />
+<center><em>Shield of Daniel</em></center></p>
+
+<p>In a moment of “divine inspiration”, I wondered how easy it could be to count how many candies were deflected by the shield.</p>
+
+<h2 id="engineering-parts">Engineering Parts</h2>
+<ul>
+  <li>1 Arduino Nano</li>
+  <li>5 100KΩ resistors</li>
+  <li>1 3.7V LiPo Battery</li>
+  <li>1 DC voltage boost converter</li>
+  <li>1 TM1637 LED digit counter</li>
+  <li>5 Piezo ceramic wafer plates</li>
+  <li>1 push-button</li>
+</ul>
+
+<p>I took a deep dive into piezoelectricity several months prior to this project, and I was excited to finally have an applied project for this fascinating phenomenon. I will be using manufactured piezoelectric ceramic wafers instead of quartz crystals, but the piezoelectric process is essentially the same.</p>
+<h3 id="piezoelectricity---quartz">Piezoelectricity - Quartz</h3>
+<p>Piezoelectricity occurs when physical pressure is converted to an electric charge. Quartz is a beautiful example of piezoelecricity: when a precisely angled cut of quartz is struck, it releases voltage. One interesting quality of quartz is that every time it is struck with the same force, it releases the same voltage every time. This is why quartz is used in elecronic oscillators, clocks, and watches.</p>
+
+<p><img src="/assets/files/bar-mitzvah/silicon-dioxide.gif" alt="Silicon Dioxide" class="center" />
+<em>This is how silicon dioxide materials (e.g quartz) create DC voltage with pressure</em></p>
+
+<h2 id="physical-routing">Physical Routing</h2>
+
+<p><img src="/assets/files/bar-mitzvah/shield-bb.jpg" alt="Fritzing Model" class="center" /></p>
+
+<p>The Piezo wafer sensors are connected to the analog ports to provide different feedback for various pressures. I also attached a 100KΩ resistor to each wafer to prevent damage to the Nano. I used whatever large-load resistors were lying around, but I recommend 1MΩ for future projects.</p>
+
+<p>I used <a href="https://www.amazon.com/MakerFocus-Discharge-Integrated-Charging-Protection/dp/B07PZT3ZW2/">this</a> boost converter in my project because of its battery charging capabilities bundled with a pretty cool battery indicator. I desoldered the “key” button and bridged the connection with the push-button to allow turning on and prevent powering off.</p>
+
+<h2 id="code">Code</h2>
+
+<p>This is the first completed project where I used a C++ class in a practical scenario. Although OOP wasn’t necessary, it was interesting to complete. You can find the code <a href="https://github.com/emorchy/piezo-shield">here</a>.</p>
+
+<h2 id="images">Images</h2>
+<div class="row">
+  <div class="column">
+<div>
+      <p><img src="/assets/files/bar-mitzvah/unconnected.jpg" alt="Exposed" class="center" />
+      <center><em>Sensor Placement</em></center></p>
+    </div>
+  </div>
+  <div class="column">
+<div>
+      <p><img src="/assets/files/bar-mitzvah/cardboard.jpg" alt="Covered" class="center" />
+      <center><em>Final Product</em></center></p>
+    </div>
+  </div>
+</div>
+
+<div>
+  <center>
+      <video controls autoplay loop>
+          <source src="/assets/files/bar-mitzvah/livedemo.mp4" type="video/mp4">
+      </video>
+  <p>
+  <center><em>Shield Sensors Video Demo (2 candies thrown simultaneously)</em></center>
+  </p>
+</center>
+</div>
+
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>The shield detected a total of 44 candies during his service. My brother got recognition of having the coolest and most well thought out Bar Mitzvah candy blocker in the synagogue. Sure, other children had tennis raquets or fly swatters, but they all cower at the might of Daniel’s mighty Shield!</p>
+
+<p>Could I have used a better wiring system? Were the wire solder connections exposed? Could I have aesthetically made it much prettier and safer? Yes to all these questions. I had the idea to create an impact-sensor shield with a built in counter a week before the Bar Mitzvah began, and I managed to finish it the night before. I am amazed I could even finish on time, let alone it working as well as it did.</p>
+
+        
+      </section>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row pt-3">
+        <div class="offset-lg-1 col-lg-11">
+          <span class="copyright">&copy; 2024 Ethan Morchy</span>  
+        </div>
+      </div>
+
+    </div>
+
+    <script async data-id="100527609" src="//static.getclicky.com/js"></script>
+    <noscript><p><img alt="C" width="1" height="1" src="//in.getclicky.com/100527609ns.gif" /></p></noscript>
+    
+  </body>
+</html>

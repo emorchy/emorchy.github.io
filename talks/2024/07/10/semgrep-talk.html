@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href='/css/style.css'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;800&display=swap" rel="stylesheet">
+    
+    <title>Ethan's Blog</title>
+
+    
+  
+    <meta name="author" content="Ethan Morchy">
+    <meta property="og:description" content="This is the early stages of this new site.">
+    <meta property="og:title" content="Ethan's Blog" />
+    <meta property="og:site_name" content="Ethan's Blog" />
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website" />
+    <!--<meta property="og:description" content="" />-->
+    <meta property="og:url" content="/" />
+
+    
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+    
+
+
+  </head>
+  <body>
+
+    <div class="container py-5 d-none d-lg-block"></div>
+
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-4" style="background-color: transparent!important;">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item" >
+                <a class="nav-link" href="/">
+                  <h3 class="navtext">ABOUT</h3>
+                </a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link " href="/projects/">
+                  <h3 class="navtext">PROJECTS</h3>
+                  
+                </a>
+              </li> 
+              <li class="nav-item" aria-current="page" >
+                <a class="nav-link active" href="/talks/">
+                  <h3 class="navtext">TALKS</h3>
+                  <span class="visually-hidden">(current)</span>
+                </a> 
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link " href="/writeups/">
+                  <h3 class="navtext">WRITEUPS</h3>
+                  
+                </a> 
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+
+    <div class="container pt-5 pb-3 d-lg-none"></div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="content">
+            <div class="row pt-5 pb-5">
+              <div class="offset-lg-1 col-lg-10">
+                <div class="row">
+                  <div class="col-lg"><div class="blog-title">Automated Bug Hunting with Semgrep</div></div>
+                </div>
+
+                <div class="date pb-4">10 Jul 2024</div>
+                <div>
+
+                <h2>Interactive Slides</h2>
+                    <div style="position:relative;padding-bottom:56.25%;">
+                        <!-- 56.25 comes from aspect ratio of 16:9, change this accordingly -->
+                        <iframe id="presentation_iframe" style="width:100%;height:100%;position:absolute;left:0px;top:0px;" frameborder="0" width="100%" height="100%" allowfullscreen="" allow="autoplay" src="/assets/files/semgrep/revealjs.html">
+                        </iframe>
+                    </div>
+                <script>document.getElementById("presentation_iframe").focus();</script>
+
+                <center>Press "F" to enable fullscreen.</center>
+                <center>For more keyboard controls, press "?".</center>
+
+                <p><br />This presentation was compiled using “<a href="https://www.manim.community/">Manim</a>”, a mathematical animation engine. I used the <a href="https://manim-slides.eertmans.be/latest/index.html">Manim Slides</a> plugin for easy slide creation. The slides can be rendered with the python code found in my <a href="https://github.com/emorchy/semgrep-presentation">semgrep-presentation</a> repository.</p>
+
+                <br>
+                <h2 id="video">Video</h2>
+
+                <p>As of August 26th, 2024, a video I created with similar presentation slides was created and displayed on Somerset Recon’s blog: <a href="https://www.somersetrecon.com/blog/2024/automated-bug-hunting-with-semgrep">https://www.somersetrecon.com/blog/2024/automated-bug-hunting-with-semgrep</a>. The video is embedded below:</p>
+
+                <iframe src="https://player.vimeo.com/video/1001793854?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="margin: -15% 0 -15% auto;" title="Semgrep Presentation"></iframe>
+
+                <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row pt-3">
+        <div class="offset-lg-1 col-lg-11">
+          <span class="copyright">&copy; 2024 Ethan Morchy</span>  
+        </div>
+      </div>
+
+    </div>
+
+    <script async data-id="100527609" src="//static.getclicky.com/js"></script>
+    <noscript><p><img alt="C" width="1" height="1" src="//in.getclicky.com/100527609ns.gif" /></p></noscript>
+    
+  </body>
+</html>

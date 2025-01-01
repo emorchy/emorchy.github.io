@@ -1,3 +1,0 @@
-import gmpy
-n = gmpy.mpz(N)
-n.root(2)[0]

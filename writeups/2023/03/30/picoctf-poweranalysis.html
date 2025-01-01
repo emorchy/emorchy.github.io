@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href='/css/style.css'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;800&display=swap" rel="stylesheet">
+    
+    <title>Ethan's Blog</title>
+
+    
+  
+    <meta name="author" content="Ethan Morchy">
+    <meta property="og:description" content="This is the early stages of this new site.">
+    <meta property="og:title" content="Ethan's Blog" />
+    <meta property="og:site_name" content="Ethan's Blog" />
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website" />
+    <!--<meta property="og:description" content="" />-->
+    <meta property="og:url" content="/" />
+
+    
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+    
+
+
+  </head>
+  <body>
+
+    <div class="container py-5 d-none d-lg-block"></div>
+
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-4" style="background-color: transparent!important;">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item" >
+                <a class="nav-link" href="/">
+                  <h3 class="navtext">ABOUT</h3>
+                </a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link " href="/projects/">
+                  <h3 class="navtext">PROJECTS</h3>
+                  
+                </a>
+              </li> 
+              <li class="nav-item" aria-current="page" >
+                <a class="nav-link active" href="/talks/">
+                  <h3 class="navtext">TALKS</h3>
+                  <span class="visually-hidden">(current)</span>
+                </a> 
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link " href="/writeups/">
+                  <h3 class="navtext">WRITEUPS</h3>
+                  
+                </a> 
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+
+    <div class="container pt-5 pb-3 d-lg-none"></div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="content">
+            <div class="row pt-5 pb-5">
+              <div class="offset-lg-1 col-lg-10">
+                <div class="row">
+                  <div class="col-lg"><div class="blog-title">PicoCTF Power Analysis</div></div>
+                </div>
+
+                <div class="date pb-4">30 Mar 2023</div>
+                <div>
+        <h1>PowerAnalysisWarm</h1>
+<details open="">
+<summary>Description</summary>
+<br />
+This encryption algorithm leaks a "bit" of data every time it does a computation. Use this to figure out the encryption key.
+
+Additional details will be available after launching your challenge instance.
+</details>
+
+<h2 id="precursor">Precursor</h2>
+<h3 id="what-is-aes">What is AES?</h3>
+<p>Advanced Encryption Standard (AES) is a symmetric-key block cipher used in VPNs, drive encryption, and government information protection. It is the most used encryption cipher used to date, and the versatility of its base leads to different varieties according to specific needs.</p>
+<h3 id="why-aes">Why AES?</h3>
+<p>Because of its properties, this algorithm easily and quickly allows data to be encrypted and decrypted at will when a key is known. AES is a worldwide algorithm that works great, when it is not improperly configured. Several attacks are known for insecure AES, including side channel attacks (which we will be discussing later on).</p>
+<h3 id="how-aes">How AES?</h3>
+<p>Let’s say Alice wants to securely send a simple 16 byte message to Bob using AES.</p>
+
+<p>Alice decides to create a 16 byte key that will encrypt the message she sends to Bob. She settles on the following:</p>
+
+<p>Key: “My precious key!”</p>
+
+<p>Plaintext: “Are belong to us”</p>
+
+<p><img src="/assets/files/picoctf/aes.png" alt="AES" /></p>
+<h4 id="xor">XOR</h4>
+<p>Alice first converts the key and the plaintext to hex:</p>
+
+<p>Key: 4d792070726563696f7573206b657921</p>
+
+<p>Plaintext: 4172652062656c6f6e6720746f207573</p>
+
+<p><br />
+She then begins by XORing the plaintext and the key.</p>
+
+<p>Ex. First byte: 0x4d XOR 0x41 = 0x0c</p>
+
+<p>Second byte: 0x79 XOR 0x72 = 0x0b
+  <br />
+  <br />
+Key XOR Plaintext = 0c0b455010000f060112535404450c52</p>
+<h4 id="sub-bytes">Sub-bytes</h4>
+<p>Next, Alice takes each byte in the XORed result and matches it with a substitution box (S-box). Because the first byte of the XORed value is 0x0c, Alice indexes the 13th value in the S-box and substitutes it for 0x0c.</p>
+
+<p>Luckily, the AES S-box is a standard lookup table originating from the <a href="https://en.wikipedia.org/wiki/Rijndael_S-box">Rijndael S-box</a>.</p>
+
+<p><img src="/assets/files/picoctf/sbox.png" alt="S-box" /></p>
+
+<p>The left column indexes with first half byte and the top row indexes using the last half byte of the input.</p>
+
+<p>Ex. “0c” would be substituted for “fe”.</p>
+
+<p>Sub-bytes = fe2b6e53ca63766f7cc9ed20f26efe00</p>
+
+<p>Although there are subsequent steps involved during the encryption process, this challenge focuses specifically on the XOR and S-box lookup in AES.</p>
+
+<h3 id="where-aes">Where AES?</h3>
+
+<p>The function “leaky_aes_secret” in <code class="language-plaintext highlighter-rouge">encrypt.py</code> demonstrates where AES is used:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def leaky_aes_secret(data_byte, key_byte):
+    out = Sbox[data_byte ^ key_byte]
+    leak_buf.append(out &amp; 0x01)
+    return out
+</code></pre></div></div>
+
+<p>The second line appears to be the combination of both AES steps previously defined. Additionally, the line after will leak the last bit of every substituted byte and later find the sum of the bits.</p>
+
+<p>Per our example, the least significant bits of Sub-bytes would be: 0101010101100000</p>
+
+<p>The sum (6) would subsequently be leaked with the line: <code class="language-plaintext highlighter-rouge">leakage result: 6</code></p>
+
+<p>The challenge essentially asks one question: When we are given the sum of least significant bits after providing a plaintext, is it possible to find the encryption key?</p>
+
+<h2 id="theory">Theory</h2>
+<p>We are dealing with a <a href="https://en.wikipedia.org/wiki/Side-channel_attack">side channel attack</a>. The least significant bit of each byte is calculated and the total is leaked to the user.</p>
+
+<p><img src="/assets/files/picoctf/algo.png" alt="algorithm" style="width:100%"/></p>
+
+<p>View example on <a href="https://github.com/emorchy/PicoCTF2023-PowerAnalysis/blob/main/README.md#Theory">my github repo</a>.</p>
+
+<p>How do we find the key from the result?</p>
+
+<h2 id="isolating-the-lsbs">Isolating the LSBs</h2>
+<p>We must first control the leak to find the key. To do this, we must be able to correspond individual bytes to bit leakage. By providing a payload that returns 0 bits of leakage, we can move on to the next step of manipulating individual bytes.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">testbyte</span><span class="p">(</span><span class="n">bits</span><span class="p">,</span> <span class="n">zero_payload</span><span class="p">):</span> <span class="c1">#tests payload bytes to decrease bit leakage
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mh">0xff</span><span class="p">):</span> <span class="c1">#returns before completion
+</span>        <span class="n">prepend</span> <span class="o">=</span> <span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">zero_payload</span><span class="p">])</span> <span class="c1">#increases each byte
+</span>        <span class="n">payload</span> <span class="o">=</span> <span class="s">"{:02x}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s">"00"</span><span class="o">*</span><span class="p">(</span><span class="mi">16</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">zero_payload</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">prepend</span> <span class="o">+</span> <span class="n">payload</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sendinput</span><span class="p">(</span><span class="n">prepend</span> <span class="o">+</span> <span class="n">payload</span><span class="p">))</span> <span class="c1">#receives the bit leakage
+</span>        <span class="k">print</span><span class="p">(</span><span class="s">"Bits: {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">result</span> <span class="o">&lt;</span> <span class="n">bits</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">payload</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="c1">#return incremented byte
+</span>        <span class="k">elif</span> <span class="n">results</span> <span class="o">&gt;</span> <span class="n">bits</span><span class="p">:</span> <span class="c1">#LSB was already 0
+</span>            <span class="k">return</span> <span class="s">"00"</span>
+
+<span class="n">zero_payload</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1">#becomes a list of payload bytes that output 0 leakage bits
+</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mh">0x10</span><span class="p">):</span> <span class="c1">#for each byte
+</span>    <span class="n">result</span> <span class="o">=</span> <span class="n">testbyte</span><span class="p">(</span><span class="n">bits</span><span class="p">,</span> <span class="n">zero_payload</span><span class="p">)</span> <span class="c1">#lowers bit leakage if it can
+</span>    <span class="n">zero_payload</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="c1">#appends the returned byte
+</span>    <span class="k">print</span><span class="p">(</span><span class="n">zero_payload</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">result</span> <span class="o">!=</span> <span class="s">"00"</span><span class="p">:</span>
+        <span class="n">bits</span> <span class="o">-=</span> <span class="mi">1</span> <span class="c1">#for each byte that once had LSB
+</span></code></pre></div></div>
+<p>Because I am using payload “00000000000000000000000000000000”, I receive <code class="language-plaintext highlighter-rouge">leakage result: 8</code>.
+For the first byte of the payload, increment value until it returns a bit leakage value lower than 8. If the bit count becomes higher, the byte “00” already returns LSB 0.
+Repeat for each byte while prepending the bytes from the previous result to craft a “zero payload”.
+Thus, when we submit the “zero payload”, the bit leakage will always be 0.</p>
+
+<p><img src="/assets/files/picoctf/zero.png" alt="zeropayload" /></p>
+
+<h2 id="solving">Solving</h2>
+<p>Now, we solve!</p>
+
+<p>Choose one payload byte to increment. Record the bit leakage and the incremented payload byte. Repeat for a certain amount of times (more details later).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">zero_payload</span> <span class="o">=</span> <span class="p">[</span><span class="s">'00'</span><span class="p">,</span> <span class="s">'01'</span><span class="p">,</span> <span class="s">'00'</span><span class="p">,</span> <span class="s">'01'</span><span class="p">,</span> <span class="s">'00'</span><span class="p">,</span> <span class="s">'00'</span><span class="p">,</span> <span class="s">'00'</span><span class="p">,</span> <span class="s">'01'</span><span class="p">,</span> <span class="s">'00'</span><span class="p">,</span> <span class="s">'02'</span><span class="p">,</span> <span class="s">'04'</span><span class="p">,</span> <span class="s">'01'</span><span class="p">,</span> <span class="s">'03'</span><span class="p">,</span> <span class="s">'03'</span><span class="p">,</span> <span class="s">'00'</span><span class="p">,</span> <span class="s">'00'</span><span class="p">]</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="n">zero_payload</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">data_byte</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">leak</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">position</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#first byte will be incremented
+</span><span class="n">size</span> <span class="o">=</span> <span class="mi">30</span> <span class="c1">#amount of increments/recordings
+</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+    <span class="n">payload</span><span class="p">[</span><span class="n">position</span><span class="p">]</span> <span class="o">=</span> <span class="s">"{:02x}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">zero_payload</span><span class="p">[</span><span class="n">position</span><span class="p">],</span> <span class="mi">16</span><span class="p">)</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="c1">#increment
+</span>    <span class="n">data_byte</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">payload</span><span class="p">[</span><span class="n">position</span><span class="p">],</span> <span class="mi">16</span><span class="p">))</span> <span class="c1">#record the byte
+</span>    <span class="n">result</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sendinput</span><span class="p">(</span><span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">payload</span><span class="p">)))</span> <span class="c1">#get the result (1 or 0)
+</span>    <span class="n">leak</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="c1">#record result
+</span>
+</code></pre></div></div>
+
+<p>The bit leakage recorded will either be a 1 or a 0 (because the other 15 bytes return an LSB of 0).</p>
+
+<p>What does this mean?</p>
+
+<p>By curating a list of returned LSBs, it is possible to brute force the key byte by byte.</p>
+
+<p><img src="/assets/files/picoctf/onebyte.png" alt="onebyte" /></p>
+
+<p>As the payload byte increments, XORing with the static key changes its value, returning different Sbox numbers. Therefore, the list of leaked Sbox LSBs matches the Sbox LSBs of a given key byte XORed with the incremented payload byte.</p>
+
+<p><img src="/assets/files/picoctf/bytesolve.png" alt="bytesolve" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mh">0xff</span><span class="p">):</span> <span class="c1">#tests all possible bytes
+</span>    <span class="n">testleak</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">size</span>
+    <span class="k">for</span> <span class="n">pos</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+        <span class="n">testleak</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span> <span class="o">=</span> <span class="n">Sbox</span><span class="p">[</span><span class="n">data_byte</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span> <span class="o">^</span> <span class="n">key</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mh">0x1</span> <span class="c1">#gets LSB of possible Sbox match
+</span>    <span class="k">if</span> <span class="n">leak</span> <span class="o">==</span> <span class="n">testleak</span><span class="p">:</span> <span class="c1">#leak list defined previously
+</span>        <span class="k">print</span><span class="p">(</span><span class="s">"MATCH: 0x{:02x}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+        <span class="n">final</span> <span class="o">=</span> <span class="n">key</span>
+        <span class="k">break</span>
+</code></pre></div></div>
+
+<p>We have successfully brute forced the first byte of the AES key. Now repeat 15 more times and we’ve got the encryption key!</p>
+
+<p>For the python solution code, see “power.py”.</p>
+
+<p><a href="https://asciinema.org/a/4FEbdqMm97Jis2h5a4r6zoXP7?speed=2&amp;autoplay=1"><img src="https://asciinema.org/a/4FEbdqMm97Jis2h5a4r6zoXP7.png" alt="asciinema" style="width:100%"/></a></p>
+
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>Overall, this was a fun challenge and a fantastic introduction to side-channel attacks. After several hours of scripting, the key is produced in 90 seconds.</p>
+
+<p>By the end of the competition, a total of 86 out of 6923 teams solved this challenge. Only 1% of the teams that competed managed to solve it.</p>
+
+<details open=""><summary>Author's Note</summary>
+<br />
+Use the variable `SILENT=1` with `python3 power.py` to witness the beauty of the password oracle.
+</details>
+
+        
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row pt-3">
+        <div class="offset-lg-1 col-lg-11">
+          <span class="copyright">&copy; 2024 Ethan Morchy</span>  
+        </div>
+      </div>
+
+    </div>
+
+    <script async data-id="100527609" src="//static.getclicky.com/js"></script>
+    <noscript><p><img alt="C" width="1" height="1" src="//in.getclicky.com/100527609ns.gif" /></p></noscript>
+    
+  </body>
+</html>

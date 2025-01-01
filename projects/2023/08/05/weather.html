@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href='/css/style.css'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;800&display=swap" rel="stylesheet">
+    
+    <title>Ethan's Blog</title>
+
+    
+  
+    <meta name="author" content="Ethan Morchy">
+    <meta property="og:description" content="This is the early stages of this new site.">
+    <meta property="og:title" content="Ethan's Blog" />
+    <meta property="og:site_name" content="Ethan's Blog" />
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website" />
+    <!--<meta property="og:description" content="" />-->
+    <meta property="og:url" content="/" />
+
+    
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+    
+
+
+  </head>
+  <body>
+
+    <div class="container py-5 d-none d-lg-block"></div>
+
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-4" style="background-color: transparent!important;">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item" >
+                <a class="nav-link " href="/">
+                  <h3 class="navtext">ABOUT</h3>
+                </a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link current" href="/projects/">
+                  <h3 class="navtext">PROJECTS</h3>
+                  <span class="visually-hidden">(current)</span>
+                </a>
+              </li> 
+              <li class="nav-item" aria-current="page">
+                <a class="nav-link" href="/talks/">
+                  <h3 class="navtext">TALKS</h3>
+                </a> 
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link " href="/writeups/">
+                  <h3 class="navtext">WRITEUPS</h3>
+                  
+                </a> 
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+
+    <div class="container pt-5 pb-3 d-lg-none"></div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="content">
+            <div class="row pt-5 pb-5">
+              <div class="offset-lg-1 col-lg-10">
+                <div class="row">
+                  <div class="col-lg"><div class="blog-title"> Weather Station Protocol Forwarding</div></div>
+                </div>
+
+                <div class="date pb-4">5 Aug 2023</div>
+                <div>
+
+
+<h1 id="overview">Overview</h1>
+<p>I used a 433MHz radio receiver and transmitter with an Attiny chip to interface an AcuRite weather transmitter with a La Crosse weather display.
+<!--excerpt-->
+I own a La Crosse weather transmitter and station. Several years ago, my transmitter stopped working. It wasn’t until recently when I began working on another project that I discovered a wireless weather transmission coming from nearby.</p>
+
+<p><img src="/assets/files/weather/lacrosse.webp" alt="lacrosse.webp" class="center" style="width=75%;" /></p>
+<p><center><em>La Crosse Weather Sensor and Station</em></center></p>
+<h1 id="code-creation">Code Creation</h1>
+<h2 id="receive-acurite">Receive Acurite</h2>
+<p>Using a RTL-SDR with the “rtl_433” program, I was able to see that someone owned a weather station in the general vicinity.
+<img src="/assets/files/weather/rtl.png" alt="rtl.png" class="center" />
+<center><em>rtl_433 output</em></center></p>
+
+<p>From the output, my neighbor owns an AcuRite 5-in-1 weather sensor. This device transmits temperature, humidity, wind speed, wind direction, and rainfall on the 433MHz frequency. Every 30 seconds, an AcuRite transmitter will send 3 identical messages (not including the sequence number). An AcuRite weather station (usually some sort of display) will demodulate and process the received data into a handy human-readable display.</p>
+<h3 id="demodulation">Demodulation</h3>
+<!--
+![5in1.png](/assets/files/weather/5in1.png){:.centered}
+*AcuRite 5-in-1 Weather Station*
+-->
+<p>To receive AcuRite data using an arduino (or attiny chip), a 433 MHz receiver must connect to the microcontroller. I will be using the <a href="https://github.com/sui77/rc-switch/wiki">RC Switch</a> library, which can be used send and receive RC codes.</p>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;RCSwitch.h&gt;</span><span class="cp">
+</span><span class="n">RCSwitch</span> <span class="n">receiver</span> <span class="o">=</span> <span class="n">RCSwitch</span><span class="p">();</span>
+<span class="o">---</span><span class="n">snip</span><span class="o">---</span>
+<span class="kt">void</span> <span class="nf">receive</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">receiver</span><span class="p">.</span><span class="n">enableReceive</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>  <span class="c1">// Receiver on interrupt 0 =&gt; that is pin #2</span>
+  <span class="k">static</span> <span class="k">const</span> <span class="n">RCSwitch</span><span class="o">::</span><span class="n">Protocol</span> <span class="n">acurite</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">204</span><span class="p">,</span> <span class="p">{</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span> <span class="p">},</span> <span class="p">{</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="p">},</span> <span class="nb">false</span> <span class="p">};</span>
+  <span class="n">receiver</span><span class="p">.</span><span class="n">setProtocol</span><span class="p">(</span><span class="n">acurite</span><span class="p">);</span>
+  <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">receiver</span><span class="p">.</span><span class="n">available</span><span class="p">())</span> <span class="p">{};</span>
+  <span class="n">receiver</span><span class="p">.</span><span class="n">resetAvailable</span><span class="p">();</span>
+<span class="o">---</span><span class="n">snip</span><span class="o">---</span></code></pre></figure>
+
+<p>The <code class="language-plaintext highlighter-rouge">receive()</code> function first enables the receiver on pin #2. In order to differentiate an AcuRite transmission from random noise, the protocol uses <a href="https://en.wikipedia.org/wiki/Pulse-width_modulation#Telecommunications">Pulse Width Modulation</a>. As a quick AcuRite PWM crash course, data is read one bit every clock cycle. In each cycle, a digital 1 is represented by a short pulse, and a digital 0 is represented by a long pulse. Thanks to rtl_433, we are able to <a href="https://triq.org/pdv/#AAB00B0404026000D4019027148055+AAB04B0401026000D401902714929292929292A1A1A192A1929292A19292A1A1A1A19292929292929292929292A19292A1A192A19292A1A1A192A1A1A1A19292A1A19292A1A1A1929292A1A1A19055+AAB00B0404026000D4019027148055+AAB04B0401026000D401902714929292A19292A1A1A192A1929292A19292A1A1A1A19292929292929292929292A19292A1A192A19292A1A1A192A1A1A1A19292A1A19292A1A1A192A192A1A1A19055+AAB00B0404026000D4019027148055+AAB04B0401026000D4019027149292A1929292A1A1A192A1929292A19292A1A1A1A19292929292929292929292A19292A1A192A19292A1A1A192A1A1A1A19292A1A19292A1A1A1A19292A1A1A19355">visualize the pulsedata</a> coming from Acurite.
+<img src="/assets/files/weather/triq.png" alt="triq.png" class="center" />
+<center><em>Acurite PWM visualization</em></center></p>
+<p>As shown above on the right side, a bit is read every 612ms.</p>
+
+<p><em>Note</em>: There is a margin of error for received pulse data. I set the pulse length to two short pulses equal one long pulse.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><code>    __
+0: |  |_ : long high pulse (~408ms), short low pulse (~204ms)
+    _
+1: | |__ : short high pulse (~204ms), long low pulse (~408ms)
+</code></div></div>
+<p>The acurite protocol definition is in the format: {pulselength, Sync bit, “0” bit, “1” bit, invertedSignal}. Given that each bit is composed of 3 short pulses (204ms * 3 = 612ms):</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>pulselength</td>
+      <td>204ms</td>
+    </tr>
+    <tr>
+      <td>Off bit</td>
+      <td>{2,1} #2 high pulses, 1 low pulse</td>
+    </tr>
+    <tr>
+      <td>On bit</td>
+      <td>{1,2} #1 high pulse, 2 low pulses</td>
+    </tr>
+    <tr>
+      <td>sync header</td>
+      <td>3 high pulses and 3 low pulses x4 (612ms up, 612ms down) x4</td>
+    </tr>
+    <tr>
+      <td>invertedSignal</td>
+      <td>false</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="decoding">Decoding</h3>
+<p>As mentioned before, 3 near-identical messages are released every 30 seconds. Here is an example message set:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><code>[01] {65} 03 a2 78 00 88 36 d2 ad 00 
+[02] {65} 13 a2 78 00 88 36 d2 bd 00 
+[03] {65} 23 a2 78 00 88 36 d2 cd 00 
+</code></div></div>
+
+<p>Once again, the rtl_433 repository proves invaluable with the Acurite data decoding. The <a href="https://github.com/merbanan/rtl_433/blob/master/src/devices/acurite.c#L632C1-L695">acurite.c</a> that exists in the rtl_433 repository demonstrates the decoding process of an Acurite message.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><code>{65} 03 a2 78 00 88 36 d2 ad 00 
+ ^^ sync byte (in buf as item 0)
+     ^^ ^^ ^^ id, seq, status, etc
+              ^^ ^^ wind speed
+                 ^^ ^^ temperature
+                       ^^ humidity
+</code></div></div>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kt">void</span> <span class="nf">receive</span><span class="p">()</span> <span class="p">{</span>
+  <span class="o">---</span><span class="n">snip</span><span class="o">---</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mh">0x3f</span> <span class="o">==</span> <span class="mi">56</span><span class="p">){</span> <span class="c1">//correct message type</span>
+      <span class="kt">bool</span> <span class="n">failure</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+      <span class="kt">int</span> <span class="n">temp_raw</span> <span class="o">=</span> <span class="p">(</span><span class="n">bb</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mh">0x0F</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">7</span> <span class="o">|</span> <span class="p">(</span><span class="n">bb</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mh">0x7F</span><span class="p">);</span>
+      <span class="kt">float</span> <span class="n">tempf</span> <span class="o">=</span> <span class="p">(</span><span class="n">temp_raw</span> <span class="o">-</span> <span class="mi">400</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.1</span><span class="n">f</span><span class="p">;</span>
+      <span class="kt">uint8_t</span> <span class="n">humidity</span> <span class="o">=</span> <span class="p">(</span><span class="n">bb</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">&amp;</span> <span class="mh">0x7f</span><span class="p">);</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">humidity</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">humidity</span> <span class="o">&gt;</span> <span class="mi">100</span> <span class="o">||</span> <span class="n">tempf</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">40</span> <span class="o">||</span> <span class="n">tempf</span> <span class="o">&gt;</span> <span class="mi">158</span><span class="p">)</span> <span class="p">{</span><span class="n">failure</span> <span class="o">=</span> <span class="nb">true</span><span class="p">};</span> <span class="c1">//data sanity</span>
+  <span class="p">}</span>
+  <span class="o">---</span><span class="n">snip</span><span class="o">---</span>
+</code></pre></div></div>
+<h2 id="transmit-la-crosse">Transmit La Crosse</h2>
+<p>Now that we have temperature and humidity stored in a variable, it is time to transmit the data to the La Crosse weather station. I emulated the La Crosse TX141TH-Bv2 sensor. From the description in <a href="https://github.com/merbanan/rtl_433/blob/master/src/devices/lacrosse_tx141x.c#L33-L47">lacrosse_tx141x.c</a>, we can gather a PWM profile for rc-switch:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">RCSwitch</span> <span class="n">transmitter</span> <span class="o">=</span> <span class="n">RCSwitch</span><span class="p">();</span>
+<span class="kt">void</span> <span class="nf">transmit</span><span class="p">(</span><span class="kt">float</span> <span class="n">tempc</span><span class="p">,</span> <span class="kt">int</span> <span class="n">humi</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">transmitter</span><span class="p">.</span><span class="n">enableTransmit</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span> <span class="c1">//arduino pin #10</span>
+  <span class="n">transmitter</span><span class="p">.</span><span class="n">setRepeatTransmit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">//disables repeat</span>
+  <span class="k">static</span> <span class="k">const</span> <span class="n">RCSwitch</span><span class="o">::</span><span class="n">Protocol</span> <span class="n">sync</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">833</span><span class="p">,</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="p">},</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span> <span class="nb">false</span> <span class="p">};</span>      <span class="c1">//833ms apart</span>
+  <span class="k">static</span> <span class="k">const</span> <span class="n">RCSwitch</span><span class="o">::</span><span class="n">Protocol</span> <span class="n">lacrosse</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">208</span><span class="p">,</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="p">},</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="p">},</span> <span class="p">{</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span> <span class="nb">false</span> <span class="p">};</span>
+<span class="o">---</span><span class="n">snip</span><span class="o">---</span>
+</code></pre></div></div>
+
+<p>I created a different protocol for the sync header because the preamble is 833ms high and 833ms low repeated 4 times. RCSwitch does not allow repeated sync packets, so I used a different protocol for sync. Following the <a href="https://github.com/merbanan/rtl_433/blob/master/src/devices/lacrosse_tx141x.c#L58-L64">La Crosse transmission analysis</a>, the protocol can be coded as such:</p>
+<center>
+<code>
+[id] [id] [flags] [temp] [temp] [temp] [humi] [humi] [chk] [chk]
+</code>
+</center>
+<center><p>Every 4 bits of data is enclosed in [ ] for a total of 40 bits.</p></center>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">---</span><span class="n">snip</span><span class="o">---</span>
+    <span class="n">transmitter</span><span class="p">.</span><span class="n">setProtocol</span><span class="p">(</span><span class="n">sync</span><span class="p">);</span>
+    <span class="n">transmitter</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="s">"1111"</span><span class="p">);</span>  <span class="c1">//initial sync of 4x 833us high and low</span>
+    <span class="n">transmitter</span><span class="p">.</span><span class="n">setProtocol</span><span class="p">(</span><span class="n">lacrosse</span><span class="p">);</span>
+    <span class="n">transmitter</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="mh">0xFF</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>       <span class="c1">//bogus nonzero ID;</span>
+    <span class="n">transmitter</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="s">"1001"</span><span class="p">);</span>        <span class="c1">//flags: battery 0 (!1), test 0, channel 01</span>
+    <span class="n">transmitter</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="n">temp_raw</span><span class="p">,</span> <span class="mi">12</span><span class="p">);</span>  <span class="c1">//12 bit packet</span>
+    <span class="n">transmitter</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="n">humi</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>       <span class="c1">//8 bit packet</span>
+    <span class="n">transmitter</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="s">"11111111"</span><span class="p">);</span>    <span class="c1">//dummy CRC is unchecked</span>
+<span class="o">---</span><span class="n">snip</span><span class="o">---</span>
+</code></pre></div></div>
+
+<p>According to <a href="https://github.com/merbanan/rtl_433/blob/master/src/devices/lacrosse_tx141x.c#L50-L52">rtl_433</a>, “The TX141TH-Bv2 sensor sends 12 of identical packets, one immediately following the other, in a single burst. These 12-packet bursts repeat every 50 seconds”. The final transmission function is shown below:</p>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">transmit</span><span class="p">(</span><span class="kt">float</span> <span class="n">tempc</span><span class="p">,</span> <span class="kt">int</span> <span class="n">humi</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">transmitter</span><span class="p">.</span><span class="n">enableTransmit</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span> <span class="c1">//arduino pin #10</span>
+  <span class="n">transmitter</span><span class="p">.</span><span class="n">setRepeatTransmit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">//disables repeat</span>
+  <span class="k">static</span> <span class="k">const</span> <span class="n">RCSwitch</span><span class="o">::</span><span class="n">Protocol</span> <span class="n">sync</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">833</span><span class="p">,</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="p">},</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span> <span class="nb">false</span> <span class="p">};</span>      <span class="c1">//833ms apart</span>
+  <span class="k">static</span> <span class="k">const</span> <span class="n">RCSwitch</span><span class="o">::</span><span class="n">Protocol</span> <span class="n">lacrosse</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">208</span><span class="p">,</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="p">},</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="p">},</span> <span class="p">{</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span> <span class="nb">false</span> <span class="p">};</span>
+
+  <span class="kt">int</span> <span class="n">temp_raw</span> <span class="o">=</span> <span class="n">tempc</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">500</span><span class="p">;</span> <span class="c1">//converts Celcius to La Crosse 12 bits</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//12 repeated packets</span>
+    <span class="n">transmitter</span><span class="p">.</span><span class="n">setProtocol</span><span class="p">(</span><span class="n">sync</span><span class="p">);</span>
+    <span class="n">transmitter</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="s">"1111"</span><span class="p">);</span>  <span class="c1">//initial sync of 4x 833us high and low</span>
+    <span class="n">transmitter</span><span class="p">.</span><span class="n">setProtocol</span><span class="p">(</span><span class="n">lacrosse</span><span class="p">);</span>
+    <span class="n">transmitter</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="mh">0xFF</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>       <span class="c1">//bogus nonzero ID;</span>
+    <span class="n">transmitter</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="s">"1001"</span><span class="p">);</span>        <span class="c1">//flags: battery 0 (!1), test 0, channel 01</span>
+    <span class="n">transmitter</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="n">temp_raw</span><span class="p">,</span> <span class="mi">12</span><span class="p">);</span>  <span class="c1">//12 bit packet</span>
+    <span class="n">transmitter</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="n">humi</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>       <span class="c1">//8 bit packet</span>
+    <span class="n">transmitter</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="s">"11111111"</span><span class="p">);</span>    <span class="c1">//dummy CRC is unchecked</span>
+  <span class="p">}</span>
+  <span class="n">transmitter</span><span class="p">.</span><span class="n">setProtocol</span><span class="p">(</span><span class="n">sync</span><span class="p">);</span>
+  <span class="n">transmitter</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="s">"11"</span><span class="p">);</span>  <span class="c1">//post-amble 2x 833us high and low</span>
+  <span class="n">transmitter</span><span class="p">.</span><span class="n">disableTransmit</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+        
+      </section>
+
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row pt-3">
+        <div class="offset-lg-1 col-lg-11">
+          <span class="copyright">&copy; 2024 Ethan Morchy</span>  
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
