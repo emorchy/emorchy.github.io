@@ -47,24 +47,25 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-              <li class="nav-item"   aria-current="page" >
+                <li class="nav-item" >
                 <a class="nav-link" href="/">
                   <h3 class="navtext">ABOUT</h3>
                 </a>
               </li>
               <li class="nav-item" >
-                <a class="nav-link" href="/projects/">
+                <a class="nav-link " href="/projects/">
                   <h3 class="navtext">PROJECTS</h3>
                   
                 </a>
               </li> 
-              <li class="nav-item" >
-                <a class="nav-link" href="/talks/">
+              <li class="nav-item" aria-current="page" >
+                <a class="nav-link active" href="/talks/">
                   <h3 class="navtext">TALKS</h3>
+                  <span class="visually-hidden">(current)</span>
                 </a> 
               </li>
               <li class="nav-item" >
-                <a class="nav-link active" href="/writeups/">
+                <a class="nav-link " href="/writeups/">
                   <h3 class="navtext">WRITEUPS</h3>
                   
                 </a> 
@@ -84,31 +85,49 @@
           <div class="content">
             <div class="row pt-5 pb-5">
               <div class="offset-lg-1 col-lg-10">
-                <h1 class="pb-4">Writeups</h1>
+                <div class="row">
+                  <div class="col-lg"><div class="blog-title">Medtronic CVEs</div></div>
+                </div>
 
-  <article class="excerpt">
-    <h3 class="unspaced"><a href="/writeups/2025/08/16/medtronic-cves.html">Medtronic CVEs</a></h3>
-    <div class="date">16 Aug 2025</div>
-    <p>
-    <p>This writeup details the process for discovering 3 vulnerabilities in the Medtronic MyCareLink Patient Monitor, given identifications CVE-2025-4393, CVE-2025-4394, and CVE-2025-4395.</p>
-    </p>
-  </article>
+                <div class="date pb-4">16 Aug 2025</div>
+                <div>
 
-  <article class="excerpt">
-    <h3 class="unspaced"><a href="/writeups/2023/03/30/picoctf-poweranalysis.html">PicoCTF Power Analysis</a></h3>
-    <div class="date">30 Mar 2023</div>
-    <p>
-    <p>This is a writeup for the PicoCTF 2023 PowerAnalysisWarm challenge. This involves side-channel power analysis and a cryptographic understanding of AES. Source code in my github repo.</p>
-    </p>
-  </article>
+Three vulnerabilities were discovered in Medtronic's MyCareLink Patient Monitor 24590, 24952 over the course of three days.
+<br><br>
+The CISA ICS Medical Advisory can be found here: <a href=https://www.cisa.gov/news-events/ics-medical-advisories/icsma-25-205-01>https://www.cisa.gov/news-events/ics-medical-advisories/icsma-25-205-01</a>
+<br><br>
+A security bulletin has been released by Medtronic and can be found here: <a href=https://global.medtronic.com/content/dam/medtronic-wide/public/united-states/products/cardiac-vascular/cardiac-rhythm/cardiac-monitoring/mycarelink-patient-monitor-security-bulletin.pdf>Medtronic Bulletin</a>
+<br><br>
 
-  <article class="excerpt">
-    <h3 class="unspaced"><a href="/writeups/2021/03/26/cryptohack.html">Cryptohack Euler’s Totient</a></h3>
-    <div class="date">26 Mar 2021</div>
-    <p>
-    <p>Calculate Euler’s Totient (φn) using the Extended Euclidean Algorithm.</p>
-    </p>
-  </article>
+<div class="table_component">
+<table>
+  <tr>
+    <th>CVE ID</th>
+    <th>Vulnerability Description</th>
+    <th>CVSS v3.1/v4 Score</th>
+  </tr>
+  <tr>
+    <td><a href="https://www.cve.org/CVERecord?id=CVE-2025-4393">CVE-2025-4393</a></td>
+    <td>Deserialization of Untrusted Data</td>
+    <td>6.5/5.9</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.cve.org/CVERecord?id=CVE-2025-4394">CVE-2025-4394</a></td>
+    <td>Cleartext Storage of Sensitive Information</td>
+    <td>6.8/7.0</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.cve.org/CVERecord?id=CVE-2025-4395">CVE-2025-4395</a></td>
+    <td>Empty Password In Configuration File</td>
+    <td>6.8/7.0</td>
+  </tr>
+</table> 
+</div>
+
+
+        
+                </div>
+
               </div>
             </div>
           </div>
