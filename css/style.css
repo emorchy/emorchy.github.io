@@ -508,3 +508,40 @@ figure.highlight pre.highlight {
     color: [object HTMLInputElement];
     padding: 5px;
 }
+
+ nav ol {
+list-style-type: none; /* Remove default bullet points */
+padding: 0px;
+}
+
+nav li {
+margin-bottom: 5px;
+}
+
+nav#toc {
+    background: #eceff4;
+    padding: 0px 0px 0 0;
+    margin: 0px 0px 0px 20px;
+}
+
+nav#toc h2 {
+    margin-top: 0;
+}
+
+nav#toc ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav#toc ul li {
+    margin: 5px 0;
+}
+
+nav#toc a {
+    text-decoration: none;
+    color: #0073e6;
+}
+
+nav#toc a:hover {
+    text-decoration: underline;
+}
