@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href='/css/style.css'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;800&display=swap" rel="stylesheet">
+    
+    <title>Ethan's Blog</title>
+
+    
+  
+    <meta name="author" content="Ethan Morchy">
+    <meta property="og:description" content="This is the early stages of this new site.">
+    <meta property="og:title" content="Ethan's Blog" />
+    <meta property="og:site_name" content="Ethan's Blog" />
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website" />
+    <!--<meta property="og:description" content="" />-->
+    <meta property="og:url" content="/" />
+
+    
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+    
+
+
+  </head>
+  <body>
+
+    <div class="container py-5 d-none d-lg-block"></div>
+
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-4" style="background-color: transparent!important;">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item" >
+                <a class="nav-link " href="/">
+                  <h3 class="navtext">ABOUT</h3>
+                </a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link active" href="/projects/">
+                  <h3 class="navtext">PROJECTS</h3>
+                  <span class="visually-hidden">(current)</span>
+                </a>
+              </li> 
+              <li class="nav-item" aria-current="page">
+                <a class="nav-link" href="/talks/">
+                  <h3 class="navtext">TALKS</h3>
+                </a> 
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link " href="/writeups/">
+                  <h3 class="navtext">WRITEUPS</h3>
+                  
+                </a> 
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+
+    <div class="container pt-5 pb-3 d-lg-none"></div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="content">
+            <div class="row pt-5 pb-5">
+              <div class="offset-lg-1 col-lg-10">
+                <div class="row">
+                  <div class="col-lg"><div class="blog-title">Social Media Predictor</div></div>
+                </div>
+
+                <div class="date pb-4">20 Mar 2026</div>
+                <div>
+
+                <p>Goal: Attempt to predict YikYak post engagement from post text and auxiliary metadata (e.g. time, punctuation count, emoji usage) using a mix of classic MLPs and transformer models.</p>
+                <p>The documentation, scripts, and evaluation metrics can be found <a href="https://github.com/emorchy/social-media-predictor">here</a>.</p>
+
+                <h1 id="overview">Overview</h1>
+                <p>YikYak is an anonymous messaging platform that allows college students to create and view discussions at UCSD. Posts and comments can be voted positively or negatively by the users, denoted as a “vote total” in the community. By leveraging Machine Learning (ML) and Natural Language Processing (NLP), previous messages can be used to predict the average vote count that a new post would receive.</p>
+                <h1 id="why">Why?</h1>
+                <p>Far too often, a user is concerned about whether a message will be well received in their community. Predicting vote totals can allow a user to alter their message to maximize user reachability and positive engagement.</p>
+                <h1 id="how">How?</h1>
+                <h2 id="scrape">Dataset Retrieval</h2>
+                <p>To train a model, I first had to scrape as many YikYak posts and comments from the UCSD group.</p>
+                    <p><img src="/assets/files/yikyak/yikyak-count.png" alt="YikYak Stats" class="center" style="width:100%;"/></p>
+                    <p>I created a scraped collection of posts and comments from UCSD’s YikYak group from March 30, 2023 to March 5, 2026. Without filtering null text and posts, the database snapshot contained <b>51,342 posts</b> and <b>78,760 comments</b> in total. Of these, <b>46,796 posts</b> and <b>76,764 comments</b> are text-only.</p>
+                    <details closed="">
+                    <summary>Post Statistics</summary>
+                        <p><img src="/assets/files/yikyak/length_distribution.png" alt="Length Distribution" class="center" style="width:75%;"/></p>
+                        <p><img src="/assets/files/yikyak/weekly_stats.png" alt="Weekly Stats" class="center" style="width:75%;"/></p>
+                    </details>
+
+                <h2 id="Data input">Data Input/Output</h2>
+                <p>Inputs: post text and created_at. Output: percentile (vote total). The target is likes_percentile in (0, 1): within each calendar week, I compute the mean and standard deviation of log(1 + likes), convert each post to a z-score within its week, then map the z-score through the standard normal CDF. This yields a comparable, stable scale across weeks and is invertible to log or raw likes using per-week statistics.</p>
+
+                <h2 id="Auxiliary Features">Auxiliary Features</h2>
+                <p>There are 18 numeric features: day_of_week, hour_sin, hour_cos, text_length, num_words, num_hashtags, num_punctuation, is_question, caps_ratio, emoji_count, has_emoji, contains_number, time_since_last_post, week_index, weekly_post_count, log_weekly_post_count, week_log_like_mean, and week_log_like_std. They are standardized with StandardScaler fit on the training set only.</p>
+
+                <h2 id=split>Splitting</h2>
+                <p>By default, the split is strictly temporal (70% train, 15% val, 15% test). In an attempt to improve model accuracy, I also added an optional feature to randomly split. I also used a "latest fraction" (e.g., 0.6, 0.75, 0.8, 1.0) for ablations, as the oldest 10% of posts existed over 4 years ago and may have less relevance to the posts of today. During attempted classification, I added an option to balance classes, so each class would contain the equal amount of posts during training.</p>
+                
+                <h2 id=bert>BERT Pipeline</h2>
+                    <details closed="">
+                    <summary>BERT Pipeline Diagram</summary>
+                                <p><img src="/assets/files/yikyak/bert_pipeline_training.png" alt="Bert Model" class="center" style="width:50%;"/></p>
+                    </details>
+                    <ol type="1">
+                        <li>DAPT: Masked language modeling on posts and comments (domain adaptation).</li>
+                        <li>TAPT: Masked LM on posts only, labels stripped (task adaptation).</li>
+                        <li>Supervised regression: Load the adapted BERT, add a regression head and auxiliary tower.</li>
+                        <ol type="A">
+                            <li>Freeze BERT, train the MLP only. Important for incorporating auxiliary inputs and regression head.</li>
+                            <li>Optionally unfreeze all or top-k layers with a low learning rate. Differential learning rates are used for the transformer vs. the head. I unfroze the top 4 layers during phase B testing.</li>
+                        </ol>
+                    </ol>
+
+                <h2 id=bert>Models</h2>
+                    <details closed="">
+                    <summary>Model Shapes</summary>
+                                <p><img src="/assets/files/yikyak/bert_models_shapes.png" alt="Bert Model" class="center" style="width:100%;"/></p>
+                    </details>
+                    <p>Leveraged multiple model types with various tests on their hyperparameters and configuration. The first model was a Multi-Layer Perceptron on the MiniLM embeddings with appended auxiliary inputs. The second model was an MLP with a small transformer layer after embedding. I also did end-to-end DistilBERT (tokenize → [CLS]+aux tower → head). These are reported for comparison only.</p>
+
+                <h2 id=eval>Evaluation</h2>
+                    <p>I report RMSE and MAE on the percentile target, fraction of predictions within 0.5σ and 1.0σ, and MAE on raw likes (inverted from percentile). For classification, I report accuracy and F1.</p>
+
+                <h2 id=target>Target Choices</h2>
+                <p>In an attempt to find the most accurate results, the pipeline supports multiple output styles. What began with simple log-vote regression changed into vote-based and percentile-based classification, then a single binary output, with and without sigmoid. The final regression target was decided to be a weekly normalized percentile. The target was found to be the most effective and is comparable across weeks for higher accuracy and variation accountability.</p>
+
+                <h2 id=target>Model Comparison</h2>
+                    <p><img src="/assets/files/yikyak/model_comparison.png" alt="Model Comparison" class="center" style="width:100%;"/></p>
+                    <p>TAPT epoch testing comparison: DAPT=3, latest 80% data, temporal split, frozen then unfrozen (top-4), early stopping</p>
+                    <p><img src="/assets/files/yikyak/tapt_epochs.png" alt="TAPT Epochs" class="center" style="width:80%;"/></p>
+
+                <h2 id=analysis>Analysis</h2>
+                <p>The BERT pipeline (DAPT 3, TAPT 48, frozen 9, unfrozen 2 with 0.8 ablation and a temporal split) achieves Test RMSE 0.2626 and MAE 0.2191, with 42.17% of predictions within 0.5σ and 76.16% within 1.0σ, and MAE on raw likes 12.15. It improves over the baseline (Test RMSE 0.2952, MAE 0.2457) by roughly 11% relative on RMSE and MAE. Domain and task adaptation (DAPT then TAPT) plus frozen/unfrozen regression yield a model that generalizes to chronologically later data (0.8 temporal split). With max_length=64, only 0.4% of posts are truncated. Classification results with 10 frozen epochs and 2 unfrozen epochs reach 46.14% accuracy, 0.3476 F1, and 0.4444 weighted F1.</p>
+
+                <h2 id=eval>Evaluation</h2>
+                <p>I created several scripts that aid in using the BERT model for vote total prediction purposes. One script take text and improve it by prepending/appending text, while another takes in text and finds the most optimal time to send it.
+                    <details closed="">
+                    <summary>Script Images</summary>
+                            <p><img src="/assets/files/yikyak/improvement_prediction.png" alt="Improvement Prediction" class="center" style="width:75%;"/></p>
+                            <p><img src="/assets/files/yikyak/Class_probabilities_date_spread.png" alt="Timing probabilities" class="center" style="width:75%;"/></p>
+                    </details>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row pt-3">
+        <div class="offset-lg-1 col-lg-11">
+          <span class="copyright">&copy; 2025 Ethan Morchy</span>  
+        </div>
+      </div>
+
+    </div>
+
+    <script async data-id="100527609" src="//static.getclicky.com/js"></script>
+    <noscript><p><img alt="C" width="1" height="1" src="//in.getclicky.com/100527609ns.gif" /></p></noscript>
+    
+  </body>
+</html>
