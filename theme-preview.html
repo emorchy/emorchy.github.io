@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Theme Preview - Ethan Morchy</title>
+    <style>
+      @font-face {
+        font-family: JetBrainsR;
+        src: url("/assets/fonts/JetBrainsMonoNL-Regular.ttf");
+      }
+
+      @font-face {
+        font-family: JetBrainsB;
+        src: url("/assets/fonts/JetBrainsMonoNL-Bold.ttf");
+      }
+
+      :root {
+        --bg: #242933;
+        --surface: #2e3440;
+        --surface-2: #3b4252;
+        --border: #434c5e;
+        --muted: #81899a;
+        --text: #d8dee9;
+        --text-strong: #eceff4;
+        --accent: #88c0d0;
+        --accent-2: #a3be8c;
+        --danger: #bf616a;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 15% 15%, rgba(136, 192, 208, 0.08), transparent 28rem),
+          radial-gradient(circle at 85% 10%, rgba(163, 190, 140, 0.05), transparent 24rem),
+          linear-gradient(rgba(216, 222, 233, 0.025) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(216, 222, 233, 0.025) 1px, transparent 1px),
+          var(--bg);
+        background-size: auto, auto, 42px 42px, 42px 42px, auto;
+        font-family: JetBrainsR, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        text-underline-offset: 0.22em;
+      }
+
+      .shell {
+        width: min(100% - 32px, 900px);
+        margin: 0 auto;
+        padding: 36px 0 54px;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 14px 0 26px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .brand {
+        color: var(--text-strong);
+        font-family: JetBrainsB, monospace;
+        letter-spacing: -0.03em;
+      }
+
+      .brand .prompt {
+        color: var(--accent-2);
+      }
+
+      .topnav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: flex-end;
+        font-size: 13px;
+      }
+
+      .topnav a {
+        color: var(--text);
+      }
+
+      .topnav a.active {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 0.28em;
+      }
+
+      .status {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .status strong {
+        color: var(--accent-2);
+        font-family: JetBrainsB, monospace;
+      }
+
+      .page {
+        max-width: 820px;
+        margin: 0 auto;
+        padding-top: 58px;
+      }
+
+      .hero {
+        position: relative;
+        padding: 0 0 46px;
+      }
+
+      .eyebrow,
+      .command-label {
+        margin: 0 0 12px;
+        color: var(--accent-2);
+        font-size: 13px;
+      }
+
+      .eyebrow::before,
+      .command-label::before {
+        content: "$ ";
+        color: var(--accent);
+      }
+
+      .name {
+        margin: 0;
+        color: var(--text-strong);
+        font-family: JetBrainsB, monospace;
+        font-size: clamp(38px, 8vw, 76px);
+        line-height: 0.95;
+        letter-spacing: -0.08em;
+      }
+
+      .tagline {
+        max-width: 700px;
+        margin: 22px 0 0;
+        color: var(--text);
+        font-size: clamp(17px, 2vw, 21px);
+        line-height: 1.55;
+      }
+
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 24px 0 0;
+        padding: 0;
+        list-style: none;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .contact li {
+        padding: 4px 9px;
+        border: 1px solid var(--border);
+        background: rgba(46, 52, 64, 0.72);
+      }
+
+      .signal {
+        margin: 30px 0 0;
+        padding: 16px 18px;
+        overflow-x: auto;
+        border: 1px solid var(--border);
+        border-left: 3px solid var(--accent);
+        background: rgba(46, 52, 64, 0.84);
+        color: var(--text);
+        font-family: JetBrainsR, monospace;
+        font-size: 13px;
+        line-height: 1.65;
+      }
+
+      .signal .key {
+        color: var(--accent-2);
+      }
+
+      .section-block {
+        margin-top: 44px;
+        padding-top: 28px;
+        border-top: 1px solid var(--border);
+      }
+
+      .recent-list,
+      .gateway-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .recent-list li {
+        display: grid;
+        grid-template-columns: 92px 1fr auto;
+        gap: 16px;
+        align-items: baseline;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(67, 76, 94, 0.7);
+      }
+
+      .kind,
+      .date,
+      .muted {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .kind {
+        color: var(--accent-2);
+      }
+
+      .evidence-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+
+      .evidence-card {
+        min-height: 190px;
+        padding: 15px;
+        border: 1px solid var(--border);
+        background:
+          linear-gradient(135deg, rgba(136, 192, 208, 0.08), transparent 36%),
+          rgba(46, 52, 64, 0.88);
+        color: var(--text);
+      }
+
+      .evidence-card:hover {
+        border-color: var(--accent);
+        text-decoration: none;
+      }
+
+      .evidence-card strong {
+        display: block;
+        margin: 18px 0 10px;
+        color: var(--text-strong);
+        font-family: JetBrainsB, monospace;
+        line-height: 1.35;
+      }
+
+      .evidence-card span:last-child {
+        display: block;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .placeholder {
+        border-style: dashed;
+        opacity: 0.82;
+      }
+
+      .gateway {
+        color: var(--muted);
+      }
+
+      .gateway a {
+        color: var(--text-strong);
+      }
+
+      .footer {
+        margin-top: 54px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      @media (max-width: 760px) {
+        .shell {
+          width: min(100% - 24px, 900px);
+          padding-top: 18px;
+        }
+
+        .topbar {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .topnav {
+          justify-content: flex-start;
+        }
+
+        .page {
+          padding-top: 38px;
+        }
+
+        .recent-list li {
+          grid-template-columns: 1fr;
+          gap: 3px;
+        }
+
+        .evidence-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <header>
+        <div class="topbar">
+          <a class="brand" href="#"><span class="prompt">ethan@morchy</span>:~$</a>
+          <nav class="topnav" aria-label="Primary">
+            <a href="#">projects</a>
+            <a href="#">talks</a>
+            <a href="#">writeups</a>
+            <a href="#" class="active">about</a>
+          </nav>
+        </div>
+        <div class="status">status: <strong>available_for_security_work</strong> / mode: research</div>
+      </header>
+
+      <main class="page">
+        <section class="hero">
+          <p class="eyebrow">./whoami</p>
+          <h1 class="name">Ethan<br>Morchy</h1>
+          <p class="tagline">
+            Offensive security engineer. CVE-reported. Hardware, embedded,
+            application, and code review work.
+          </p>
+          <ul class="contact">
+            <li><a href="#">github.com/emorchy</a></li>
+            <li><a href="#">hello@emorchy.com</a></li>
+            <li><span class="muted">California</span></li>
+          </ul>
+
+          <pre class="signal"><span class="key">focus</span>: hardware / embedded / appsec / code review
+<span class="key">proof</span>: CVEs, talks, projects, CTF writeups
+<span class="key">style</span>: build first, document clearly</pre>
+        </section>
+
+        <section class="section-block recent">
+          <h2 class="command-label">recent</h2>
+          <ul class="recent-list">
+            <li>
+              <span class="kind">[writeup]</span>
+              <a href="#">Medtronic CVEs</a>
+              <span class="date">2025-08-16</span>
+            </li>
+            <li>
+              <span class="kind">[talk]</span>
+              <a href="#">Automated Bug Hunting with Semgrep</a>
+              <span class="date">2024-07-10</span>
+            </li>
+            <li>
+              <span class="kind">[project]</span>
+              <a href="#">Social Media Predictor</a>
+              <span class="date">2026-03-20</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="section-block selected">
+          <h2 class="command-label">selected evidence</h2>
+          <div class="evidence-grid">
+            <a class="evidence-card" href="#">
+              <span class="kind">[cve]</span>
+              <strong>CVE-2025-4393 / 4394 / 4395</strong>
+              <span>Medtronic MyCareLink Patient Monitor vulnerability research.</span>
+            </a>
+            <a class="evidence-card" href="#">
+              <span class="kind">[talk]</span>
+              <strong>Automated Bug Hunting with Semgrep</strong>
+              <span>Static analysis talk, demos, and slides for security audiences.</span>
+            </a>
+            <div class="evidence-card placeholder">
+              <span class="kind">[placeholder]</span>
+              <strong>Lorem ipsum dolor sit amet</strong>
+              <span>Additional highlight awaiting manual review.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-block gateway">
+          <h2 class="command-label">enter</h2>
+          <p>
+            <a href="#">writeups</a> for technical breakdowns,
+            <a href="#">talks</a> for presentations,
+            <a href="#">projects</a> for builds, and
+            <a href="#">about</a> for resume and contact.
+          </p>
+        </section>
+      </main>
+
+      <footer class="footer">
+        &copy; 2026 Ethan Morchy / theme preview
+      </footer>
+    </div>
+  </body>
+</html>

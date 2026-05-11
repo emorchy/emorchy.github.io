@@ -3,13 +3,14 @@ layout: default
 section: talks
 ---
 
-<h1 class="pb-4">Talks</h1>
+<h1>Talks</h1>
+<p class="lede">Slides, recordings, and conference presentations.</p>
 
 {% assign items = site.talks | sort: "date" | reverse %}
 {% for item in items %}
-  <article class="excerpt">
+  <article class="excerpt log-entry">
+    <div class="date">{{ item.date | date: "%Y-%m-%d" }}</div>
     <h3 class="unspaced"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
-    <div class="date">{{ item.date | date: "%-d %b %Y" }}</div>
     <p>{{ item.description }}</p>
   </article>
 {% endfor %}

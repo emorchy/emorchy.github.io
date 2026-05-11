@@ -1,41 +1,12 @@
-<div class="container py-5 d-none d-lg-block"></div>
-
-<div class="container">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-4" style="background-color: transparent!important;">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item" {% if page.section == 'about' %} aria-current="page" {% endif %}>
-            <a class="nav-link{% if page.section == 'about' %} active {% endif %}" href="{{ '/' | relative_url }}">
-              <h3 class="navtext">ABOUT</h3>
-              {% if page.section == 'about' %}<span class="visually-hidden">(current)</span>{% endif %}
-            </a>
-          </li>
-          <li class="nav-item" {% if page.section == 'projects' %} aria-current="page" {% endif %}>
-            <a class="nav-link{% if page.section == 'projects' %} active {% endif %}" href="{{ '/projects/' | relative_url }}">
-              <h3 class="navtext">PROJECTS</h3>
-              {% if page.section == 'projects' %}<span class="visually-hidden">(current)</span>{% endif %}
-            </a>
-          </li>
-          <li class="nav-item" {% if page.section == 'talks' %} aria-current="page" {% endif %}>
-            <a class="nav-link{% if page.section == 'talks' %} active {% endif %}" href="{{ '/talks/' | relative_url }}">
-              <h3 class="navtext">TALKS</h3>
-              {% if page.section == 'talks' %}<span class="visually-hidden">(current)</span>{% endif %}
-            </a>
-          </li>
-          <li class="nav-item" {% if page.section == 'writeups' %} aria-current="page" {% endif %}>
-            <a class="nav-link{% if page.section == 'writeups' %} active {% endif %}" href="{{ '/writeups/' | relative_url }}">
-              <h3 class="navtext">WRITEUPS</h3>
-              {% if page.section == 'writeups' %}<span class="visually-hidden">(current)</span>{% endif %}
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</div>
-
-<div class="container pt-5 pb-3 d-lg-none"></div>
+<header class="site-header">
+  <div class="topbar">
+    <a class="brand" href="{{ '/' | relative_url }}"><span class="brand-user">ethan@morchy</span>:~$</a>
+    <nav class="topnav" aria-label="Primary">
+      <a href="{{ '/projects/' | relative_url }}" {% if page.section == 'projects' %}class="active" aria-current="page"{% endif %}>projects</a>
+      <a href="{{ '/talks/' | relative_url }}" {% if page.section == 'talks' %}class="active" aria-current="page"{% endif %}>talks</a>
+      <a href="{{ '/writeups/' | relative_url }}" {% if page.section == 'writeups' %}class="active" aria-current="page"{% endif %}>writeups</a>
+      <a href="{{ '/about/' | relative_url }}" {% if page.section == 'about' %}class="active" aria-current="page"{% endif %}>about</a>
+    </nav>
+  </div>
+  <div class="status-line">status: <strong>available_for_security_work</strong> / mode: research</div>
+</header>

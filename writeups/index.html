@@ -3,13 +3,14 @@ layout: default
 section: writeups
 ---
 
-<h1 class="pb-4">Writeups</h1>
+<h1>Writeups</h1>
+<p class="lede">Vulnerability research and CTF challenge breakdowns.</p>
 
 {% assign items = site.writeups | sort: "date" | reverse %}
 {% for item in items %}
-  <article class="excerpt">
+  <article class="excerpt log-entry">
+    <div class="date">{{ item.date | date: "%Y-%m-%d" }}</div>
     <h3 class="unspaced"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
-    <div class="date">{{ item.date | date: "%-d %b %Y" }}</div>
     <p>{{ item.description }}</p>
   </article>
 {% endfor %}

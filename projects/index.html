@@ -3,13 +3,14 @@ layout: default
 section: projects
 ---
 
-<h1 class="pb-4">Projects</h1>
+<h1>Projects</h1>
+<p class="lede">Engineering builds, tooling, and experiments.</p>
 
 {% assign items = site.projects | sort: "date" | reverse %}
 {% for item in items %}
-  <article class="excerpt">
+  <article class="excerpt log-entry">
+    <div class="date">{{ item.date | date: "%Y-%m-%d" }}</div>
     <h3 class="unspaced"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
-    <div class="date">{{ item.date | date: "%-d %b %Y" }}</div>
     <p>{{ item.description }}</p>
   </article>
 {% endfor %}
