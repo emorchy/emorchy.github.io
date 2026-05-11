@@ -1,6 +1,6 @@
 <header class="site-header">
   <div class="topbar">
-    <a class="brand" href="{{ '/' | relative_url }}"><span class="brand-user">ethan@morchy</span>:~$</a>
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Home"><span class="brand-user">ethan@morchy</span>:~$<span class="caret" aria-hidden="true"></span></a>
     <nav class="topnav" aria-label="Primary">
       <a href="{{ '/projects/' | relative_url }}" {% if page.section == 'projects' %}class="active" aria-current="page"{% endif %}>projects</a>
       <a href="{{ '/talks/' | relative_url }}" {% if page.section == 'talks' %}class="active" aria-current="page"{% endif %}>talks</a>
@@ -8,5 +8,5 @@
       <a href="{{ '/about/' | relative_url }}" {% if page.section == 'about' %}class="active" aria-current="page"{% endif %}>about</a>
     </nav>
   </div>
-  <div class="status-line">status: <strong>available_for_security_work</strong> / mode: research</div>
+  <div class="status-line"><span class="status-dot" aria-hidden="true"></span>status: <strong>available_for_security_work</strong> / mode: research</div>
 </header>
