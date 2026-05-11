@@ -1,12 +1,37 @@
+{% case page.section %}
+  {% when 'projects' %}
+    {% assign status_cwd = '~/projects' %}
+  {% when 'talks' %}
+    {% assign status_cwd = '~/talks' %}
+  {% when 'writeups' %}
+    {% assign status_cwd = '~/writeups' %}
+  {% when 'about' %}
+    {% assign status_cwd = '~/about' %}
+  {% when 'home' %}
+    {% assign status_cwd = '~' %}
+  {% else %}
+    {% assign status_cwd = '~' %}
+{% endcase %}
+
+<a class="skip-link" href="#main">skip to content</a>
+
 <header class="site-header">
   <div class="topbar">
-    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Home"><span class="brand-user">ethan@morchy</span>:~$<span class="caret" aria-hidden="true"></span></a>
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Home"><span class="brand-user">ethan@morchy</span><span class="brand-sep">:</span><span class="brand-cwd">{{ status_cwd }}</span><span class="brand-sep">$</span><span class="caret" aria-hidden="true"></span></a>
     <nav class="topnav" aria-label="Primary">
-      <a href="{{ '/projects/' | relative_url }}" {% if page.section == 'projects' %}class="active" aria-current="page"{% endif %}>projects</a>
-      <a href="{{ '/talks/' | relative_url }}" {% if page.section == 'talks' %}class="active" aria-current="page"{% endif %}>talks</a>
-      <a href="{{ '/writeups/' | relative_url }}" {% if page.section == 'writeups' %}class="active" aria-current="page"{% endif %}>writeups</a>
-      <a href="{{ '/about/' | relative_url }}" {% if page.section == 'about' %}class="active" aria-current="page"{% endif %}>about</a>
+      <a href="{{ '/projects/' | relative_url }}" {% if page.section == 'projects' %}class="active" aria-current="page"{% endif %}><span class="nav-label">projects</span></a>
+      <a href="{{ '/talks/' | relative_url }}" {% if page.section == 'talks' %}class="active" aria-current="page"{% endif %}><span class="nav-label">talks</span></a>
+      <a href="{{ '/writeups/' | relative_url }}" {% if page.section == 'writeups' %}class="active" aria-current="page"{% endif %}><span class="nav-label">writeups</span></a>
+      <a href="{{ '/about/' | relative_url }}" {% if page.section == 'about' %}class="active" aria-current="page"{% endif %}><span class="nav-label">about</span></a>
     </nav>
   </div>
-  <div class="status-line"><span class="status-dot" aria-hidden="true"></span>status: <strong>available_for_security_work</strong> / mode: research</div>
+  <div class="status-line" role="status">
+    <span class="status-meta">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span class="status-kv"><span class="status-k">avail</span><span class="status-v status-v-strong">open</span></span>
+      <span class="status-sep" aria-hidden="true">·</span>
+      <span class="status-kv"><span class="status-k">focus</span><span class="status-v">offsec / embedded / appsec</span></span>
+    </span>
+    <span class="status-asof" title="Static site; date is last Jekyll render">rendered {{ site.time | date: '%Y-%m-%d' }}</span>
+  </div>
 </header>
