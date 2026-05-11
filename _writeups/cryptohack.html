@@ -1,0 +1,100 @@
+---
+title: Cryptohack Euler's Totient
+date: 2021-03-26
+description: Calculate Euler's Totient (φn) using the Extended Euclidean Algorithm.
+---
+
+        <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<p>Calculate Euler’s Totient (φn) using the Extended Euclidean Algorithm.
+<!--excerpt--></p>
+<details open="">
+<summary>Description</summary>
+RSA relies on the difficulty of the factorisation of the modulus N. If the primes can be found then we can calculate the Euler totient of N and thus decrypt the ciphertext.
+
+Given N = p*q and two primes:
+
+p = 857504083339712752489993810777
+
+q = 1029224947942998075080348647219
+
+What is the totient of N?
+</details>
+
+<h1 id="solution">Solution</h1>
+<p>p = 857504083339712752489993810777
+q = 1029224947942998075080348647219
+N = (p-1)*(q-1)</p>
+
+<p>#882564595536224140639625987657529300394956519977044270821168</p>
+<h1 id="extended-mathematics">Extended Mathematics</h1>
+<p>\(de - y(\phi(n)) \equiv 1 \pmod{\phi(n)}\)</p>
+
+<p>$882564595536224140639625987657529300394956519977044270821168 = $
+$13466661512370479891353372715527553906876367852923451955*65537 + 46333$</p>
+
+<p>$65537 = 1*46333 + 19204$</p>
+
+<p>$46333 = 2*19204 + 7925$</p>
+
+<p>$19204 = 2*7925 + 3354$</p>
+
+<p>$7925 = 2*3354 + 1217$</p>
+
+<p>$3354 = 2*1217 + 920$</p>
+
+<p>$1217 + 1*920 + 297$</p>
+
+<p>$920 = 3*297 + 29$</p>
+
+<p>$297 = 10*29 + 7$</p>
+
+<p>$29 = 4*7 + 1$ (GCD: 1)</p>
+
+<p>$1 = 29 - 4*7$</p>
+
+<p>$= 29 - 4*(297 - 10*29) = 41*29 - 4*297$</p>
+
+<p>$= 41(920-3*297) - 4*297 = 41*920 - 127*297$</p>
+
+<p>$= 41*920 - 127(1217 - 1*920) = 168*920 - 127*1217$</p>
+
+<p>$= 168(3354 - 2*1217) - 127*1217 = 168*3354 - 463*1217$</p>
+
+<p>$= 168*3354 - 463(7925 - 2*3354) = 1094*3354 - 463*7925$</p>
+
+<p>$= 1094*(19204 - 2*7925) - 463*7925 = 1094*19204 - 2651*7925$</p>
+
+<p>$= 1094*19204 - 2651*(46333 - 2*19204) = 6396*19204 - 2651*46333$</p>
+
+<p>$= 6396*(65537 - 1*46333) - 2651*46333 = 6396*65537 - 9047*46333$</p>
+
+<p>$= 6396*65537 - 9047*(882564595536224140639625987657529300394956519977044270821168 - $
+$121832886702415731577073962957377780195510499965398469843281*65537)$
+$= 65537 - 9047*882564595536224140639625987657529300394956519977044270821168$</p>
+
+<p>$1 = 121832886702415731577073962957377780195510499965398469843281*65537 - 9047*$
+$882564595536224140639625987657529300394956519977044270821168$</p>
+
+\[d = 121832886702415731577073962957377780195510499965398469843281\]
+
+<h1 id="verification">Verification</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 == 121832886702415731577073962957377780195510499965398469843281*65537 - 9047*882564595536224140639625987657529300394956519977044270821168
+#True
+</code></pre></div></div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

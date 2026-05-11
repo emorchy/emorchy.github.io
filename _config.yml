@@ -1,0 +1,61 @@
+title: Ethan's Blog
+description: >-
+  Talks, writeups, and projects by Ethan Morchy — CVE-reported hardware and software penetration testing.
+author:
+  name: Ethan Morchy
+url: "https://emorchy.com"
+baseurl: ""
+
+collections:
+  writeups:
+    output: true
+    permalink: /writeups/:year/:month/:day/:slug:output_ext
+  talks:
+    output: true
+    permalink: /talks/:year/:month/:day/:slug:output_ext
+  projects:
+    output: true
+    permalink: /projects/:year/:month/:day/:slug:output_ext
+
+defaults:
+  - scope:
+      path: ""
+      type: writeups
+    values:
+      layout: post
+      section: writeups
+  - scope:
+      path: ""
+      type: talks
+    values:
+      layout: post
+      section: talks
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: post
+      section: projects
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+
+feed:
+  collections:
+    - writeups
+    - talks
+    - projects
+
+include:
+  - CNAME
+  - robots.txt
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .bundle
