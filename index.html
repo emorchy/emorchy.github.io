@@ -11,9 +11,9 @@ description: >-
     <p class="eyebrow">whoami</p>
     <h1 class="name">Ethan Morchy</h1>
     <ul class="tagline-output" aria-label="Focus areas">
-      <li>hardware product security</li>
+      <li>hardware offensive security</li>
       <li>embedded systems + applied crypto</li>
-      <li>code review and security tooling</li>
+      <li>vulnerability research + security tooling</li>
     </ul>
 
     <dl class="proof-ledger" aria-label="Proof of work">
@@ -23,11 +23,11 @@ description: >-
       </div>
       <div>
         <dt>[award]</dt>
-        <dd>2x Hardwear.io CTF (2024 + 2025) winner</dd>
+        <dd>2x Hardwear.IO CTF winner (2024 + 2025)</dd>
       </div>
       <div>
         <dt>[tool]</dt>
-        <dd>100+ hardware labs, 25 C/C++ Semgrep rules</dd>
+        <dd>250+ security challenges built, 25 Semgrep rules</dd>
       </div>
     </dl>
 
@@ -58,36 +58,27 @@ description: >-
 
 <section class="section-block recent">
   <h2 class="command-label">recent</h2>
-  {% assign latest_writeup = site.writeups | sort: "date" | reverse | first %}
-  {% assign latest_talk = site.talks | sort: "date" | reverse | first %}
-  {% assign latest_project = site.projects | sort: "date" | reverse | first %}
+
+  {% assign recent_items = site.writeups
+    | concat: site.talks
+    | concat: site.projects
+    | sort: "date"
+    | reverse
+  %}
+
   <ul class="recent-list">
-    {% if latest_writeup %}
+    {% for item in recent_items limit: 3 %}
       <li>
-        <span class="kind">[writeups]</span>
-        <a href="{{ latest_writeup.url | relative_url }}">{{ latest_writeup.title }}</a>
-        <span class="dt">{{ latest_writeup.date | date: "%Y-%m-%d" }}</span>
+        <span class="kind">[{{ item.collection }}]</span>
+        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+        <span class="dt">{{ item.date | date: "%Y-%m-%d" }}</span>
       </li>
-    {% endif %}
-    {% if latest_talk %}
-      <li>
-        <span class="kind">[talks]</span>
-        <a href="{{ latest_talk.url | relative_url }}">{{ latest_talk.title }}</a>
-        <span class="dt">{{ latest_talk.date | date: "%Y-%m-%d" }}</span>
-      </li>
-    {% endif %}
-    {% if latest_project %}
-      <li>
-        <span class="kind">[projects]</span>
-        <a href="{{ latest_project.url | relative_url }}">{{ latest_project.title }}</a>
-        <span class="dt">{{ latest_project.date | date: "%Y-%m-%d" }}</span>
-      </li>
-    {% endif %}
+    {% endfor %}
   </ul>
 </section>
 
 <section class="section-block selected">
-  <h2 class="command-label">selected evidence</h2>
+  <h2 class="command-label">selected favorites</h2>
   <div class="evidence-grid">
     <a class="evidence-card" href="{{ '/writeups/2025/08/16/medtronic-cves.html' | relative_url }}">
       <span class="kind">[cve]</span>
