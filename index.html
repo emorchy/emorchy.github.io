@@ -10,11 +10,33 @@ description: >-
   <div class="hero-main">
     <p class="eyebrow">whoami</p>
     <h1 class="name">Ethan Morchy</h1>
-    <p class="tagline">
-      CVE-awarded penetration tester focused on hardware product security, embedded systems,
-      and secure code review. I build training, tooling, and writeups that turn deep technical
-      work into something other engineers can use.
-    </p>
+    <ul class="tagline-output" aria-label="Focus areas">
+      <li>hardware product security</li>
+      <li>embedded systems + applied crypto</li>
+      <li>code review and security tooling</li>
+    </ul>
+
+    <dl class="proof-ledger" aria-label="Proof of work">
+      <div>
+        <dt>[cve]</dt>
+        <dd>3x Medtronic patient-monitor disclosures</dd>
+      </div>
+      <div>
+        <dt>[award]</dt>
+        <dd>2x Hardwear.io CTF (2024 + 2025) winner</dd>
+      </div>
+      <div>
+        <dt>[tool]</dt>
+        <dd>100+ hardware labs, 25 C/C++ Semgrep rules</dd>
+      </div>
+    </dl>
+
+    <a class="pager-line" href="{{ '/about/' | relative_url }}" aria-label="More about Ethan">
+      <span class="pager-prompt">:</span>
+      <span>more &mdash; press</span>
+      <kbd>enter</kbd>
+      <span>to continue...</span>
+    </a>
 
     <ul class="contact">
       <li>
@@ -30,34 +52,8 @@ description: >-
         </a>
       </li>
     </ul>
-
-    <div class="hero-actions" aria-label="Primary actions">
-      <a class="terminal-action primary" href="{{ '/writeups/' | relative_url }}">view writeups</a>
-      <a class="terminal-action" href="{{ '/about/' | relative_url }}">read about</a>
-    </div>
   </div>
 
-  <aside class="proof-panel" aria-label="Proof of work summary">
-    <div class="proof-panel-title">signal</div>
-    <dl class="proof-list">
-      <div>
-        <dt>research</dt>
-        <dd>3 CVE disclosures in Medtronic patient-monitor research</dd>
-      </div>
-      <div>
-        <dt>domains</dt>
-        <dd>hardware protocols / firmware / C/C++ review / applied crypto</dd>
-      </div>
-      <div>
-        <dt>tooling</dt>
-        <dd>100+ hardware training challenges, 25 C/C++ Semgrep rules</dd>
-      </div>
-      <div>
-        <dt>community</dt>
-        <dd>Hardwear.io CTF winner, technical speaker, lockpicking instructor</dd>
-      </div>
-    </dl>
-  </aside>
 </section>
 
 <section class="section-block recent">
