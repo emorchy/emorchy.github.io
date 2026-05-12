@@ -213,40 +213,36 @@ body > .shell {
 
 .status-line {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 8px 18px;
-  margin-top: 12px;
-  padding: 8px 12px;
-  border: 1px solid var(--border);
-  border-radius: 2px;
-  background: rgba(36, 41, 51, 0.65);
+  gap: 0.65ch;
+  width: max-content;
+  max-width: 100%;
+  margin: 12px 0 0 auto;
+  padding: 6px 11px;
+  border: 1px solid rgba(179, 207, 153, 0.38);
+  border-radius: 999px;
+  background:
+    linear-gradient(135deg, rgba(179, 207, 153, 0.13), rgba(136, 192, 208, 0.06)),
+    rgba(36, 41, 51, 0.72);
+  box-shadow: 0 0 0 1px rgba(36, 41, 51, 0.35), 0 8px 22px rgba(0, 0, 0, 0.12);
   color: var(--muted);
   font-size: 12px;
-  line-height: 1.45;
-  letter-spacing: 0.01em;
-}
-
-.status-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6px 0;
-  min-width: 0;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .status-kv {
   display: inline-flex;
   align-items: baseline;
-  gap: 0.5ch;
+  gap: 0.45ch;
   white-space: nowrap;
 }
 
 .status-k {
-  color: var(--muted);
+  color: var(--muted-strong);
   font-size: 11px;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   text-transform: lowercase;
 }
 
@@ -259,7 +255,7 @@ body > .shell {
 .status-v {
   color: var(--text);
   font-family: JetBrainsR, monospace;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .status-v-strong {
@@ -268,29 +264,13 @@ body > .shell {
   font-weight: normal;
 }
 
-.status-sep {
-  margin: 0 0.35ch;
-  color: rgba(74, 84, 104, 0.95);
-  user-select: none;
-}
-
-.status-asof {
-  color: var(--muted);
-  font-family: JetBrainsR, monospace;
-  font-size: 11px;
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
 .status-dot {
   display: inline-block;
-  width: 7px;
-  height: 7px;
-  margin-right: 0.55ch;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: var(--accent-2);
-  box-shadow: 0 0 6px var(--accent-2);
+  box-shadow: 0 0 0 3px rgba(179, 207, 153, 0.14), 0 0 8px var(--accent-2);
   vertical-align: 1px;
   animation: pulse 2.4s ease-in-out infinite;
 }
@@ -1098,6 +1078,11 @@ iframe {
     justify-content: flex-start;
   }
 
+  .status-line {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
   .page {
     padding-top: 32px;
   }
@@ -1149,12 +1134,6 @@ iframe {
 
   .about-snapshot {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 420px) {
-  .status-line .status-kv:nth-of-type(2) {
-    display: none;
   }
 }
 

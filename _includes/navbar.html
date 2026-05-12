@@ -25,13 +25,8 @@
       <a href="{{ '/about/' | relative_url }}" {% if page.section == 'about' %}class="active" aria-current="page"{% endif %}><span class="nav-label">about</span></a>
     </nav>
   </div>
-  <div class="status-line" role="status">
-    <span class="status-meta">
-      <span class="status-dot" aria-hidden="true"></span>
-      <span class="status-kv"><span class="status-k">hiring</span><span class="status-v status-v-strong">open</span></span>
-      <span class="status-sep" aria-hidden="true">·</span>
-      <span class="status-kv"><span class="status-k">focus</span><span class="status-v">offsec / embedded / appsec</span></span>
-    </span>
-    <span class="status-asof" title="Static site; date is last Jekyll render">rendered {{ site.time | date: '%Y-%m-%d' }}</span>
+  <div class="status-line" role="status" aria-label="Hiring status: open">
+    <span class="status-dot" aria-hidden="true"></span>
+    <span class="status-kv"><span class="status-k">hiring</span><span class="status-v status-v-strong">open</span></span>
   </div>
 </header>
