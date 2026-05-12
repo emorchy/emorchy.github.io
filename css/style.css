@@ -217,7 +217,7 @@ body > .shell {
   gap: 0.65ch;
   width: max-content;
   max-width: 100%;
-  margin: 12px 0 0 auto;
+  margin: 12px 0 0 0;
   padding: 6px 11px;
   border: 1px solid rgba(179, 207, 153, 0.38);
   border-radius: 999px;
