@@ -9,10 +9,10 @@ description: I used a 433MHz radio receiver and transmitter with an Attiny chip 
 <!--excerpt-->
 I own a La Crosse weather transmitter and station. Several years ago, my transmitter stopped working. It wasn’t until recently when I began working on another project that I discovered a wireless weather transmission coming from nearby.</p>
 
-<p><img src="/assets/files/weather/lacrosse.webp" alt="lacrosse.webp" class="center" style="width=75%;" /></p>
+<p><img src="/assets/files/weather/lacrosse.webp" alt="lacrosse.webp" class="center" style="width:75%;" /></p>
 <p><center><em>La Crosse Weather Sensor and Station</em></center></p>
 <h1 id="code-creation">Code Creation</h1>
-<h2 id="receive-acurite">Receive Acurite</h2>
+<h2 id="receive-acurite">Receive AcuRite</h2>
 <p>Using a RTL-SDR with the “rtl_433” program, I was able to see that someone owned a weather station in the general vicinity.
 <img src="/assets/files/weather/rtl.png" alt="rtl.png" class="center" />
 <center><em>rtl_433 output</em></center></p>
@@ -36,24 +36,24 @@ I own a La Crosse weather transmitter and station. Several years ago, my transmi
   <span class="n">receiver</span><span class="p">.</span><span class="n">resetAvailable</span><span class="p">();</span>
 <span class="o">---</span><span class="n">snip</span><span class="o">---</span></code></pre></figure>
 
-<p>The <code class="language-plaintext highlighter-rouge">receive()</code> function first enables the receiver on pin #2. In order to differentiate an AcuRite transmission from random noise, the protocol uses <a href="https://en.wikipedia.org/wiki/Pulse-width_modulation#Telecommunications">Pulse Width Modulation</a>. As a quick AcuRite PWM crash course, data is read one bit every clock cycle. In each cycle, a digital 1 is represented by a short pulse, and a digital 0 is represented by a long pulse. Thanks to rtl_433, we are able to <a href="https://triq.org/pdv/#AAB00B0404026000D4019027148055+AAB04B0401026000D401902714929292929292A1A1A192A1929292A19292A1A1A1A19292929292929292929292A19292A1A192A19292A1A1A192A1A1A1A19292A1A19292A1A1A1929292A1A1A19055+AAB00B0404026000D4019027148055+AAB04B0401026000D401902714929292A19292A1A1A192A1929292A19292A1A1A1A19292929292929292929292A19292A1A192A19292A1A1A192A1A1A1A19292A1A19292A1A1A192A192A1A1A19055+AAB00B0404026000D4019027148055+AAB04B0401026000D4019027149292A1929292A1A1A192A1929292A19292A1A1A1A19292929292929292929292A19292A1A192A19292A1A1A192A1A1A1A19292A1A19292A1A1A1A19292A1A1A19355">visualize the pulsedata</a> coming from Acurite.
+<p>The <code class="language-plaintext highlighter-rouge">receive()</code> function first enables the receiver on pin #2. In order to differentiate an AcuRite transmission from random noise, the protocol uses <a href="https://en.wikipedia.org/wiki/Pulse-width_modulation#Telecommunications">Pulse Width Modulation</a>. As a quick AcuRite PWM crash course, data is read one bit every clock cycle. In each cycle, a digital 1 is represented by a short pulse, and a digital 0 is represented by a long pulse. Thanks to rtl_433, we are able to <a href="https://triq.org/pdv/#AAB00B0404026000D4019027148055+AAB04B0401026000D401902714929292929292A1A1A192A1929292A19292A1A1A1A19292929292929292929292A19292A1A192A19292A1A1A192A1A1A1A19292A1A19292A1A1A1929292A1A1A19055+AAB00B0404026000D4019027148055+AAB04B0401026000D401902714929292A19292A1A1A192A1929292A19292A1A1A1A19292929292929292929292A19292A1A192A19292A1A1A192A1A1A1A19292A1A19292A1A1A192A192A1A1A19055+AAB00B0404026000D4019027148055+AAB04B0401026000D4019027149292A1929292A1A1A192A1929292A19292A1A1A1A19292929292929292929292A19292A1A192A19292A1A1A192A1A1A1A19292A1A19292A1A1A1A19292A1A1A19355">visualize the pulsedata</a> coming from AcuRite.
 <img src="/assets/files/weather/triq.png" alt="triq.png" class="center" />
-<center><em>Acurite PWM visualization</em></center></p>
-<p>As shown above on the right side, a bit is read every 612ms.</p>
+<center><em>AcuRite PWM visualization</em></center></p>
+<p>As shown above on the right side, a bit is read every 612 µs.</p>
 
 <p><em>Note</em>: There is a margin of error for received pulse data. I set the pulse length to two short pulses equal one long pulse.</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><code>    __
-0: |  |_ : long high pulse (~408ms), short low pulse (~204ms)
+0: |  |_ : long high pulse (~408 µs), short low pulse (~204 µs)
     _
-1: | |__ : short high pulse (~204ms), long low pulse (~408ms)
+1: | |__ : short high pulse (~204 µs), long low pulse (~408 µs)
 </code></div></div>
-<p>The acurite protocol definition is in the format: {pulselength, Sync bit, “0” bit, “1” bit, invertedSignal}. Given that each bit is composed of 3 short pulses (204ms * 3 = 612ms):</p>
+<p>The AcuRite protocol definition is in the format: {pulselength, Sync bit, “0” bit, “1” bit, invertedSignal}. Given that each bit is composed of 3 short pulses (204 µs × 3 = 612 µs):</p>
 
 <table>
   <tbody>
     <tr>
       <td>pulselength</td>
-      <td>204ms</td>
+      <td>204 µs</td>
     </tr>
     <tr>
       <td>Off bit</td>
@@ -65,7 +65,7 @@ I own a La Crosse weather transmitter and station. Several years ago, my transmi
     </tr>
     <tr>
       <td>sync header</td>
-      <td>3 high pulses and 3 low pulses x4 (612ms up, 612ms down) x4</td>
+      <td>3 high pulses and 3 low pulses x4 (612 µs up, 612 µs down) ×4</td>
     </tr>
     <tr>
       <td>invertedSignal</td>
@@ -82,7 +82,7 @@ I own a La Crosse weather transmitter and station. Several years ago, my transmi
 [03] {65} 23 a2 78 00 88 36 d2 cd 00 
 </code></div></div>
 
-<p>Once again, the rtl_433 repository proves invaluable with the Acurite data decoding. The <a href="https://github.com/merbanan/rtl_433/blob/master/src/devices/acurite.c#L632C1-L695">acurite.c</a> that exists in the rtl_433 repository demonstrates the decoding process of an Acurite message.</p>
+<p>Once again, the rtl_433 repository proves invaluable with the AcuRite data decoding. The <a href="https://github.com/merbanan/rtl_433/blob/master/src/devices/acurite.c#L632C1-L695">acurite.c</a> that exists in the rtl_433 repository demonstrates the decoding process of an AcuRite message.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><code>{65} 03 a2 78 00 88 36 d2 ad 00 
  ^^ sync byte (in buf as item 0)
@@ -109,12 +109,12 @@ I own a La Crosse weather transmitter and station. Several years ago, my transmi
 <span class="kt">void</span> <span class="nf">transmit</span><span class="p">(</span><span class="kt">float</span> <span class="n">tempc</span><span class="p">,</span> <span class="kt">int</span> <span class="n">humi</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">transmitter</span><span class="p">.</span><span class="n">enableTransmit</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span> <span class="c1">//arduino pin #10</span>
   <span class="n">transmitter</span><span class="p">.</span><span class="n">setRepeatTransmit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">//disables repeat</span>
-  <span class="k">static</span> <span class="k">const</span> <span class="n">RCSwitch</span><span class="o">::</span><span class="n">Protocol</span> <span class="n">sync</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">833</span><span class="p">,</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="p">},</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span> <span class="nb">false</span> <span class="p">};</span>      <span class="c1">//833ms apart</span>
+  <span class="k">static</span> <span class="k">const</span> <span class="n">RCSwitch</span><span class="o">::</span><span class="n">Protocol</span> <span class="n">sync</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">833</span><span class="p">,</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="p">},</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span> <span class="nb">false</span> <span class="p">};</span>      <span class="c1">//833 µs apart</span>
   <span class="k">static</span> <span class="k">const</span> <span class="n">RCSwitch</span><span class="o">::</span><span class="n">Protocol</span> <span class="n">lacrosse</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">208</span><span class="p">,</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="p">},</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="p">},</span> <span class="p">{</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span> <span class="nb">false</span> <span class="p">};</span>
 <span class="o">---</span><span class="n">snip</span><span class="o">---</span>
 </code></pre></div></div>
 
-<p>I created a different protocol for the sync header because the preamble is 833ms high and 833ms low repeated 4 times. RCSwitch does not allow repeated sync packets, so I used a different protocol for sync. Following the <a href="https://github.com/merbanan/rtl_433/blob/master/src/devices/lacrosse_tx141x.c#L58-L64">La Crosse transmission analysis</a>, the protocol can be coded as such:</p>
+<p>I created a different protocol for the sync header because the preamble is 833 µs high and 833 µs low repeated 4 times. RCSwitch does not allow repeated sync packets, so I used a different protocol for sync. Following the <a href="https://github.com/merbanan/rtl_433/blob/master/src/devices/lacrosse_tx141x.c#L58-L64">La Crosse transmission analysis</a>, the protocol can be coded as such:</p>
 <center>
 <code>
 [id] [id] [flags] [temp] [temp] [temp] [humi] [humi] [chk] [chk]
@@ -138,7 +138,7 @@ I own a La Crosse weather transmitter and station. Several years ago, my transmi
 <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">transmit</span><span class="p">(</span><span class="kt">float</span> <span class="n">tempc</span><span class="p">,</span> <span class="kt">int</span> <span class="n">humi</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">transmitter</span><span class="p">.</span><span class="n">enableTransmit</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span> <span class="c1">//arduino pin #10</span>
   <span class="n">transmitter</span><span class="p">.</span><span class="n">setRepeatTransmit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">//disables repeat</span>
-  <span class="k">static</span> <span class="k">const</span> <span class="n">RCSwitch</span><span class="o">::</span><span class="n">Protocol</span> <span class="n">sync</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">833</span><span class="p">,</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="p">},</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span> <span class="nb">false</span> <span class="p">};</span>      <span class="c1">//833ms apart</span>
+  <span class="k">static</span> <span class="k">const</span> <span class="n">RCSwitch</span><span class="o">::</span><span class="n">Protocol</span> <span class="n">sync</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">833</span><span class="p">,</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="p">},</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span> <span class="nb">false</span> <span class="p">};</span>      <span class="c1">//833 µs apart</span>
   <span class="k">static</span> <span class="k">const</span> <span class="n">RCSwitch</span><span class="o">::</span><span class="n">Protocol</span> <span class="n">lacrosse</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">208</span><span class="p">,</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="p">},</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="p">},</span> <span class="p">{</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span> <span class="p">},</span> <span class="nb">false</span> <span class="p">};</span>
 
   <span class="kt">int</span> <span class="n">temp_raw</span> <span class="o">=</span> <span class="n">tempc</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">500</span><span class="p">;</span> <span class="c1">//converts Celcius to La Crosse 12 bits</span>
