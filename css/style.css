@@ -264,6 +264,25 @@ body > .shell {
   font-weight: normal;
 }
 
+/* Hired: the listening light becomes an established connection —
+   frost-blue, held steady (no pulse). */
+.status-line.is-hired {
+  border-color: rgba(136, 192, 208, 0.4);
+  background:
+    linear-gradient(135deg, rgba(136, 192, 208, 0.14), rgba(136, 192, 208, 0.05)),
+    rgba(36, 41, 51, 0.72);
+}
+
+.status-line.is-hired .status-v-strong {
+  color: var(--accent);
+}
+
+.status-line.is-hired .status-dot {
+  background: var(--accent);
+  box-shadow: 0 0 0 3px rgba(136, 192, 208, 0.14), 0 0 8px var(--accent);
+  animation: none;
+}
+
 .status-dot {
   display: inline-block;
   width: 8px;

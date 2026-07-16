@@ -6,6 +6,11 @@ author:
 url: "https://emorchy.com"
 baseurl: ""
 
+# Hiring status shown in the navbar.
+# Flip `hired` to true when you land a role; set `hired_at` to show "hired @ Company".
+hired: true
+hired_at: ""
+
 collections:
   writeups:
     output: true

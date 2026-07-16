@@ -25,8 +25,15 @@
       <a href="{{ '/about/' | relative_url }}" {% if page.section == 'about' %}class="active" aria-current="page"{% endif %}><span class="nav-label">about</span></a>
     </nav>
   </div>
+  {% if site.hired %}
+  <div class="status-line is-hired" role="status" aria-label="Hiring status: hired{% if site.hired_at != '' %} at {{ site.hired_at }}{% endif %}">
+    <span class="status-dot" aria-hidden="true"></span>
+    <span class="status-kv"><span class="status-k">status</span><span class="status-v status-v-strong">hired{% if site.hired_at != '' %}&nbsp;@&nbsp;{{ site.hired_at }}{% endif %}</span></span>
+  </div>
+  {% else %}
   <div class="status-line" role="status" aria-label="Hiring status: open">
     <span class="status-dot" aria-hidden="true"></span>
     <span class="status-kv"><span class="status-k">hiring</span><span class="status-v status-v-strong">open</span></span>
   </div>
+  {% endif %}
 </header>
