@@ -1067,6 +1067,35 @@ iframe {
   width: 80%;
 }
 
+/* Row of images that stays side by side at every width. Percentage-based so
+   the pair scales instead of overflowing on narrow screens. */
+.img-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 4%;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.img-row figure {
+  /* min-width: 0 defeats the flex automatic minimum size, which would
+     otherwise hold each column at the image's intrinsic width. */
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.img-row img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.img-row figcaption {
+  margin-top: 10px;
+}
+
 /* Footer ----------------------------------------------------------------- */
 
 .site-footer {
