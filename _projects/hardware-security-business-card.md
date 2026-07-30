@@ -21,19 +21,19 @@ I distributed a stylish and useful PCB business card at three conferences for th
 - Selflessly: benefit the hardware security community
 - Selflessly: inspire others as I have been inspired
 - Selfishly: impress fellow hardware security folk
-- Selfishly: proof of technical competence in the hardware security industry
-- Selfishly: job referrals
+- Selfishly: prove technical competence in the hardware security industry
+- Selfishly: earn job referrals
 <!--excerpt-->
 
 # Why (storytime)
 
 I had the fortunate opportunity to visit three hardware security conferences, all occurring in the span of one month. As a soon-to-be graduate with a couple of years of penetration testing experience, I was eager to make a favorable impression on those who might get me connected to a decent company.
 
-I was first inspired by a business card I saw during my first [DEFCON](https://defcon.org), where a man distributed a stack of black and silver PCBs with his name on them. The PCB had routes hidden by the silkscreen (the pretty printed layers sandwiching the copper layers) that had an interesting function of cycling a series of LEDs in a [Knight Rider](https://www.lucidinsider.com/wp-content/uploads/2022/04/kitt-knight-rider-lights.gif) fashion. He ran out of the preassembled PCBs that held the LEDs and other components, but I managed to get one of the unpopulated business cards. Despite the lack of components, the sleekness, weight, uniqueness, and durability of the business card made it easily my favorite out of the dozens of cards I received that conference. From there, I realized that I would one day make my own PCB business card.
+I was first inspired by a business card I saw during my first [DEF CON](https://defcon.org), where a man distributed a stack of black and silver PCBs with his name on them. The PCB had traces hidden by the silkscreen (the pretty printed layers sandwiching the copper layers) that had an interesting function of cycling a series of LEDs in a [Knight Rider](https://www.lucidinsider.com/wp-content/uploads/2022/04/kitt-knight-rider-lights.gif) fashion. He ran out of the preassembled PCBs that held the LEDs and other components, but I managed to get one of the unpopulated business cards. Despite the lack of components, the sleekness, weight, uniqueness, and durability of the business card made it easily my favorite out of the dozens of cards I received that conference. From there, I realized that I would one day make my own PCB business card.
 
 There are several PCB business cards out there for people to shamelessly clone and modify as their own. At times, I was tempted to copy some enticing business cards myself. I later realized that in the niche world of hardware security, no PCB business cards publicly existed for me to rip off. So I set about creating one for my own purpose.
 
-I first researched what others have done. I looked at [Hackaday](https://hackaday.com/tag/pcb-business-card/) for PCB business card ideas. I found the [DigiKey Ruler](https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/6174/DKS_PCB_RULER.pdf), which was also a PCB with a ton of useful electrical engineering information. I taught myself KiCad and familiarized myself with PCB Art tutorials [here](https://www.instructables.com/A-Guide-Artistic-PCBs/) and [here](https://blog.wokwi.com/a-practical-guide-to-designing-pcb-art/).
+I first researched what others had done. I looked at [Hackaday](https://hackaday.com/tag/pcb-business-card/) for PCB business card ideas. I found the [DigiKey Ruler](https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/6174/DKS_PCB_RULER.pdf), which was also a PCB with a ton of useful electrical engineering information. I taught myself KiCad and familiarized myself with PCB art tutorials [here](https://www.instructables.com/A-Guide-Artistic-PCBs/) and [here](https://blog.wokwi.com/a-practical-guide-to-designing-pcb-art/).
 
 # Hardware
 
@@ -51,27 +51,27 @@ The lack of components makes for an easier board design. I settled on the follow
 
 - Standard business card dimensions (88x55mm) with a 2.75mm corner radius (fillet is fancy)
 - 2-layer board
-- 0.8mm thickness: Max thickness I allowed myself. 0.6mm was much more expensive.
+- 0.8mm thickness: max thickness I allowed myself. 0.6mm was much more expensive.
 - Gold HASL: this was a hard decision. Silver is cheaper than gold, but I like the gold look better. Tariffs be damned, I refuse to diminish the style.
-- Ruler: I believe a handy ruler in your wallet to be an incredible multipurpose tool.
+- Ruler: a handy ruler in your wallet is an incredible multipurpose tool.
 
 # Front
 
-The front of the card would contain my name, title, email, website, a QR code to the website, and cool artwork. It would also contain a compact inch and millimeter ruler so the front of the card provides immediate utility.
+The front of the card would contain my name, title, email, website, a QR code to the website, and cool artwork. It would also contain a compact inch and millimeter ruler so the card provides immediate utility.
 
-I decided to create a [PCBite probe](https://pcbitekit.com) artwork, which is a staple in the hardware security community for probing data lines. I also added a SOIC-8 chip PCB art that the PCBite would probe.
+I decided to create a [PCBite probe](https://pcbitekit.com) artwork, which is a staple in the hardware security community for probing data lines. I also added SOIC-8 chip PCB art that the PCBite would probe.
 
 ![PCBite Front](/assets/files/hardware-card/pcbite_chip.png){: .center style="width:75%;"}
 <center><em>Front board revision 1 (PCBite artwork)</em></center>
 
-I replaced the PCBite logo on the probe with a mesh grid (and a golden [glider](https://web.archive.org/web/20260211232028/www.catb.org/hacker-emblem/) on the inside). The wire connected to the probe reads my initials (EM) in a UART waveform. The interior of the chip art looks like a decapped chip with wire bonds and features real copper traces between through holes. The colors of black, white, shiny gold, and less shiny gold incorporate the following layers: front silk screen, front solder mask, and copper layer 1.
+I replaced the PCBite logo on the probe with a mesh grid (and a golden [glider](https://web.archive.org/web/20260211232028/www.catb.org/hacker-emblem/) on the inside). The wire connected to the probe reads my initials (EM) in a UART waveform. The interior of the chip art looks like a decapped chip with wire bonds and features real copper traces between through holes. The black, white, shiny gold, and less shiny gold come from combinations of three layers: front silkscreen, front solder mask, and copper layer 1.
 
 I later scrapped the idea of a cool PCB artwork in favor of a sleek professional front, shoving all the fun to the back.
 
 ![Card Front](/assets/files/hardware-card/front_final.png){: .center style="width:75%;"}
 <center><em>Front board final</em></center>
 
-The final revision of the front contains a cleaner ratio of color, drawing the eye cleanly from left to right. The gold tracks connecting the through holes give a subtle image of a quantum computer without being overtly eye-catching. The end appears professional with a hint of originality that leads to the back of the card.
+The final revision of the front contains a cleaner ratio of color, drawing the eye from left to right. The gold traces connecting the through holes give a subtle image of a quantum computer without being overtly eye-catching. The result appears professional with a hint of originality that leads to the back of the card.
 
 # Back
 
@@ -89,13 +89,13 @@ The back held all of the aforementioned features, but I believed I could go abov
 - SOIC-8 pads
 - SPI/I2C pinout names (contain pads and are themselves pads)
 - Large alligator-clip-sized pads on the bottom corner
-- 1.27mm, 2.0mm, 2.54mm headers
+- 1.27mm, 2.0mm, and 2.54mm headers
 
 Hardware security engineers almost always look for non-volatile media to extract key material and firmware. 8-pin SOIC EEPROM/Flash chips serve as a standard for these non-volatile memory chips, and this business card provides six feasible methods of connecting to the chip.
 
 # KiCad
 
-I used KiCad for all PCB editing, gerber generation, and artwork. Source and hardware files are available [here](https://github.com/emorchy/hardware-business-card).
+I used KiCad for all PCB editing, Gerber generation, and artwork. Source and hardware files are available [here](https://github.com/emorchy/hardware-business-card).
 
 <!-- Collapsible section for long extras (schematics, extra plots, raw output). -->
 <details>
@@ -110,7 +110,7 @@ I used KiCad for all PCB editing, gerber generation, and artwork. Source and har
 
 # PCB Manufacturer
 
-I looked around to find the cheapest PCB manufacturer that fit the specifications for my board. I highly recommend looking at [https://pcbshopper.com/](https://pcbshopper.com/), which can filter, sort, and list the cheapest manufacturers fitting your PCB requirements.
+I looked around to find the cheapest PCB manufacturer that fit the specifications for my board. I highly recommend looking at [PCBShopper](https://pcbshopper.com/), which can filter, sort, and list the cheapest manufacturers fitting your PCB requirements.
 
 At the time, the cheapest vendor fitting my requirements was [AIVON](https://www.aivon.com/).
 
@@ -135,27 +135,28 @@ For 30 cards, the original price was set at $52. AIVON had a promotion for free 
 ## The Good
 
 1. I had been designing a PCB business card for three years before finally putting cursor to CAD tool. I am glad to have a finished product.
-2. The cards were a hit at the conferences! Several people asked if they could keep one, and most of them thanked me profusely when I said yes. This is a far cry from begging people in the industry to take my business card. Instead, the hardware security community recognized the value of a portable ruler/breakout board/protocol reference card. Many said they had the idea for a PCB business card, with some saying I inspired them to finally make one.
+2. The cards were a hit at the conferences! Several people asked if they could keep one, and most of them thanked me profusely when I said yes. This was a far cry from begging people in the industry to take my business card. Instead, the hardware security community recognized the value of a portable ruler/breakout board/protocol reference card. Many said they had the idea for a PCB business card, with some saying I inspired them to finally make one.
 3. The business cards made for a great talking point. I showed the card to someone at a conference table, and it was subsequently passed around and admired. Everyone at the table was happy when I gave them each a business card.
-4. I became increasingly selective about whom I gave my card to, and I know that the hardware security people would keep it on their person. A hardware security engineer is a specialized role, and few tools provide portable utility for this specific role.
+4. I became increasingly selective about whom I gave my card to, and I knew that the hardware security people would keep it on their person. A hardware security engineer is a specialized role, and few tools provide portable utility for this specific role.
 5. Success Story:
 
     ![Card Use](/assets/files/hardware-card/card_use.jpg){: .center style="width:75%;"}
     <center><em>Board used as a debugger</em></center>
 
-    A person I met at the conference used my card to debug his DEFCON village badge.
-6. I learned an incredible amount about PCB manufacturing, creating custom libraries and footprints, memorizing KiCad hotkeys like my productivity depended on it, and going through the full process of idea to design to manufacturing to product.
+    A person I met at the conference used my card to debug his DEF CON village badge.
+6. I learned an incredible amount about PCB manufacturing, creating custom libraries and footprints, and going through the full process of idea to design to manufacturing to product. I also memorized KiCad hotkeys as if my productivity depended on it.
 
 ## The Bad
 
-1. The gold HASL was fancy and added to the card's beauty, but the price point could have been reduced by switching to silver instead.
+1. The gold HASL was fancy and added to the card's beauty, but switching to silver would have cut the price.
 2. I spent a large amount of time on this project without a monetary profit. The conferences led to several job leads, and the business cards certainly sweetened the pot for some. However, the strongest leads came from people I've known for years who could already vouch for my ability without seeing the card. Rapport with colleagues and friends outclasses a business card.
+3. The trace for pin 6 runs a bit too close to pin 5 under the SOIC footprint. It is easy to rip a pad when swapping chips, and there is sometimes a signal integrity issue between pins 5 and 6. Minor, but worth revisiting in a future revision.
 
 ## The Ugly
 
-1. Feature creep is the silent killer of finishing many of my projects. If it were not for the looming deadline of the three conferences, I would never have finished. Even then, I did not finish in time for the first conference, and it arrived on the first day of the second conference. I need to do better at accepting that perfection is unattainable and to stop iterating.
+1. Feature creep is the silent killer of many of my projects. If it were not for the looming deadline of the three conferences, I would never have finished. Even then, I did not finish in time for the first conference, and the order arrived on the first day of the second conference. I need to do better at accepting that perfection is unattainable and knowing when to stop iterating.
 2. Committing to a design on paper would have saved me much more time than the 50+ hours of iterating and tinkering on KiCad.
 3. Verify DRC (Design Rule Check) before finishing object alignments. I adjusted everything too many times because of a single DRC violation. Ensure that the DRC in KiCad settings is the same as the PCB manufacturer specs.
 
-![Card Front](/assets/files/hardware-card/real_front_back.jpg){: .center style="width:75%;"}
+![Card Front and Back](/assets/files/hardware-card/real_front_back.jpg){: .center style="width:75%;"}
 <center><em>Physical business card</em></center>
