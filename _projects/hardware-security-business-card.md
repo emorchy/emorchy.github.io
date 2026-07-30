@@ -6,11 +6,11 @@ description: Created a useful PCB business card for breaking out non-volatile me
 
 <div class="img-row">
   <figure>
-    <img src="/assets/files/hardware-card/front_final.png" alt="Card Front">
+    <img src="/assets/files/hardware-card/front_final.jpg" alt="Card Front">
     <figcaption><em>Front</em></figcaption>
   </figure>
   <figure>
-    <img src="/assets/files/hardware-card/back_final.png" alt="Card Back">
+    <img src="/assets/files/hardware-card/back_final.jpg" alt="Card Back">
     <figcaption><em>Back</em></figcaption>
   </figure>
 </div>
@@ -68,7 +68,7 @@ I replaced the PCBite logo on the probe with a mesh grid (and a golden [glider](
 
 I later scrapped the idea of a cool PCB artwork in favor of a sleek professional front, shoving all the fun to the back.
 
-![Card Front](/assets/files/hardware-card/front_final.png){: .center style="width:75%;"}
+![Card Front](/assets/files/hardware-card/front_final.jpg){: .center style="width:75%;"}
 <center><em>Front board final</em></center>
 
 The final revision of the front contains a cleaner ratio of color, drawing the eye from left to right. The gold traces connecting the through holes give a subtle image of a quantum computer without being overtly eye-catching. The result appears professional with a hint of originality that leads to the back of the card.
@@ -82,7 +82,7 @@ After a few weeks of iterations, the back of the card would have the following u
 - A waveform visual for the most common hardware protocols (UART, SPI, I2C)
 - A handy baud rate guide
 
-![Card Back](/assets/files/hardware-card/back_final.png){: .center style="width:75%;"}
+![Card Back](/assets/files/hardware-card/back_final.jpg){: .center style="width:75%;"}
 <center><em>Back board final</em></center>
 
 The back held all of the aforementioned features, but I believed I could go above and beyond. My business card acts as a breakout board with the following connections:
